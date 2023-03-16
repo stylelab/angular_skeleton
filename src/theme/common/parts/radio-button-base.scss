@@ -1,0 +1,114 @@
+/*
+ * Radio Button Base
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+.radio-button-base {
+  --background: var(--ion-table-form-bg-color);
+  --background-hover: var(--ion-table-form-bg-color);
+  // ***** 2021/09/02 UIブラッシュアップ #83331 INTEC 木村 更新 START *****
+  --min-height: 100%;
+  display: block;
+  height: 100%;
+  margin: var(--space-size-10) 0;
+  color: var(--ion-default-text-color);
+  // ***** 2021/09/02 UIブラッシュアップ #83331 INTEC 木村 更新 END *****
+  --inner-padding-end: 0;
+  --padding-start: 0;
+
+  @include border($color: var(--ion-form-border-color));
+  @include border-radius();
+
+  ion-label.sc-ion-label-md-h {
+    margin: 0;
+
+    @include font($font-family: $hiragino-font, $size: var(--font-size-medium));
+  }
+  // ***** 2021/09/02 UIブラッシュアップ #83331 INTEC 木村 更新 START *****
+  ion-radio {
+    align-self: center;
+    margin: var(--space-size-15) var(--space-size-10);
+
+    &:not(.radio-checked) {
+      &::part(container) {
+        @include border($width: 1px, $color: var(--ion-color-step-200));
+        background-color: var(--ion-color-custom-white);
+      }
+    }
+    // ***** 2021/09/02 UIブラッシュアップ #83331 INTEC 木村 更新 END *****
+    &.radio-checked {
+      &::part(container) {
+        background-color: var(--ion-color-brown);
+      }
+
+      &::part(mark) {
+        --border-width: 0px;
+        background-color: var(--ion-color-custom-white);
+      }
+    }
+  }
+
+  /* 入力済み state */
+  &.item-radio-checked {
+    --background: transparent;
+  }
+
+  /* グループの内どれでも入力された場合 */
+  &.item-radio-other-checked {
+    --background: transparent;
+  }
+
+  /* 非活性 state */
+  &[disabled] {
+    color: var(--ion-default-text-color);
+  }
+
+  /* 任意項目 */
+  [optional] & {
+    --background: transparent;
+  }
+
+  /* エラー state */
+  &[invalid] {
+    --background: var(--ion-form-error-bg-color);
+  }
+
+  .landing-theme & {
+    --padding-top: var(--space-size-10);
+    --padding-bottom: var(--space-size-10);
+    --background: transparent;
+
+    @include border($color: var(--ion-color-custom-white));
+    @include border-radius($radius: var(--space-size-15));
+
+    ion-radio {
+      --border-width: 1px;
+      --background: none;
+
+      &:not(.radio-checked) {
+        &::part(container) {
+          @include border($width: 1px, $color: var(--ion-color-custom-white));
+          background-color: transparent;
+        }
+      }
+
+      &.radio-checked {
+        &::part(container) {
+          background-color: transparent;
+        }
+
+        &::part(mark) {
+          --border-width: 0px;
+          background-color: var(--ion-color-success);
+        }
+      }
+    }
+
+    &.item-radio-checked,
+    &[disabled],
+    &[invalid] {
+      --background: transparent;
+    }
+  }
+}

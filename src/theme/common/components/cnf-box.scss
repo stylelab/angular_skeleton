@@ -1,0 +1,169 @@
+/*
+ * Cnf Box
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+.cnf-normal {
+  margin: var(--space-size-25) 0;
+
+  .title-h3 + & {
+    margin-top: var(--space-size-20);
+  }
+
+  @extend .border-dotted-base;
+
+  @at-root {
+    @include auto-margin-top-calculate(#{&});
+  }
+
+  &[noBorder] {
+    background-image: none;
+    border: none;
+  }
+
+  .cnf-normal-box {
+    display: flex;
+    justify-content: space-between;
+
+    .cnf-normal-box-left {
+      padding-right: var(--space-size-10);
+
+      .text-info {
+        margin: 0 0 var(--space-size-15) 0 !important;
+
+        a {
+          margin-left: var(--space-size-5);
+        }
+      }
+
+      ul,
+      .text-illustration-banner {
+        margin: 0 0 var(--space-size-15) 0;
+
+        li {
+          display: inline-block;
+          margin-right: var(--space-size-5);
+
+          &:last-child {
+            margin: 0;
+          }
+        }
+      }
+
+      .banner-margin-small {
+        margin: 0 0 var(--space-size-5) 0;
+      }
+    }
+
+    .cnf-normal-box-right {
+      flex-shrink: 0;
+      max-width: 55%;
+      text-align: right;
+
+      @media (min-width: 334px) and (max-width: 374px) {
+        max-width: 50%;
+      }
+
+      @media (max-width: 334px) {
+        max-width: 48%;
+      }
+
+      .text-normal {
+        margin-bottom: var(--space-size-15);
+        word-break: break-all;
+        overflow-wrap: anywhere;
+        &.installments {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+    /* ***** 2021/08/06 UIブラッシュアップ #78753 INTEC 朴慶煥 新規 START ***** */
+    .cnf-normal-box-left-033 {
+      width: 40%;
+      padding-right: var(--space-size-10);
+
+      .text-info {
+        margin: 0 0 var(--space-size-15) 0 !important;
+
+        a {
+          margin-left: var(--space-size-5);
+        }
+      }
+
+      ul,
+      .text-illustration-banner {
+        margin: 0 0 var(--space-size-15) 0;
+
+        li {
+          display: inline-block;
+          margin-right: var(--space-size-5);
+
+          &:last-child {
+            margin: 0;
+          }
+        }
+      }
+
+      .banner-margin-small {
+        margin: 0 0 var(--space-size-5) 0;
+      }
+    }
+
+    .cnf-normal-box-center-033 {
+      width: 20%;
+      padding-right: var(--space-size-10);
+
+      .text-info {
+        margin: 0 0 var(--space-size-15) 0 !important;
+
+        ion-icon {
+          width: 18px;
+          height: 18px;
+          padding-top: 1px;
+          vertical-align: middle;
+          fill: var(--ion-form-icon-color);
+
+          .landing-theme & {
+            fill: var(--ion-color-custom-dark-green);
+          }
+        }
+
+        span {
+          margin-left: var(--space-size-5);
+          color: red;
+        }
+      }
+    }
+
+    .cnf-normal-box-right-033 {
+      width: 40%;
+      flex-shrink: 0;
+      max-width: 55%;
+      text-align: right;
+
+      @media (min-width: 334px) and (max-width: 374px) {
+        max-width: 50%;
+      }
+
+      @media (max-width: 334px) {
+        max-width: 48%;
+      }
+
+      .text-normal {
+        margin-bottom: var(--space-size-15);
+        word-break: break-all;
+        overflow-wrap: anywhere;
+        &.installments {
+          margin-bottom: 0;
+        }
+      }
+    }
+    /* ***** 2021/08/06 UIブラッシュアップ #78753 INTEC 朴慶煥 新規 END ***** */
+
+  &:last-of-type {
+    border: none;
+  }
+}

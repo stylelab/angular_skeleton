@@ -1,0 +1,134 @@
+/*
+ * Input Base
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+.input-base {
+  margin: var(--space-size-15) 0 0 0;
+  padding: var(--space-size-5);
+  color: var(--ion-default-text-color);
+
+  @include font($font-family: $hiragino-font, $size: var(--font-size-medium));
+  @include border($color: var(--ion-form-border-color));
+  @include border-radius($radius: var(--space-size-5));
+
+  --background: var(--ion-table-form-bg-color);
+  background: var(--ion-table-form-bg-color);
+  position: relative;
+
+  /* 未入力 state */
+  &.item-has-placeholder {
+    ion-select {
+      --padding-start: calc(var(--space-size-20) / 2);
+
+      align-items: center;
+    }
+    select {
+      --padding-start: calc(var(--space-size-20) / 2);
+
+      align-items: center;
+    }
+  }
+
+  /* Set the icon color and opacity */
+  .down-icon,
+  ion-select::part(icon) {
+    width: 17px;
+    height: 10px;
+    color: transparent;
+    background-color: var(--ion-color-custom-dark-gold);
+    opacity: 1;
+    mask-repeat: no-repeat;
+
+    @include position-absolute(
+      var(--space-size-20),
+      var(--space-size-10),
+      auto,
+      auto
+    );
+    @include css3-prefix(
+      mask-image,
+      url("assets/custom-ion-icons/ios-select-icon.svg")
+    );
+
+    .landing-theme & {
+      background-color: var(--ion-color-custom-white);
+    }
+  }
+  .down-icon {
+    z-index: -1;
+  }
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+  }
+
+  /* 入力済み state */
+  &.has-value,
+  &.item-has-value {
+    --background: var(--ion-default-bg-color);
+    background: var(--ion-default-bg-color);
+
+    ion-select {
+      --placeholder-color: var(--ion-color-step-400);
+    }
+    select {
+      --placeholder-color: var(--ion-color-step-400);
+    }
+  }
+
+  /* 非活性 state */
+  &[disabled] {
+    --background: var(--ion-color-step-100);
+    background: var(--ion-color-step-100);
+
+    ion-select {
+      --placeholder-color: var(--ion-default-text-color);
+      --placeholder-opacity: 0.6;
+    }
+    select {
+      --placeholder-color: var(--ion-default-text-color);
+      --placeholder-opacity: 0.6;
+    }
+  }
+
+  /* 任意項目 */
+  &[optional],
+  [optional] & {
+    --background: var(--ion-default-bg-color);
+    background: var(--ion-default-bg-color);
+  }
+
+  /* エラー state */
+  &[invalid] {
+    --background: var(--ion-form-error-bg-color);
+    background: var(--ion-form-error-bg-color);
+
+    ion-select {
+      --placeholder-color: var(--ion-default-text-color);
+      --placeholder-opacity: 1;
+    }
+    select {
+      --placeholder-color: var(--ion-default-text-color);
+      --placeholder-opacity: 1;
+    }
+  }
+
+  .landing-theme & {
+    --background: none;
+    background: none;
+
+    ion-select {
+      --placeholder-color: var(--ion-color-custom-white);
+      --placeholder-opacity: 1;
+    }
+    select {
+      --placeholder-color: var(--ion-color-custom-white);
+      --placeholder-opacity: 1;
+    }
+  }
+}

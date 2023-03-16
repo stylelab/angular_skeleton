@@ -1,0 +1,63 @@
+/*
+ * Select By Letter Box
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+.select-by-letter-box {
+  &:first-child {
+    margin-top: var(--space-size-10);
+  }
+  .select-by-letter-wrap {
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: var(--space-size-30) 0;
+
+    @at-root {
+      @include auto-margin-top-calculate(#{&});
+    }
+
+    ion-button {
+      --border-width: 1px;
+      --padding-top: calc(var(--space-size-20) - 1px);
+      --padding-end: var(--space-size-20);
+      --padding-bottom: calc(var(--space-size-20) - 1px);
+      --padding-start: var(--space-size-20);
+      --border-radius: var(--space-size-5);
+
+      display: block;
+      width: calc(20% - var(--space-size-10));
+      height: auto;
+      margin: 0 0 var(--space-size-20);
+
+      &:nth-last-child(1),
+      &:nth-last-child(2),
+      &:nth-last-child(3),
+      &:nth-last-child(4),
+      &:nth-last-child(5) {
+        margin: 0;
+      }
+
+      ion-text {
+        color: var(--ion-default-text-color);
+
+        @include font(
+          $font-family: $hiragino-font,
+          $size: var(--font-size-medium)
+        );
+      }
+
+      &.ion-activated {
+        ion-text {
+          color: var(--ion-color-custom-white);
+        }
+      }
+
+      &.hide {
+        visibility: hidden;
+      }
+    }
+  }
+}

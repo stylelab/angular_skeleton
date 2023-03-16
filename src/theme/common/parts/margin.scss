@@ -1,0 +1,202 @@
+/*
+ * Margin
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+/*
+  使い方要注意!!!
+  他に方法がなければこれを使ってください。あまり使って欲しくないdirectiveです。
+*/
+
+/* content-box margin reset */
+[marginXReset] {
+  margin-right: var(--space-size-reset) !important;
+  margin-left: var(--space-size-reset) !important;
+}
+
+[marginYReset] {
+  margin-top: var(--space-size-reset) !important;
+  margin-bottom: var(--space-size-reset) !important;
+}
+
+[marginTopReset] {
+  margin-top: var(--space-size-reset) !important;
+}
+
+[marginBottomReset] {
+  margin-bottom: var(--space-size-reset) !important;
+}
+
+/* margin top 60px */
+[topSpace60] {
+  margin-top: var(--space-size-60) !important;
+}
+
+/* margin top 55px */
+[topSpace55] {
+  margin-top: var(--space-size-55) !important;
+}
+
+/* margin top 50px */
+[topSpace50] {
+  margin-top: var(--space-size-50) !important;
+}
+
+/* margin top 45px */
+[topSpace45] {
+  margin-top: var(--space-size-45) !important;
+}
+
+/* margin top 40px */
+[topSpace40] {
+  margin-top: var(--space-size-40) !important;
+}
+
+/* margin top 35px */
+[topSpace35] {
+  margin-top: var(--space-size-35) !important;
+}
+
+/* margin top 30px */
+[topSpace30] {
+  margin-top: var(--space-size-30) !important;
+}
+
+/* margin top 25px */
+[topSpace25] {
+  margin-top: var(--space-size-25) !important;
+}
+
+/* margin top 20px */
+[topSpace20] {
+  margin-top: var(--space-size-20) !important;
+}
+
+/* margin top 15px */
+[topSpace15] {
+  margin-top: var(--space-size-15) !important;
+}
+
+/* margin top 10px */
+[topSpace10] {
+  margin-top: var(--space-size-10) !important;
+}
+
+/* margin top 5px */
+[topSpace5] {
+  margin-top: var(--space-size-5) !important;
+}
+
+/* margin bottom 5px */
+[btmSpace5] {
+  margin-bottom: var(--space-size-5) !important;
+}
+
+/* margin bottom 10px */
+[btmSpace10] {
+  margin-bottom: var(--space-size-10) !important;
+}
+
+/* margin bottom 15px */
+[btmSpace15] {
+  margin-bottom: var(--space-size-15) !important;
+}
+
+/* margin bottom 20px */
+[btmSpace20] {
+  margin-bottom: var(--space-size-20) !important;
+}
+
+/* margin bottom 25px */
+[btmSpace25] {
+  margin-bottom: var(--space-size-25) !important;
+}
+
+/* margin bottom 30px */
+[btmSpace30] {
+  margin-bottom: var(--space-size-30) !important;
+}
+
+/* margin bottom 35px */
+[btmSpace35] {
+  margin-bottom: var(--space-size-35) !important;
+}
+
+/* margin bottom 40px */
+[btmSpace40] {
+  margin-bottom: var(--space-size-40) !important;
+}
+
+/* margin bottom 45px */
+[btmSpace45] {
+  margin-bottom: var(--space-size-45) !important;
+}
+
+/* margin bottom 190px */
+[btmSpace190px] {
+  margin-bottom: calc(var(--space-size-10) * 19) !important;
+}
+
+/* margin bottom 210px */
+[btmSpace210px] {
+  margin-bottom: calc(var(--space-size-10) * 21) !important;
+}
+
+/* margin left 5px */
+[leftSpace5] {
+  margin-left: var(--space-size-5) !important;
+}
+
+/* margin left 10px */
+[leftSpace10] {
+  margin-left: var(--space-size-10) !important;
+}
+
+/* margin left 15px */
+[leftSpace15] {
+  margin-left: var(--space-size-15) !important;
+}
+
+/* margin left 20px */
+[leftSpace20] {
+  margin-left: var(--space-size-20) !important;
+}
+
+/* margin right 5px */
+[rightSpace5] {
+  margin-right: var(--space-size-5) !important;
+}
+/* margin right 10px */
+[rightSpace10] {
+  margin-right: var(--space-size-10) !important;
+}
+/* margin right 15px */
+[rightSpace15] {
+  margin-right: var(--space-size-15) !important;
+}
+/* margin right 20px */
+[rightSpace20] {
+  margin-right: var(--space-size-20) !important;
+}
+
+// ***** 2021/08/31 UIブラッシュアップ #79923 INTEC 廣瀬善之 新規 START ****
+/* margin top 0px */
+[topSpace0] {
+  margin-top: var(--space-size-0) !important;
+}
+/* margin bottom -40px */
+[btmSpace-40] {
+  margin-bottom: var(--space-size--40) !important;
+}
+// ***** 2021/08/31 UIブラッシュアップ #79923 INTEC 廣瀬善之 新規 END ****
+
+/* content-box margin reset */
+/* padding 0 */
+[paddingReset] {
+  padding: var(--space-size-0) !important;
+}
+/* margin 0 */
+[marginRest] {
+  margin: var(--space-size-0) !important;
+}

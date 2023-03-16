@@ -1,0 +1,160 @@
+.title-div-img {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-top: 10px;
+
+  .title-div-font {
+    font-size: 16px;
+    color: rgba(0, 58, 119, 1);
+  }
+
+  .title-image {
+    app-static-contents {
+      margin: 0;
+      img {
+        width: 276px;
+      }
+    }
+  }
+}
+
+.title-div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-top: 10px;
+
+  p {
+    font-size: 16px;
+    color: rgba(0, 58, 119, 1);
+  }
+
+  .title-image {
+    app-static-contents {
+      margin: 0;
+      img {
+        width: 276px;
+      }
+    }
+  }
+}
+
+.step-div {
+  margin-bottom: 25px;
+
+  p {
+    line-height: 28px;
+    margin-top: 10px;
+  }
+
+  .step-kome-div {
+    display: flex;
+    font-size: 13px;
+    line-height: 25px;
+  }
+
+  .kome-left {
+    margin-left: 8px;
+  }
+}
+
+.gift-p {
+  font-weight: bold;
+}
+
+.gift-div {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+
+  app-static-contents {
+    img {
+      width: 328px;
+    }
+  }
+
+  p {
+    margin-top: 7px;
+  }
+}
+
+.ion-list-style {
+  box-shadow: 0px 0px 0px 1px #dcd2be;
+  border-radius: 4px;
+
+  ion-item-group {
+    ion-item-divider {
+      border-top: 0px !important;
+
+      ion-text {
+        margin-left: 8px !important;
+        margin-right: 7px !important;
+        line-height: 28px;
+      }
+    }
+
+    &[closed] {
+      ion-item-divider {
+        border-bottom: 0px !important;
+      }
+    }
+  }
+
+  .dl-style {
+    margin-left: 20px;
+    margin-right: 20px;
+    border-bottom: 0px !important;
+
+    .img-p-flex {
+      display: flex;
+      align-items: start;
+      margin-top: 9px;
+
+      img {
+        margin-top: 5px;
+        margin-right: 8px;
+      }
+    }
+
+    .image-top-bottom {
+      margin-top: 8px;
+      margin-bottom: 5px;
+    }
+
+    .image-top {
+      margin-top: 10px;
+    }
+
+    .img-p-flex-top {
+      margin-top: 20px;
+    }
+
+    .information-div {
+      border: 2px solid rgba(0, 58, 119, 1);
+      border-radius: 4px;
+
+      .information-first-p {
+        font-size: 16px;
+        color: rgba(0, 58, 119, 1);
+        font-weight: bold;
+        margin-left: 10px;
+        margin-top: 7px;
+        margin-bottom: 10px;
+      }
+
+      .information-second-p {
+        margin-left: 12px;
+        font-weight: normal;
+        font-size: 16px;
+        color: rgba(0, 58, 119, 1);
+        line-height: 28px;
+        margin-bottom: 7px;
+      }
+    }
+  }
+}
+
+.remaining-introduction-times-margin {
+  margin-top: 30px !important;
+}

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38">
+  <g id="_00_icon_link_お客さま情報_" data-name="00_icon_link_お客さま情報 " transform="translate(0)">
+    <path id="パス_241" data-name="パス 241" d="M183.725,252.866h38v38h-38Z" transform="translate(-183.725 -252.866)" fill="none"/>
+    <g id="グループ_673" data-name="グループ 673" transform="translate(-249.224 -252.866)">
+      <path id="パス_241-2" data-name="パス 241" d="M287.224,252.866v38h-38v-38" fill="none"/>
+      <path id="パス_242" data-name="パス 242" d="M283.95,282.486l2.387-15.7a2.558,2.558,0,0,0-2.478-2.84" fill="none" stroke="#003a77" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="パス_957" data-name="パス 957" d="M280.785,261.59H266.4v-.033c0-1.749-.938-3.167-2.094-3.167H252.793c-1.156,0-2.094,1.417-2.094,3.165v20.619c0,1.749.936,3.167,2.093,3.167h27.991a3.167,3.167,0,0,0,3.167-3.167V264.757A3.167,3.167,0,0,0,280.785,261.59Z" fill="none" stroke="#003a77" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <g id="グループ_671" data-name="グループ 671">
+        <line id="線_29" data-name="線 29" x2="7.31" transform="translate(269.938 274.663)" fill="none" stroke="#003a77" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        <line id="線_30" data-name="線 30" x2="9.679" transform="translate(269.938 270.869)" fill="none" stroke="#003a77" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      </g>
+      <g id="グループ_672" data-name="グループ 672" transform="translate(1)">
+        <path id="パス_16" data-name="パス 16" d="M264.184,279.005v-2.023a1.623,1.623,0,0,0-.777-1.4,9.376,9.376,0,0,0-9.168,0,1.623,1.623,0,0,0-.777,1.4v2.023" fill="none" stroke="#003a77" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        <circle id="楕円形_21" data-name="楕円形 21" cx="2.624" cy="2.624" r="2.624" transform="translate(256.199 266.665)" stroke-width="1.5" stroke="#003a77" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

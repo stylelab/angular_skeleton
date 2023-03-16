@@ -1,0 +1,194 @@
+/*
+ * Modal Box
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+.modal-wrapper {
+  --height: 100%;
+
+  // ***** 2021/7/26 UIブラッシュアップ #66798 INTEC 木村 更新 START *****
+  .modal-box {
+    justify-content: flex-start;
+    padding-top: var(--space-size-30);
+    padding-bottom: var(--space-size-30);
+    ion-content {
+      flex: 1 1 auto;
+      height: fit-content;
+      min-height: 100%;
+      background: var(--background);
+      contain: initial;
+      -webkit-overflow-scrolling: touch;
+
+      &::part(scroll) {
+        position: relative;
+        height: auto;
+        overflow: hidden;
+        background: var(--background);
+        -webkit-overflow-scrolling: touch;
+      }
+      // ***** 2021/7/26 UIブラッシュアップ #66798 INTEC 木村 更新 END *****
+    }
+    /* modal top close button */
+
+    .modal-top-close-button {
+      padding: 1px 6px;
+      color: var(--ion-color-custom-white);
+      // ***** 2021/7/26 UIブラッシュアップ #66798 INTEC 木村 更新 START *****
+      font-size: calc(var(--space-size-20) + var(--space-size-5));
+      // ***** 2021/7/26 UIブラッシュアップ #66798 INTEC 木村 更新 END *****
+      background: none;
+
+      &:hover {
+        color: var(--ion-color-step-200);
+        transition: color 0.5s ease-in;
+      }
+
+      &:focus,
+      &:active {
+        outline: none;
+      }
+
+      // ***** 2021/7/26 UIブラッシュアップ #66798 INTEC 木村 更新 START *****
+      @include position-absolute(
+        0,
+        calc(var(--space-size-10) * -1),
+        auto,
+        auto
+      );
+      // ***** 2021/7/26 UIブラッシュアップ #66798 INTEC 木村 更新 END *****
+    }
+
+    // ***** 2021/7/26 UIブラッシュアップ #66798 INTEC 木村 更新 START *****
+    /* modal scroll box */
+    .modal-scroll-box {
+      height: 100%;
+      overflow-y: scroll;
+    }
+    // ***** 2021/7/26 UIブラッシュアップ #66798 INTEC 木村 更新 END *****
+
+    /* modal header */
+    .modal-header-box {
+      position: relative;
+      padding-top: 0;
+      background: var(--ion-default-bg-color);
+
+      ion-icon {
+        font-size: var(--space-size-30);
+
+        @include position-absolute(
+          var(--space-size-30),
+          auto,
+          auto,
+          var(--space-size-10)
+        );
+      }
+      // ***** 2021/7/27 UIブラッシュアップ #66798  INTEC 木村 更新 START *****
+      h1 {
+        //margin: var(--space-size-30) var(--space-size-20) 0;
+        padding: var(--space-size-20) var(--space-size-10);
+        color: var(--ion-color-custom-black);
+        line-height: 1.5;
+        text-align: center;
+        // ***** 2021/7/27 UIブラッシュアップ #66798  INTEC 木村 更新 END *****
+        @include font(
+          $font-family: $hiragino-font,
+          $size: var(--font-size-20),
+          $weight: bold
+        );
+
+        @include border(
+          $corner: bottom,
+          $width: 2px,
+          $color: var(--ion-default-border-color)
+        );
+      }
+
+      &.landing-theme {
+        h1 {
+          @include border(
+            $corner: bottom,
+            $width: 2px,
+            $color: var(--ion-color-custom-dark-green)
+          );
+        }
+      }
+    }
+
+    /* modal footer */
+    .modal-footer-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-size-10) 0;
+      color: var(--ion-color-custom-white);
+
+      .modal-footer-button {
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        cursor: pointer;
+      }
+
+      ion-button {
+        --padding-start: var(--space-size-10);
+        --padding-end: 0;
+        --background: none;
+        --background-activated: none;
+        --background-focused: none;
+        --background-hover: none;
+        --box-shadow: none;
+
+        color: var(--ion-color-custom-white);
+        font-size: var(--font-size-large);
+      }
+
+      span {
+        cursor: pointer;
+      }
+    }
+
+    &:hover {
+      .ion-footer {
+        span,
+        ion-button {
+          color: var(--ion-color-step-200);
+          transition: color 0.5s ease-in;
+        }
+      }
+    }
+  }
+}
+// ***** 2021/7/27 UIブラッシュアップ #66796  INTEC 木村 削除 START *****
+//ion-modal + ion-modal {
+//  .modal-wrapper {
+//    .modal-box {
+//      ion-content {
+//        flex: 1 1 0%;
+//        contain: size style;
+//        height: 100%;
+//        overflow-y: auto;
+//        --overflow: auto;
+//      }
+//    }
+//  }
+// }
+// ***** 2021/7/27 UIブラッシュアップ #66796  INTEC 木村 削除 END *****
+ion-modal:first-of-type:not(:only-of-type) {
+  .modal-wrapper {
+    .modal-box {
+      ion-content {
+        flex: 1 1 0%;
+        contain: size style;
+        height: 100%;
+        overflow-y: auto;
+        --overflow: auto;
+      }
+    }
+  }
+}
+// ***** 2021/09/07 UIブラッシュアップ #83352 INTEC 木村 新規 START *****
+.isVisible {
+  display: none !important;
+}
+// ***** 2021/09/07 UIブラッシュアップ #83352 INTEC 木村 新規 END *****

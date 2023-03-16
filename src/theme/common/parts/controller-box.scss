@@ -1,0 +1,74 @@
+/*
+ * Controller Box
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+/* 設定 */
+$controllerBox: 'controller-box';
+
+/* controller-box */
+.#{$controllerBox} {
+  margin: var(--space-size-30) 0;
+
+  ion-col {
+    border: 1px solid var(--ion-color-custom-white);
+    --ion-grid-column-padding: 0;
+
+    &.#{$controllerBox}-rewind,
+    &.#{$controllerBox}-forward {
+      max-width: calc(var(--space-size-45) * 2) !important;
+
+      ion-button {
+        ion-icon {
+          width: var(--space-size-30);
+          fill: var(--ion-color-custom-dark-gold);
+          stroke: none;
+        }
+
+        ion-text {
+          margin: 0 var(--space-size-10) 0;
+
+          @include font($size: var(--font-size-small), $weight: normal);
+        }
+
+        &.ion-activated {
+          ion-icon {
+            fill: var(--ion-color-custom-white);
+          }
+
+          ion-text {
+            color: var(--ion-color-custom-white);
+          }
+        }
+      }
+    }
+
+    &.#{$controllerBox}-previous,
+    &.#{$controllerBox}-next {
+      max-width: var(--space-size-40) !important;
+
+      ion-button {
+        ion-icon {
+          fill: var(--ion-color-custom-dark-gold);
+          stroke: var(--ion-color-custom-dark-gold);
+        }
+
+        &.ion-activated {
+          ion-icon {
+            fill: var(--ion-color-custom-white);
+            stroke: var(--ion-color-custom-white);
+          }
+        }
+      }
+    }
+
+    p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: var(--space-size-5) 0 0 0;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+/*
+ * Content Box
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+.content-box {
+  padding: 0 var(--space-size-15) var(--space-size-50) var(--space-size-15);
+  padding-bottom: var(--space-size-5);
+
+  @include pc {
+    padding: 0 var(--space-size-50) var(--space-size-50) var(--space-size-50);
+  }
+
+  &.landing-theme {
+    padding: 0 var(--space-size-30) var(--space-size-50) var(--space-size-30);
+  }
+
+  &[noPadding] {
+    padding: 0;
+  }
+
+  .modal-box & {
+    height: 100%;
+    padding: var(--space-size-15) var(--space-size-20) var(--space-size-25);
+
+    & > [txt-01-04]:first-child,
+    & > .text-large:first-child {
+      padding-top: var(--space-size-10);
+    }
+  }
+
+  &.stepper {
+    padding: 0 var(--space-size-15);
+  }
+}

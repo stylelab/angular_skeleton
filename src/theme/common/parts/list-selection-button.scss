@@ -1,0 +1,110 @@
+/*
+ * List Selection Button
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+/* list-selection-button-normal-wrap */
+.list-selection-button-normal-wrap {
+  margin: var(--space-size-30) 0 0 0;
+  padding: 0;
+
+  &:first-child {
+    margin: var(--space-size-15) 0 0 0;
+  }
+
+  ion-list-header {
+    min-height: 1rem;
+    padding-bottom: var(--space-size-10);
+    padding-left: 0;
+
+    ion-label {
+      margin: 0;
+
+      @include font(
+        $font-family: $hiragino-font,
+        $size: var(--font-size-medium),
+        $weight: bold
+      );
+    }
+  }
+
+  ion-item {
+    --inner-padding-top: calc(var(--space-size-15) / 2);
+    --inner-padding-bottom: calc(var(--space-size-15) / 2);
+
+    ion-label {
+      @include no-ellipsis();
+    }
+
+    ion-icon {
+      margin-top: var(--space-size-5);
+      margin-bottom: var(--space-size-5);
+    }
+  }
+
+  &[UNI-05] {
+    ion-list-header {
+      & + .text-normal {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+/* list-selection-button-normal */
+.list-selection-button-normal {
+  @extend .list-selection-button-base;
+}
+
+/* list-selection-button-multiline */
+.list-selection-button-multiline {
+  @extend .list-selection-button-base;
+
+  margin: 0;
+
+  &:first-of-type {
+    @include border-radius($corner: border-top-right);
+    @include border-radius($corner: border-top-left);
+  }
+
+  // list header
+  ion-list-header {
+    padding-left: 0;
+    @include font(
+      $font-family: $hiragino-font,
+      $size: var(--font-size-medium),
+      $weight: bold
+    );
+
+    @include font(
+      $font-family: $hiragino-font,
+      $size: var(--font-size-medium),
+      $weight: bold
+    );
+
+    ion-label {
+      @include font(
+        $font-family: $hiragino-font,
+        $size: var(--font-size-medium)
+      );
+    }
+  }
+
+  & + & {
+    border-top: 0 !important;
+  }
+
+  &:last-of-type {
+    @include border-radius($corner: border-bottom-left);
+    @include border-radius($corner: border-bottom-right);
+  }
+
+  ion-list.list-brown & {
+    @include border($color: var(--ion-form-border-color));
+
+    &:hover {
+      --background: var(--ion-table-form-bg-color);
+    }
+  }
+}

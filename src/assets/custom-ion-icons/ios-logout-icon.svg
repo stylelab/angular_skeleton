@@ -1,0 +1,9 @@
+<svg id="_00_icon_logout" data-name="00_icon_logout" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <rect id="長方形_82" data-name="長方形 82" width="24" height="24" fill="none"/>
+  <g id="icon" transform="translate(-313.375 -173.932)">
+    <path id="パス_930" data-name="パス 930" d="M318.965,185.932" fill="none" stroke="#c6a465" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="パス_931" data-name="パス 931" d="M329.779,181.132l4.8,4.8-4.8,4.8" fill="none" stroke="#c6a465" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <line id="線_32" data-name="線 32" x1="13.287" transform="translate(320.892 185.932)" fill="none" stroke="#c6a465" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="パス_932" data-name="パス 932" d="M324.848,191.932a2.006,2.006,0,0,1-2,2h-4.8a2.006,2.006,0,0,1-2-2v-12a2.006,2.006,0,0,1,2-2h4.8a2.006,2.006,0,0,1,2,2" fill="none" stroke="#c6a465" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+  </g>
+</svg>

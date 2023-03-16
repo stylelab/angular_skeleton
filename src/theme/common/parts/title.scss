@@ -1,0 +1,223 @@
+/*
+ * Title
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+.title-landing-base {
+  color: var(--ion-table-header-text-color);
+  line-height: 1.5;
+  text-align: center;
+}
+
+.title-h1 {
+  margin: var(--space-size-40) 0 var(--space-size-15);
+  color: var(--ion-h1-text-color);
+  line-height: 1.5;
+
+  @include font(
+    $font-family: $hiragino-font,
+    $size: var(--font-size-24),
+    $weight: bold
+  );
+  @include pc {
+    //font-size: var(--font-size-28);
+    font-size: 28px;
+  }
+
+  &.landing-theme,
+  .landing-theme & {
+    @extend .title-landing-base;
+
+    &[topSpace40] {
+      padding: 0 var(--space-size-50);
+    }
+
+    margin: var(--space-size-25) var(--space-size-reset) var(--space-size-15);
+
+    @include font(
+      $font-family: $hiragino-mincho-font,
+      $size: var(--font-size-20),
+      $weight: normal
+    );
+
+    &[textBold] {
+      @include font(
+        $font-family: $hiragino-font,
+        $size: var(--font-size-24),
+        $weight: bold
+      );
+    }
+  }
+}
+
+.title-h2 {
+  margin: var(--space-size-40) 0 var(--space-size-15);
+  padding-bottom: var(--space-size-10);
+  line-height: 1.5;
+
+  @include font(
+    $font-family: $hiragino-font,
+    $size: var(--font-size-20),
+    $weight: bold
+  );
+  @include border(
+    $corner: bottom,
+    $width: 2px,
+    $color: var(--ion-default-border-color)
+  );
+
+  @at-root {
+    @include auto-margin-top-calculate(#{&});
+  }
+
+  &:first-child {
+    margin-top: var(--space-size-15);
+  }
+
+  &[noBorder] {
+    padding-bottom: 0;
+    border: none;
+  }
+
+  .landing-theme & {
+    @extend .title-landing-base;
+  }
+
+  &[textGreen] {
+    color: var(--ion-color-custom-dark-green);
+    text-align: center;
+  }
+}
+
+.title-h3 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: var(--space-size-40) 0 var(--space-size-15);
+  padding-left: var(--space-size-10);
+  line-height: 1.5;
+
+  @include font(
+    $font-family: $hiragino-font,
+    $size: var(--font-size-large),
+    $weight: bold
+  );
+  // add taku
+  // @include pc {
+  //   font-size: 24px;
+  // }
+  @include border(
+    $corner: left,
+    $width: 3px,
+    $color: var(--ion-default-border-color)
+  );
+
+  @at-root {
+    @include auto-margin-top-calculate(#{&});
+  }
+
+  .text-illustration-banner {
+    min-width: 46px;
+    margin-top: calc(var(--space-size-5) / 2);
+    font-weight: normal;
+    background: var(--ion-color-custom-red);
+  }
+
+  &[noBorder] {
+    padding-left: 0;
+    border: none;
+  }
+
+  .landing-theme & {
+    @extend .title-landing-base;
+
+    padding: 0 0 var(--space-size-10) 0;
+    border-bottom: 2px solid #000;
+    border-left: none;
+
+    @include border(
+      $corner: bottom,
+      $width: 2px,
+      $color: var(--ion-color-custom-dark-green)
+    );
+  }
+
+  .modal-box & {
+    &:first-child {
+      margin-top: var(--space-size-25);
+    }
+  }
+}
+
+.title-h4 {
+  margin: var(--space-size-30) 0 var(--space-size-15);
+  padding-bottom: var(--space-size-15);
+  line-height: 1.5;
+
+  @include font(
+    $font-family: $hiragino-font,
+    $size: var(--font-size-normal),
+    $weight: bold
+  );
+  @include border(
+    $corner: bottom,
+    $width: 1px,
+    $color: var(--ion-separator-border-color)
+  );
+
+  @at-root {
+    @include auto-margin-top-calculate(#{&});
+  }
+
+  &[noBorder] {
+    padding-left: 0;
+    border: none;
+  }
+
+  .landing-theme & {
+    @extend .title-landing-base;
+  }
+}
+
+.title-h5 {
+  margin: var(--space-size-30) 0 var(--space-size-15);
+
+  @include font(
+    $font-family: $hiragino-font,
+    $size: var(--font-size-normal),
+    $weight: bold
+  );
+
+  @at-root {
+    @include auto-margin-top-calculate(#{&});
+  }
+
+  .landing-theme & {
+    @extend .title-landing-base;
+  }
+}
+
+.title-h6 {
+  margin: var(--space-size-30) 0 var(--space-size-15);
+
+  @include font(
+    $font-family: $hiragino-font,
+    $size: var(--font-size-small),
+    $weight: bold
+  );
+
+  @at-root {
+    @include auto-margin-top-calculate(#{&});
+  }
+
+  .landing-theme & {
+    @extend .title-landing-base;
+
+    @include font(
+      $font-family: $hiragino-mincho-font,
+      $size: var(--font-size-12),
+      $weight: normal
+    );
+  }
+}

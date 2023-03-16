@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-calendar">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="calendar" clip-path="url(#clip-calendar)">
+    <g id="_00_icon_form_txtbox_calendar" data-name="00_icon_form_txtbox_calendar" transform="translate(0 1)">
+      <rect id="長方形_62" data-name="長方形 62" width="24" height="20" rx="2" transform="translate(0 2)" fill="#fff"/>
+      <g id="グループ_269" data-name="グループ 269" transform="translate(-1625 -1490.5)">
+        <path id="パス_99" data-name="パス 99" d="M1631,1494.5a.5.5,0,0,1-.5-.5v-3a.5.5,0,0,1,1,0v3A.5.5,0,0,1,1631,1494.5Z" fill="#c6a465"/>
+        <path id="パス_100" data-name="パス 100" d="M1643,1494.5a.5.5,0,0,1-.5-.5v-3a.5.5,0,0,1,1,0v3A.5.5,0,0,1,1643,1494.5Z" fill="#c6a465"/>
+        <path id="パス_101" data-name="パス 101" d="M1637,1494.5a.5.5,0,0,1-.5-.5v-3a.5.5,0,0,1,1,0v3A.5.5,0,0,1,1637,1494.5Z" fill="#c6a465"/>
+        <path id="長方形_63" data-name="長方形 63" d="M1647,1493a1.013,1.013,0,0,1,1,1.024v16.952a1.013,1.013,0,0,1-1,1.024h-20a1.013,1.013,0,0,1-1-1.024v-16.952a1.013,1.013,0,0,1,1-1.024h20m0-1h-20a2.012,2.012,0,0,0-2,2.024v16.952a2.012,2.012,0,0,0,2,2.024h20a2.012,2.012,0,0,0,2-2.024v-16.952a2.012,2.012,0,0,0-2-2.024Z" fill="#c6a465"/>
+        <g id="グループ_266" data-name="グループ 266">
+          <circle id="楕円形_52" data-name="楕円形 52" cx="1" cy="1" r="1" transform="translate(1628.5 1497)" fill="#c6a465"/>
+          <circle id="楕円形_53" data-name="楕円形 53" cx="1" cy="1" r="1" transform="translate(1633.5 1497)" fill="#c6a465"/>
+          <circle id="楕円形_54" data-name="楕円形 54" cx="1" cy="1" r="1" transform="translate(1638.5 1497)" fill="#c6a465"/>
+          <circle id="楕円形_55" data-name="楕円形 55" cx="1" cy="1" r="1" transform="translate(1643.5 1497)" fill="#c6a465"/>
+        </g>
+        <g id="グループ_267" data-name="グループ 267">
+          <circle id="楕円形_56" data-name="楕円形 56" cx="1" cy="1" r="1" transform="translate(1628.5 1502)" fill="#c6a465"/>
+          <circle id="楕円形_57" data-name="楕円形 57" cx="1" cy="1" r="1" transform="translate(1633.5 1502)" fill="#c6a465"/>
+          <circle id="楕円形_58" data-name="楕円形 58" cx="1" cy="1" r="1" transform="translate(1638.5 1502)" fill="#c6a465"/>
+          <circle id="楕円形_59" data-name="楕円形 59" cx="1" cy="1" r="1" transform="translate(1643.5 1502)" fill="#c6a465"/>
+        </g>
+        <g id="グループ_268" data-name="グループ 268">
+          <circle id="楕円形_60" data-name="楕円形 60" cx="1" cy="1" r="1" transform="translate(1628.5 1507)" fill="#c6a465"/>
+          <circle id="楕円形_61" data-name="楕円形 61" cx="1" cy="1" r="1" transform="translate(1633.5 1507)" fill="#c6a465"/>
+          <circle id="楕円形_62" data-name="楕円形 62" cx="1" cy="1" r="1" transform="translate(1638.5 1507)" fill="#c6a465"/>
+          <circle id="楕円形_63" data-name="楕円形 63" cx="1" cy="1" r="1" transform="translate(1643.5 1507)" fill="#c6a465"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

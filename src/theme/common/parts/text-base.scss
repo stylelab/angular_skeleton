@@ -1,0 +1,35 @@
+/*
+ * Text Base
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+.text-base {
+  margin: var(--space-size-30) 0 var(--space-size-15) 0;
+  color: var(--ion-default-text-color);
+
+  @include font($font-family: $hiragino-font, $size: var(--font-size-medium));
+
+  @at-root {
+    @include auto-margin-top-calculate(#{&});
+  }
+
+  ion-icon + & {
+    margin-top: 0;
+  }
+
+  &[textMiddle],
+  [textMiddle] {
+    text-align: center;
+  }
+
+  &[textBold],
+  [textBold] {
+    @include font($font-family: $hiragino-font, $weight: bold);
+  }
+
+  &[textEllipsis],
+  [textEllipsis] {
+    @include ellipsis();
+  }
+}

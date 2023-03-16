@@ -1,0 +1,110 @@
+/*
+ * Pay Box
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+.pay-box {
+  margin: var(--space-size-20) 0;
+  padding-bottom: var(--space-size-20);
+
+  span {
+    @include font($font-family: $hiragino-font);
+  }
+
+  @at-root {
+    @include auto-margin-top-calculate(#{&});
+  }
+
+  @extend .border-dotted-base;
+
+  &[noBorder] {
+    background-image: none;
+    border: none;
+
+    & + .title-h2 {
+      margin-top: var(--space-size-20) 0;
+    }
+  }
+
+  .pay-box-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0;
+
+    .pay-box-line-left {
+      word-break: break-all;
+      overflow-wrap: anywhere;
+      vertical-align: middle;
+
+      a {
+        margin-left: var(--space-size-10);
+        vertical-align: middle;
+
+        ion-icon {
+          width: calc(var(--space-size-20) + 4px);
+          height: calc(var(--space-size-20) + 4px);
+          vertical-align: middle;
+          margin-top: -5px;
+          fill: var(--ion-form-icon-color);
+
+          .landing-theme & {
+            fill: var(--ion-color-custom-dark-green);
+          }
+        }
+      }
+    }
+
+    .pay-box-line-right {
+      flex-shrink: 0;
+    }
+
+    &[textBold] > span:last-child:not(.pay-box-line-right) {
+      flex-shrink: 0;
+      margin-left: var(--space-size-10);
+    }
+
+    .font-small {
+      @include font($font-family: $hiragino-font, $weight: normal);
+    }
+
+    &.installments-times {
+      align-items: flex-start;
+
+      span {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+      }
+    }
+  }
+
+  p:not(.text-red) {
+    text-align: right;
+  }
+
+  .text-normal {
+    margin: 0;
+  }
+
+  & + .list-sharp {
+    margin-top: var(--space-size-20);
+  }
+}
+
+.cnf-normal + .pay-box {
+  .pay-box-line {
+    .text-normal {
+      text-align: left;
+    }
+
+    span {
+      flex-shrink: 0;
+      max-width: 60%;
+      text-align: right;
+      word-break: break-all;
+      overflow-wrap: anywhere;
+    }
+  }
+}

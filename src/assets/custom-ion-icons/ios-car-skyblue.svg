@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22.395" height="17.195" viewBox="0 0 22.395 17.195">
+  <g id="_00_icon_contract_car06" data-name="00_icon_contract_car06" transform="translate(0 0.5)">
+    <path id="パス_1" data-name="パス 1" d="M175.351,2074.071c-.448-1.171-1.739-.737-2.186-.666a48.516,48.516,0,0,1-17.938,0c-.448-.071-1.738-.507-2.186.666-.238.611.561,1.563,1.682,1.731-.056,0-.673,1.681-.673,1.681a4.921,4.921,0,0,0-.224,1.518v2.741s-.273,1.177,1.962,1.346,4.6.449,8.409.449,6.166-.281,8.408-.449,1.963-1.346,1.963-1.346V2079a4.962,4.962,0,0,0-.224-1.518s-.616-1.681-.673-1.681C174.794,2075.634,175.594,2074.709,175.351,2074.071Z" transform="translate(-153 -2068.804)" fill="#19aed5"/>
+    <path id="パス_2" data-name="パス 2" d="M157.42,2080.815v1.295a.964.964,0,0,1-.964.964h-1.882a.965.965,0,0,1-.966-.964v-2.218" transform="translate(-152.778 -2066.38)" fill="#19aed5"/>
+    <circle id="楕円形_1" data-name="楕円形 1" cx="1.233" cy="1.233" r="1.233" transform="translate(2.793 8.964)" fill="#fff"/>
+    <path id="パス_3" data-name="パス 3" d="M166.025,2080.815v1.295a.964.964,0,0,0,.964.964h1.882a.966.966,0,0,0,.966-.964v-2.218" transform="translate(-148.234 -2066.38)" fill="#19aed5"/>
+    <circle id="楕円形_2" data-name="楕円形 2" cx="1.233" cy="1.233" r="1.233" transform="translate(17.174 8.964)" fill="#fff"/>
+    <path id="パス_4" data-name="パス 4" d="M171.64,2074.6l-1.727-3.824a23.806,23.806,0,0,0-6.458-.772,23.062,23.062,0,0,0-6.662.836l-1.746,3.767" transform="translate(-152.251 -2070)" fill="none" stroke="#19aed5" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="パス_5" data-name="パス 5" d="M158.164,2076.938h8.3" transform="translate(-151.11 -2067.461)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.8"/>
+    <line id="線_1" data-name="線 1" x2="5.833" transform="translate(8.251 11.719)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.8"/>
+  </g>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-ios-copy-sharp-icon_4">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="ios-copy-sharp-icon_4" data-name="ios-copy-sharp-icon – 4" clip-path="url(#clip-ios-copy-sharp-icon_4)">
+    <g id="_00_icon_link_delate" data-name="00_icon_link_delate">
+      <rect id="長方形_82" data-name="長方形 82" width="24" height="24" fill="none" stroke="none"/>
+      <g id="_00_icon_link_newwindow" data-name="00_icon_link_newwindow" transform="translate(4.5 4.5)">
+        <g id="長方形_53" data-name="長方形 53" transform="translate(0 4)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1">
+          <rect width="12" height="12" rx="1" stroke="none"/>
+          <rect x="0.5" y="0.5" width="11" height="11" rx="0.5" fill="none"/>
+        </g>
+        <path id="長方形_337" data-name="長方形 337" d="M1,0H11a1,1,0,0,1,1,1V3a1,1,0,0,1-1,1H0A0,0,0,0,1,0,4V1A1,1,0,0,1,1,0Z" transform="translate(4)" fill="#fff" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+        <path id="長方形_338" data-name="長方形 338" d="M1,0H3A1,1,0,0,1,4,1V11a1,1,0,0,1-1,1H0a0,0,0,0,1,0,0V1A1,1,0,0,1,1,0Z" transform="translate(12)" fill="#fff" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      </g>
+    </g>
+  </g>
+</svg>

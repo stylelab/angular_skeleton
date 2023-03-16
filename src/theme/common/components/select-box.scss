@@ -1,0 +1,178 @@
+/*
+ * Select Box
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+/* select-box-split-wrap */
+.select-box-split-wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: var(--space-size-30) 0 var(--space-size-15) 0;
+  column-gap: var(--space-size-15);
+  row-gap: var(--space-size-15);
+
+  @at-root {
+    @include auto-margin-top-calculate(#{&});
+  }
+
+  .text-selection-input-normal {
+    width: 100%;
+    margin: 0;
+    border-collapse: separate;
+
+    ion-label {
+      width: 100%;
+    }
+  }
+}
+
+/* text-selection-input-multiline */
+.text-selection-input-multiline {
+  @include border($color: var(--ion-form-border-color));
+  @include border-radius();
+
+  margin: 0;
+
+  --padding-start: 0;
+
+  &:first-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  & + & {
+    border-top: 0;
+
+    &:not(:last-child) {
+      @include border-radius($radius: 0);
+    }
+  }
+
+  &:last-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  ion-select {
+    align-self: self-start;
+    min-width: 100%;
+  }
+  select {
+    align-self: self-start;
+    min-width: 100%;
+  }
+}
+
+/* select-calendar-wrap */
+.select-calendar-wrap {
+  margin: var(--space-size-15) 0 0;
+
+  @at-root {
+    @include auto-margin-top-calculate(#{&});
+  }
+
+  .text-info {
+    margin-bottom: var(--space-size-15);
+  }
+
+  .text-normal {
+    margin-top: var(--space-size-15);
+    margin-bottom: 0;
+  }
+
+  .select-box-split-wrap {
+    margin-top: var(--space-size-15);
+
+    & > ion-label {
+      width: 100%;
+      margin: 0 0 var(--space-size-10) 0;
+    }
+
+    .select-box-calendar-wrap {
+      .text-selection-input-normal {
+        width: 100%;
+      }
+
+      display: flex;
+      flex-basis: 28px;
+      flex-grow: 1;
+      align-items: center;
+
+      &:first-of-type {
+        flex-basis: 40px;
+        flex-grow: 2;
+      }
+
+      &.calendar-2column:first-of-type {
+        flex-basis: 40px;
+        flex-grow: 1;
+      }
+
+      span {
+        margin: var(--space-size-10);
+      }
+    }
+
+    ion-select {
+      min-width: 100%;
+    }
+    select {
+      min-width: 100%;
+    }
+  }
+
+  &[slc-cal-03],
+  &[slc-cal-06] {
+    .select-box-split-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      grid-template-columns: none;
+      align-items: center;
+      justify-content: space-between;
+      column-gap: 0;
+      row-gap: 0;
+
+      .select-box-calendar-wrap {
+        width: 100%;
+        padding-right: var(--space-size-15);
+
+        ion-label {
+          width: 100%;
+        }
+
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
+  &[slc-cal-06] {
+    & > .text-normal {
+      @include font($weight: bold);
+    }
+  }
+}
+
+/* select-box-parameters */
+div[class*=' select-box-cell'],
+div[class^='select-box-cell'] {
+  flex-grow: unset !important;
+}
+
+.select-box-cell-year {
+  min-width: calc(var(--space-size-70) * 2);
+}
+
+.select-box-cell-month {
+  min-width: calc(var(--space-size-50) * 2);
+}
+
+.select-box-cell-day {
+  min-width: calc(var(--space-size-50) * 2);
+}
+
+[SLC-CAL-01] {
+  margin-top: var(--space-size-30);
+}

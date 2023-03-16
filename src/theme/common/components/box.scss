@@ -1,0 +1,353 @@
+/*
+ * Box
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+.empty-white-box {
+  background: var(--ion-default-bg-color);
+
+  .empty-padding-box {
+    .unique-box-01 {
+      padding: var(--space-size-30) 0 var(--space-size-50);
+      background-position: bottom 0 right 50%;
+
+      dt {
+        margin-bottom: 0;
+      }
+
+      dd {
+        text-align: left;
+      }
+
+      &.first {
+        padding: var(--space-size-60) 0 var(--space-size-50);
+      }
+    }
+
+    .button-wrap {
+      .button-normal:nth-child(2) {
+        margin-bottom: var(--space-size-40);
+      }
+    }
+
+    h2:first-of-type {
+      margin-top: var(--space-size-75);
+    }
+  }
+}
+
+.empty-padding-box {
+  padding: 0 var(--space-size-15) var(--space-size-15);
+}
+
+.box {
+  margin: var(--space-size-15) 0 0 0;
+  padding: var(--space-size-20);
+
+  @include border(
+    $width: 1px,
+    $style: solid,
+    $color: var(--ion-form-border-color)
+  );
+
+  @include border-radius($radius: 4px);
+
+  ion-thumbnail {
+    display: block;
+    width: auto;
+    min-height: calc(var(--space-size-40) * 2);
+    background: var(--ion-carousel-icon-color);
+  }
+
+  dl {
+    margin: var(--space-size-20) 0 0 0;
+    dt {
+      margin-bottom: 0;
+    }
+
+    dd {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    dt + dd {
+      margin-top: var(--space-size-15);
+    }
+  }
+
+  ul,
+  ol {
+    margin-top: var(--space-size-5) !important;
+    margin-bottom: 0;
+    li {
+      margin-top: var(--space-size-5) !important;
+      margin-bottom: 0 !important;
+    }
+  }
+
+  p {
+    &:not(.text-red) {
+      margin: 0;
+    }
+    &:not(:first-child, .text-red, .text-blue) {
+      margin: var(--space-size-10) 0 0 0 !important;
+    }
+
+    &.text-large + .text-normal {
+      margin-top: var(--space-size-15);
+    }
+
+    &[textBold] + .text-normal {
+      margin-top: var(--space-size-15);
+    }
+
+    &.text-large + dd {
+      margin-top: var(--space-size-15);
+    }
+
+    &.text-normal + ul {
+      margin-top: var(--space-size-15) !important;
+    }
+  }
+
+  &.unique-g19-04 {
+    p {
+      &.text-normal + ul {
+        margin-top: 0 !important;
+      }
+    }
+  }
+
+  .text-info,
+  .checkbox-button-normal {
+    margin: var(--space-size-15) 0 0 0 !important;
+  }
+
+  .button-wrap {
+    padding: 0;
+
+    ion-button {
+      margin-bottom: 0;
+    }
+  }
+
+  //最後のelementの場合はmarginを使って強調する
+  .link-normal:last-child {
+    margin-top: var(--space-size-20);
+  }
+
+  .link-normal + .link-normal {
+    margin-top: -15px;
+  }
+
+  &.box-02 {
+    background: var(--ion-color-brown-tint);
+  }
+
+  &.blue-box,
+  &.blue-box-02 {
+    @include border($width: 1px, $style: solid, $color: var(--ion-color-blue));
+
+    dt {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      & > ion-icon {
+        flex-shrink: 0;
+        width: var(--space-size-30);
+        height: var(--space-size-30);
+        margin-right: var(--space-size-10);
+        fill: var(--ion-color-blue);
+      }
+    }
+
+    &[BOX-INF-01] {
+      dt > p {
+        padding-top: 2px;
+      }
+    }
+  }
+
+  &.blue-box-width-2 {
+    @include border($width: 2px, $style: solid, $color: var(--ion-color-blue));
+  }
+
+  &.blue-box-02 {
+    background: var(--ion-emphasis-bg-color);
+  }
+
+  //UNI-G10-04のdivにflexを無効にするために使用
+  &.blue-box-03 {
+    @include border($width: 2px, $style: solid, $color: var(--ion-color-blue));
+
+    .text-info {
+      margin: 0 !important;
+    }
+
+    .pay-box {
+      margin: var(--space-size-15) 0;
+
+      .text-normal {
+        span:first-child:not(.font-extra-large) {
+          @include font(
+            $font-family: $hiragino-font,
+            $weight: normal,
+            $size: var(--font-size-medium)
+          );
+        }
+      }
+    }
+  }
+
+  &.red-box,
+  &.red-box-02 {
+    padding: var(--space-size-30) var(--space-size-20);
+
+    @include border(
+      $width: 1px,
+      $style: solid,
+      $color: var(--ion-color-danger)
+    );
+
+    dt {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      & > ion-icon {
+        flex-shrink: 0;
+        width: var(--space-size-30);
+        height: var(--space-size-30);
+        margin-right: var(--space-size-10);
+        fill: var(--ion-color-danger);
+      }
+
+      & > p {
+        padding-top: 2px;
+      }
+    }
+
+    ion-button {
+      &.upload {
+        ion-icon {
+          width: var(--space-size-25);
+          height: var(--space-size-25);
+          stroke: var(--ion-color-custom-dark-gold);
+        }
+      }
+    }
+  }
+
+  &.red-box-02 {
+    background: var(--ion-form-error-bg-color);
+
+    @at-root {
+      @include auto-margin-top-calculate(#{&});
+    }
+  }
+
+  &.red-box {
+    @at-root {
+      @include auto-margin-top-calculate(#{&});
+    }
+  }
+
+  &.box-scroll-y {
+    position: relative;
+    height: 280px;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      border: solid 3px transparent;
+      box-shadow: inset 0 0 10px 10px var(--ion-color-step-scroll-track);
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      border: solid 3px transparent;
+      box-shadow: inset 0 0 10px 10px var(--ion-color-step-scroll-thumb);
+    }
+  }
+
+  &[UNI-UPL-01],
+  &[UNI-UPL-02] {
+    padding: var(--space-size-30) var(--space-size-20);
+
+    dl {
+      dt {
+        display: block;
+        margin-bottom: var(--space-size-25);
+        text-align: center;
+
+        & > ion-icon {
+          width: var(--space-size-40);
+          height: var(--space-size-40);
+          margin: 0 0 var(--space-size-10) 0;
+        }
+      }
+    }
+
+    ion-button {
+      margin-top: var(--space-size-25);
+      --border-width: 1px;
+      background: var(--ion-default-bg-color);
+
+      ion-text {
+        color: var(--ion-default-text-color);
+
+        @include font($font-family: $hiragino-font, $weight: normal);
+      }
+    }
+  }
+
+  &[BOX-INF-01] {
+    padding: var(--space-size-30) var(--space-size-20);
+  }
+}
+
+.box-cau {
+  margin-top: var(--space-size-5);
+
+  p {
+    margin-top: var(--space-size-5) !important;
+  }
+
+  .link-normal {
+    .text-small {
+      ion-icon {
+        padding-left: 5px;
+      }
+    }
+  }
+
+  @at-root {
+    @include auto-margin-top-calculate(#{&});
+  }
+}
+
+.box_lastYearPaymentInsuranceFee {
+  margin: var(--space-size-15) 0 -20px 0;
+  padding: var(--space-size-20);
+  background: var(--ion-emphasis-bg-color);
+  border-radius: 4px;
+}
+
+.box-flex {
+  @include pc {
+    &[PC-BOX-FLEX] {
+      display: flex;
+    }
+    &[PC-BOX-FLEX-01] {
+      flex-wrap: nowrap;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+/*
+ * Static Page
+ * ----------------------------------------------------------------------------
+ *
+ */
+.static-page {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 20006;
+  &-dialog {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .modal-top-close-button {
+    padding: 1px 6px;
+    color: var(--ion-color-custom-white);
+    font-size: calc(var(--space-size-20) + var(--space-size-5));
+    background: none;
+    position: absolute;
+    top: 0;
+    right: calc(var(--space-size-10) * -1);
+    bottom: auto;
+    left: auto;
+  }
+
+  &-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin-top: var(--space-size-30);
+    margin-bottom: var(--space-size-30);
+    background-color: #fff;
+  }
+}

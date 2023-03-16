@@ -1,0 +1,201 @@
+/*
+ * Button Base
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+.button-base {
+  --padding-top: var(--space-size-15);
+  --padding-end: var(--space-size-20);
+  --padding-bottom: var(--space-size-15);
+  --padding-start: var(--space-size-20);
+  --border-radius: 4px;
+  display: block;
+  height: auto;
+  margin: var(--space-size-20) 0;
+
+  [type='file'] {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  @include font(
+    $font-family: $hiragino-font,
+    $size: var(--font-size-medium),
+    $weight: bold
+  );
+
+  @at-root {
+    @include auto-margin-top-calculate(#{&});
+  }
+
+  &[fill='outline'] {
+    --border-width: 2px;
+  }
+
+  // iconの配置
+  &[iconSlotStart] {
+    --padding-start: var(--space-size-50);
+
+    ion-icon {
+      font-size: var(--space-size-20);
+      stroke: var(--ion-default-icon-color);
+      @include position-absolute(auto, auto, auto, -28px);
+    }
+  }
+
+  &[iconSlotEnd] {
+    --padding-end: var(--space-size-50);
+    --padding-start: var(--space-size-50);
+
+    ion-icon {
+      width: var(--space-size-25);
+      height: var(--space-size-25);
+      font-size: var(--space-size-30);
+      stroke: var(--ion-default-icon-color);
+      @include position-absolute(auto, -28px, auto, auto);
+    }
+  }
+
+  // button text
+  ion-text {
+    line-height: 1.5;
+    white-space: normal;
+    word-break: break-all;
+  }
+}
+
+/* button-icon-base */
+@mixin button-icon-base($size) {
+  display: grid;
+  grid-template-columns: repeat($size, 1fr);
+  column-gap: var(--space-size-15);
+  row-gap: var(--space-size-15);
+
+  [type='file'] {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--space-size-15);
+
+    @include border(
+      $width: 1px,
+      $style: solid,
+      $color: var(--ion-form-border-color)
+    );
+    @include border-radius($radius: 4px);
+
+    ion-thumbnail {
+      width: 100%;
+      min-height: 118px;
+      margin-bottom: var(--space-size-10);
+    }
+  }
+}
+
+/* button-iupload-base */
+@mixin button-iupload-base($size) {
+  display: grid;
+  grid-template-columns: repeat($size, 1fr);
+  column-gap: var(--space-size-15);
+  row-gap: var(--space-size-15);
+
+  [type='file'] {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .button-iup-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(var(--space-size-80) * 2);
+    margin-top: var(--space-size-10);
+    padding: var(--space-size-20);
+
+    @include border(
+      $width: 1px,
+      $style: solid,
+      $color: var(--ion-form-border-color)
+    );
+
+    @include border-radius($radius: 4px);
+
+    ion-thumbnail {
+      width: 100%;
+      min-height: 118px;
+    }
+
+    .text-normal {
+      margin-top: var(--space-size-20);
+    }
+  }
+
+  .button-iup-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ion-color-custom-black);
+
+    span {
+      cursor: pointer;
+    }
+
+    ion-button {
+      --padding-start: var(--space-size-10);
+      --padding-end: 0;
+      --background: none;
+      --background-activated: none;
+      --background-focused: none;
+      --background-hover: none;
+      --box-shadow: none;
+
+      color: var(--ion-color-custom-black);
+      font-size: var(--font-size-large);
+    }
+  }
+
+  &:hover {
+    .ion-footer {
+      span,
+      ion-button {
+        color: var(--ion-color-step-200);
+        transition: color 0.5s ease-in;
+      }
+    }
+  }
+
+  .button-iup-icon {
+    display: flex;
+    align-items: center;
+
+    padding: var(--space-size-15);
+
+    @include border(
+      $width: 1px,
+      $style: dashed,
+      $color: var(--ion-color-step-250)
+    );
+
+    @include border-radius($radius: 4px);
+
+    ion-icon {
+      width: var(--space-size-30);
+      height: var(--space-size-30);
+      stroke: var(--ion-color-custom-dark-gold);
+    }
+  }
+}
+
+.action-sheet-group-cancel {
+  display: none;
+}

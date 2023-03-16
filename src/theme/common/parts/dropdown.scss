@@ -1,0 +1,47 @@
+/*
+ * dropdown
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+.remind-signin-selectBox {
+  width: 100%;
+  padding: 1px 6px;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.remind-signin-selectOption {
+  color: black;
+}
+
+.defaultDropdown {
+  min-width: 100%;
+}
+
+.default-height {
+  min-height: 44px;
+}
+
+.select-box-split-wrap-2v1 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin: var(--space-size-30) 0 var(--space-size-15) 0;
+  column-gap: var(--space-size-15);
+  row-gap: var(--space-size-15);
+
+  @at-root {
+    @include auto-margin-top-calculate(#{&});
+  }
+
+  .text-selection-input-normal {
+    width: 100%;
+    margin: 0;
+    border-collapse: separate;
+
+    ion-label {
+      width: 100%;
+    }
+  }
+}

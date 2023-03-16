@@ -1,0 +1,19 @@
+/*
+ * Text Color
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+$colorConfig: 'black' --ion-color-custom-black, 'red' --ion-color-danger,
+  'green' --ion-color-success, 'gray' --ion-color-step-400,
+  'blue' --ion-color-blue;
+
+@each $item in $colorConfig {
+  .text-#{nth($item, 1)} {
+    color: var(nth($item, 2)) !important;
+  }
+}
+
+.text-gray {
+  color: var(--ion-color-custom-gray);
+}

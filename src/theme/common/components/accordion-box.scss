@@ -1,0 +1,72 @@
+/*
+ * Accordion Box
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+.accordion-box {
+  margin: var(--space-size-30) 0 0 0;
+  padding: 0;
+
+  @at-root {
+    @include auto-margin-top-calculate(#{&});
+  }
+
+  ion-item-group {
+    ion-icon {
+      flex-shrink: 0;
+      width: var(--space-size-20);
+      height: var(--space-size-20);
+    }
+
+    ion-item-divider {
+      @include border($corner: top, $color: var(--ion-color-custom-dark-gold));
+      @include border($corner: bottom, $color: #eeeeee);
+
+      --background: none;
+      --padding-start: var(--space-size-10);
+      --padding-top: var(--space-size-10);
+      --padding-bottom: var(--space-size-10);
+
+      // for safari
+      z-index: 0;
+
+      ion-text {
+        margin: 0;
+
+        .accordion-box-title {
+          @include font($weight: bold);
+        }
+      }
+    }
+
+    dl {
+      @include border(
+        $corner: bottom,
+        $color: var(--ion-color-custom-dark-gold)
+      );
+
+      margin: 0;
+      padding: var(--space-size-25) 0;
+    }
+
+    &[closed] {
+      ion-item-divider {
+        @include border(
+          $corner: bottom,
+          $color: var(--ion-color-custom-dark-gold)
+        );
+      }
+
+      dl {
+        display: none;
+      }
+    }
+
+    &:nth-child(n + 2) {
+      ion-item-divider {
+        @include border($corner: top, $style: none);
+      }
+    }
+  }
+}

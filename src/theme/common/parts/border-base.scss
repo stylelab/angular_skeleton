@@ -1,0 +1,20 @@
+/*
+ * Border Base
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+.border-base {
+  @include border($corner: bottom, $color: var(--ion-separator-border-color));
+}
+
+.border-dotted-base {
+  background-image: linear-gradient(
+    to right,
+    #999 33%,
+    rgba(255, 255, 255, 0) 0%
+  );
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: 3px 1px;
+}

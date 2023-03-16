@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30.12" height="24" viewBox="0 0 30.12 24">
+  <g id="icon" transform="translate(-384 -1920)">
+    <g id="Misc_Objects_Infrastructure" data-name="Misc Objects Infrastructure">
+      <g id="car">
+        <rect id="Rectangle_35" data-name="Rectangle 35" width="24" height="24" transform="translate(384 1920)" fill="none"/>
+        <g id="Group_144" data-name="Group 144">
+          <path id="Rectangle_36" data-name="Rectangle 36" d="M2,0H17a2,2,0,0,1,2,2V7a1,1,0,0,1-1,1H1A1,1,0,0,1,0,7V2A2,2,0,0,1,2,0Z" transform="translate(386.5 1930.5)" fill="none" stroke="#003a77" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <path id="Path_72" data-name="Path 72" d="M403.5,1930.5h-15l1.586-5.549a2,2,0,0,1,1.923-1.451h7.982a2,2,0,0,1,1.923,1.451Z" fill="none" stroke="#003a77" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <rect id="Rectangle_37" data-name="Rectangle 37" width="3" height="2" transform="translate(387.5 1938.5)" stroke-width="1" stroke="#003a77" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <rect id="Rectangle_38" data-name="Rectangle 38" width="3" height="2" transform="translate(401.5 1938.5)" stroke-width="1" stroke="#003a77" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <circle id="Ellipse_38" data-name="Ellipse 38" cx="0.5" cy="0.5" r="0.5" transform="translate(389.5 1933.5)" stroke-width="1" stroke="#003a77" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <circle id="Ellipse_39" data-name="Ellipse 39" cx="0.5" cy="0.5" r="0.5" transform="translate(401.5 1933.5)" stroke-width="1" stroke="#003a77" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <line id="Line_8" data-name="Line 8" x2="7" transform="translate(392.5 1934.5)" fill="none" stroke="#003a77" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        </g>
+      </g>
+    </g>
+    <g id="Media_Devices_Communication" data-name="Media Devices Communication">
+      <path id="Path_73" data-name="Path 73" d="M404.8,1927.117l-.2-2.969,2.575,1.491,1.959-2.24.767,2.876,2.969-.2-1.491,2.575,2.24,1.959-2.876.766.2,2.969-2.575-1.491" fill="none" stroke="#003a77" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

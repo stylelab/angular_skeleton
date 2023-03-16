@@ -1,0 +1,104 @@
+/*
+ * New
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+.new-01 {
+  .new-01-item {
+    &.space-wide {
+      margin-top: var(--space-size-15);
+
+      &:first-child {
+        margin-top: var(--space-size-10);
+      }
+    }
+
+    &.space-narrow {
+      margin-top: var(--space-size-5);
+    }
+
+    .text-normal {
+      margin: var(--space-size-0);
+
+      .date {
+        @include font(
+          $font-family: $hiragino-font,
+          $size: var(--font-size-small)
+        );
+      }
+
+      .text-illustration-banner {
+        min-width: auto;
+        margin: 0 0 0 var(--space-size-10);
+        vertical-align: 1px;
+
+        &.fill-red {
+          background-color: var(--ion-color-custom-red);
+          @include border-radius(2px);
+        }
+
+        &.outline-red {
+          @include border(
+            $width: 1px,
+            $style: solid,
+            $color: var(--ion-color-custom-red)
+          );
+          @include border-radius(2px);
+
+          color: var(--ion-color-custom-red);
+          background-color: var(--ion-color-custom-white);
+        }
+      }
+
+      &.text-link {
+        color: var(--ion-color-link) !important;
+      }
+
+      .title {
+        display: inline-block;
+        margin-top: 3px;
+        margin-right: var(--space-size-5);
+        line-height: 1.6;
+        word-break: break-all;
+        overflow-wrap: anywhere;
+        cursor: pointer;
+
+        &.bold {
+          @include font($font-family: $hiragino-font, $weight: bold);
+        }
+
+        &.date-time {
+          margin-top: var(--space-size-0);
+        }
+      }
+    }
+
+    ion-item {
+      --border-style: none;
+      --padding-start: 0;
+      --padding-end: 0;
+      --inner-padding-end: 0;
+    }
+  }
+
+  .border-dashed {
+    &.space-wide {
+      margin: var(--space-size-15) 0 0 0;
+    }
+
+    &.space-narrow {
+      margin: var(--space-size-5) 0 0 0;
+    }
+  }
+
+  ion-icon {
+    position: relative;
+    width: var(--space-size-25) !important;
+    height: var(--space-size-25) !important;
+    margin: 0;
+    color: var(--ion-color-link) !important;
+    cursor: pointer;
+    stroke: var(--ion-link-icon-color);
+  }
+}

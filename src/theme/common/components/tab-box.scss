@@ -1,0 +1,97 @@
+/*
+ * Tab
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+tabs {
+  .tabs {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+
+    @at-root {
+      @include auto-margin-top-calculate(#{&});
+    }
+
+    padding-right: var(--space-size-10);
+    padding-left: var(--space-size-10);
+
+    @include border(
+      $corner: bottom,
+      $width: 2px,
+      $style: solid,
+      $color: var(--ion-color-brown)
+    );
+
+    .tab-button {
+      display: flex;
+      flex: 1 1 0;
+      justify-content: center;
+      min-height: 60px;
+      margin: 0 var(--space-size-5) 0 var(--space-size-5);
+      text-align: center;
+      cursor: pointer;
+
+      @include border(
+        $corner: top,
+        $width: 1px,
+        $style: solid,
+        $color: var(--ion-form-border-color)
+      );
+
+      @include border(
+        $corner: right,
+        $width: 1px,
+        $style: solid,
+        $color: var(--ion-form-border-color)
+      );
+
+      @include border(
+        $corner: left,
+        $width: 1px,
+        $style: solid,
+        $color: var(--ion-form-border-color)
+      );
+
+      @include border-radius(border-top-left, 4px);
+      @include border-radius(border-top-right, 4px);
+
+      & > span {
+        padding: var(--space-size-10) var(--space-size-15) var(--space-size-10)
+          var(--space-size-15);
+        color: var(--ion-color-custom-black);
+      }
+
+      &.title-top {
+        align-items: flex-start;
+      }
+
+      &.title-center {
+        align-items: center;
+      }
+
+      &.active {
+        background-color: var(--ion-color-brown);
+        span {
+          @include font($font-family: $hiragino-font, $weight: bold);
+          color: var(--ion-color-custom-white);
+        }
+      }
+    }
+
+    .tab-wrap-scroll & {
+      overflow-y: scroll;
+
+      .tab-button {
+        flex: auto;
+        flex-shrink: 0;
+        width: calc(var(--space-size-60) * 3);
+      }
+    }
+  }
+
+  .tab-body {
+    margin: var(--space-size-15);
+  }
+}

@@ -1,0 +1,252 @@
+/*
+ * Text
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+/* text-normal 16px */
+.text-normal {
+  @extend .text-base;
+
+  &.driving-self-assessment-top-text {
+    margin-top: var(--space-size-20);
+  }
+
+  .link-normal a {
+    text-decoration: underline;
+    vertical-align: unset;
+  }
+}
+
+/* text-small */
+.text-small {
+  @extend .text-base;
+  @extend .font-small;
+}
+
+.text-small-narrow-top-space {
+  @extend .text-base;
+  @extend .font-small;
+
+  margin: var(--space-size-10) 0 var(--space-size-15) 0;
+}
+
+/* text-extra-small */
+.text-extra-small {
+  @extend .text-base;
+  @extend .font-extra-small;
+}
+
+/* text-large */
+.text-large {
+  @extend .text-base;
+  @extend .font-large;
+
+  &[blue] {
+    color: var(--ion-color-blue);
+  }
+}
+
+/* text-center */
+.text-center {
+  text-align: center;
+}
+
+/* text-medium-large */
+.text-medium-large {
+  @extend .text-base;
+  @extend .font-medium-large;
+
+  &[blue] {
+    color: var(--ion-color-blue);
+  }
+}
+
+/* text-top */
+.text-top {
+  @extend .text-base;
+  @extend .font-mini;
+
+  vertical-align: super;
+}
+
+/* text-bottom */
+.text-bottom {
+  @extend .text-base;
+  @extend .font-mini;
+
+  vertical-align: baseline;
+}
+
+/* text-label */
+.text-label {
+  @extend .text-base;
+  @extend .font-extra-small;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 70px;
+  height: calc(var(--space-size-20) + 1px);
+  padding: 0 var(--space-size-10);
+
+  @include border($color: var(--ion-separator-border-color));
+}
+
+.text-label-title {
+  @extend .text-base;
+  @extend .font-small;
+
+  display: inline-flex;
+  padding: 0 8px;
+  color: var(--ion-color-blue);
+  background-color: var(--ion-color-custom-white);
+
+  border: 1px solid var(--ion-color-blue);
+}
+
+.text-label-point {
+  margin-left: -20px;
+
+  & > span {
+    @extend .text-base;
+    @extend .font-small;
+
+    position: relative;
+    display: inline-block;
+    padding: 0 22px 0 10px;
+    overflow: hidden;
+    color: var(--ion-color-custom-white);
+    vertical-align: top;
+    background-color: var(--ion-color-blue);
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 0;
+      height: 0;
+      margin-top: -10px;
+      border-top: 10px solid transparent;
+      border-right: 10px solid var(--ion-color-step-100);
+      border-bottom: 10px solid transparent;
+      border-left: 10px solid transparent;
+      content: '';
+    }
+  }
+}
+
+/* text-label-multiline */
+.text-label-multiline {
+  margin-bottom: var(--space-size-25);
+
+  .text-label {
+    margin-bottom: var(--space-size-5);
+  }
+}
+
+/* text-validation */
+.text-validation {
+  @include font(
+    $size: var(--font-size-small),
+    $font-family: $hiragino-font,
+    $weight: bold
+  );
+}
+
+/* text-info */
+.text-info {
+  @extend .text-base;
+
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    margin: 0;
+    line-height: 1.4;
+    word-break: break-all;
+    overflow-wrap: anywhere;
+
+    span {
+      vertical-align: middle;
+    }
+
+    a {
+      display: inline-block;
+      margin-left: var(--space-size-10);
+      line-height: 1;
+      vertical-align: middle;
+
+      ion-icon {
+        width: calc(var(--space-size-20) + 4px);
+        height: calc(var(--space-size-20) + 4px);
+        padding-top: 1px;
+        vertical-align: middle;
+        fill: var(--ion-form-icon-color);
+
+        .landing-theme & {
+          fill: var(--ion-color-custom-dark-green);
+        }
+      }
+    }
+
+    .a-left {
+      margin-left: 0;
+      vertical-align: bottom;
+    }
+  }
+
+  .text-label,
+  .text-illustration-banner {
+    margin-top: calc(var(--space-size-5) / 2) !important;
+    margin-left: var(--space-size-20);
+  }
+}
+
+/* text-illustration-banner */
+.text-illustration-banner {
+  @extend .text-base;
+  @extend .font-extra-small;
+
+  @include border-radius($radius: 2px);
+
+  .tgt-01 & {
+    border-radius: 0;
+  }
+
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  min-width: 70px;
+  height: calc(var(--space-size-20) + 1px);
+  padding: 0 var(--space-size-10);
+  color: var(--ion-table-header-text-color);
+  background: var(--ion-notification-icon-color);
+
+  &[darkblue] {
+    background: var(--ion-color-custom-dark-blue);
+  }
+}
+.text-illustration-banner2 {
+  @extend .text-base;
+  @extend .font-extra-small;
+
+  @include border-radius($radius: 2px);
+
+  .tgt-01 & {
+    border-radius: 0;
+  }
+
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  min-width: 100%;
+  height: calc(var(--space-size-20) + 1px);
+  padding: 0 var(--space-size-10);
+}
+// 移行導線:見積り、申し込み画面「お客さま情報」下余白
+#discription {
+  margin-bottom: var(--space-size-25);
+}

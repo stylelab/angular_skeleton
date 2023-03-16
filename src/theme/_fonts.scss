@@ -1,0 +1,361 @@
+/*
+ * Ionic Fonts Reset
+ * ----------------------------------------------------------------------------
+ * Common Custom Fonts Should Be Set Here.
+ *
+ */
+
+/* Safari and Firefox use -apple-system for San Fransisco; Chrome recognizes BlinkMacSystemFont */
+/* system-ui — default UI font on a given platform */
+
+/* 要注意）Font familyのバグ： */
+/* 期待フォントが日本語用のフォントの場合は -> fallback -apple-system > BlinkMacSystemFont > etc... */
+/* 期待フォントが英数字用のフォントの場合は -> fallbackの記述通りにfallbackしていく。 */
+
+/**********************
+Font familyの定義
+**********************/
+// フォントの書き方の基礎：https://saruwakakun.com/html-css/basic/font-family-how-to
+$base-font: -apple-system, BlinkMacSystemFont, 'ヒラギノ角ゴ ProN',
+  'HiraKakuProN', 'ヒラギノ角ゴ Pro', 'HiraKakuPro', 'Hiragino Kaku Gothic ProN',
+  'Hiragino Kaku Gothic Pro', 'Hiragino Sans', Roboto, 'Noto Sans',
+  'Noto Sans CJK JP', 'Noto Sans JP', system-ui, Verdana, '游ゴシック', YuGothic,
+  'メイリオ', Meiryo, sans-serif;
+
+/* 共通 font family */
+$hiragino-font-1: hiraginoKakuGothicPro-W3, Roboto-W1, NotoSans-W1, system-ui,
+  Verdana, '游ゴシック', YuGothic, 'メイリオ', Meiryo, sans-serif;
+$hiragino-font-2: hiraginoKakuGothicPro-W3, Roboto-W1, NotoSans-W1, system-ui,
+  Verdana, '游ゴシック', YuGothic, 'メイリオ', Meiryo, sans-serif;
+$hiragino-font-3: hiraginoKakuGothicPro-W3, Roboto-W3, NotoSans-W3, system-ui,
+  Verdana, '游ゴシック', YuGothic, 'メイリオ', Meiryo, sans-serif;
+$hiragino-font-4: hiraginoKakuGothicPro-W4, Roboto-W4, NotoSans-W4, system-ui,
+  Verdana, '游ゴシック', YuGothic, 'メイリオ', Meiryo, sans-serif;
+$hiragino-font-5: hiraginoKakuGothicPro-W5, Roboto-W5, NotoSans-W5, system-ui,
+  Verdana, '游ゴシック', YuGothic, 'メイリオ', Meiryo, sans-serif;
+$hiragino-font-6: hiraginoKakuGothicPro-W6, Roboto-W5, NotoSans-W5, system-ui,
+  Verdana, '游ゴシック', YuGothic, 'メイリオ', Meiryo, sans-serif;
+$hiragino-font-7: hiraginoKakuGothicPro-W6, Roboto-W7, NotoSans-W7, system-ui,
+  Verdana, '游ゴシック', YuGothic, 'メイリオ', Meiryo, sans-serif;
+$hiragino-font-8: hiraginoKakuGothicPro-W6, Roboto-W7, NotoSans-W7, system-ui,
+  Verdana, '游ゴシック', YuGothic, 'メイリオ', Meiryo, sans-serif;
+$hiragino-font-9: hiraginoKakuGothicPro-W6, Roboto-W9, NotoSans-W9, system-ui,
+  Verdana, '游ゴシック', YuGothic, 'メイリオ', Meiryo, sans-serif;
+
+/* 例外 font その ① */
+$hiragino-font: 'ヒラギノ角ゴ ProN', 'HiraKakuProN', 'ヒラギノ角ゴ Pro',
+  'HiraKakuPro', 'Hiragino Kaku Gothic ProN', 'Hiragino Kaku Gothic Pro',
+  'Hiragino Sans', Roboto, 'Noto Sans', 'Noto Sans CJK JP', 'Noto Sans JP',
+  system-ui, Verdana, '游ゴシック', YuGothic, 'メイリオ', Meiryo, sans-serif;
+
+/* 例外 font その ② */
+$roboto-font: Roboto, 'Noto Sans', 'Noto Sans CJK JP', 'Noto Sans JP', system-ui,
+  Verdana, '游ゴシック', YuGothic, 'メイリオ', Meiryo, sans-serif;
+
+/* 例外 font その ③ */
+$helvetica-font: 'Helvetica Neue', Helvetica, -apple-system, BlinkMacSystemFont,
+  Roboto, 'ヒラギノ角ゴ ProN', 'HiraKakuProN', 'ヒラギノ角ゴ Pro', 'HiraKakuPro',
+  'Hiragino Kaku Gothic ProN', 'Hiragino Kaku Gothic Pro', 'Hiragino Sans',
+  Roboto, 'Noto Sans', 'Noto Sans CJK JP', 'Noto Sans JP', system-ui, Verdana,
+  '游ゴシック', YuGothic, 'メイリオ', Meiryo, sans-serif;
+
+/* 例外 font その ④ */
+$avenir-font: Avenir, -apple-system, BlinkMacSystemFont, 'ヒラギノ角ゴ ProN',
+  'HiraKakuProN', 'ヒラギノ角ゴ Pro', 'HiraKakuPro', 'Hiragino Kaku Gothic ProN',
+  'Hiragino Kaku Gothic Pro', 'Hiragino Sans', Roboto, 'Noto Sans',
+  'Noto Sans CJK JP', 'Noto Sans JP', system-ui, Verdana, '游ゴシック', YuGothic,
+  'メイリオ', Meiryo, sans-serif;
+
+/* 例外 font その ⑤ */
+$hiragino-mincho-font: 'ヒラギノ明朝 Pro', 'Hiragino Mincho Pro',
+  'Noto Serif JP', 'ヒラギノ角ゴ ProN', 'HiraKakuProN', 'ヒラギノ角ゴ Pro',
+  'HiraKakuPro', 'Hiragino Kaku Gothic ProN', 'Hiragino Kaku Gothic Pro',
+  'Hiragino Sans', -apple-system, BlinkMacSystemFont, Roboto, 'Noto Sans',
+  'Noto Sans CJK JP', 'Noto Sans JP', system-ui, Verdana, '游ゴシック', YuGothic,
+  'メイリオ', Meiryo, sans-serif;
+
+/*例外 font その ⑥ */
+$hiragino-static-font: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro',
+  'HiraKakuPro-W3', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic',
+  sans-serif;
+
+/* etc... */
+
+/**********************
+mixin and imports
+**********************/
+@mixin base-font-face() {
+  /*
+   * San Fransisco Display (英数字)
+   * -------------------------------------
+   * Apple fonts, Yosemite OSから登場、Helvetica (Neue)の代わりに開発されたフォント。
+   * 「Ultralight 100」、「Thin 200」、「Light 300」、「Regular 400」、
+   * 「Medium 500」、「Semi-Bold 600」、「Bold 700」、「Heavy 800」、「Black 900」
+   */
+
+  // Safari and Firefox use SF for -apple-system; Chrome recognizes BlinkMacSystemFont
+  // system-ui — default UI font on a given platform
+  // 直接に定義不可能
+
+  /*
+   * Hiragino Kaku Gothic Pro (漢字/英数字)
+   * -------------------------------------
+   * Apple fonts, San Fransiscoは和文がないためiosはHiraginoを使用する。
+   * 「Light 300」、「Semi-Bold 600」
+   */
+  @font-face {
+    font-family: 'hiraginoKakuGothicPro-W3';
+    src: local('ヒラギノ角ゴ ProN W3'), local('HiraKakuProN-W3'),
+      local('ヒラギノ角ゴ Pro W3'), local('HiraKakuPro-W3'),
+      local('Hiragino Kaku Gothic ProN'), local('Hiragino Kaku Gothic Pro'),
+      local('Hiragino Sans');
+  }
+
+  @font-face {
+    font-family: 'hiraginoKakuGothicPro-W6';
+    src: local('ヒラギノ角ゴ ProN W6'), local('HiraKakuProN-W6'),
+      local('ヒラギノ角ゴ Pro W6'), local('HiraKakuPro-W6'),
+      local('Hiragino Kaku Gothic ProN'), local('Hiragino Kaku Gothic Pro'),
+      local('Hiragino Sans');
+  }
+
+  /*
+   * Roboto (英数字)
+   * -------------------------------------
+   * Android fonts。
+   * 「Thin 100」、「Light 300」、「Regular 400」、
+   * 「Medium 500」、「Bold 700」、「Black 900」
+   */
+  @font-face {
+    font-family: 'Roboto-W1';
+    src: local('Roboto');
+  }
+
+  @font-face {
+    font-family: 'Roboto-W3';
+    src: local('Roboto');
+  }
+
+  @font-face {
+    font-family: 'Roboto-W4';
+    src: local('Roboto');
+  }
+
+  @font-face {
+    font-family: 'Roboto-W5';
+    src: local('Roboto');
+  }
+
+  @font-face {
+    font-family: 'Roboto-W7';
+    src: local('Roboto');
+  }
+
+  @font-face {
+    font-family: 'Roboto-W9';
+    src: local('Roboto');
+  }
+
+  /*
+   * Noto Sans (漢字/英数字)
+   * -------------------------------------
+   * Android fonts。
+   * 「Thin 100」、「Light 300」、「Regular 400」、
+   * 「Medium 500」、「Bold 700」、「Black 900」
+   */
+  @font-face {
+    font-family: 'NotoSans-W1';
+    src: local('Noto Sans'), local('Noto Sans CJK JP'), local('Noto Sans JP');
+  }
+
+  @font-face {
+    font-family: 'NotoSans-W3';
+    src: local('Noto Sans'), local('Noto Sans CJK JP'), local('Noto Sans JP');
+  }
+
+  @font-face {
+    font-family: 'NotoSans-W4';
+    src: local('Noto Sans'), local('Noto Sans CJK JP'), local('Noto Sans JP');
+  }
+
+  @font-face {
+    font-family: 'NotoSans-W5';
+    src: local('Noto Sans'), local('Noto Sans CJK JP'), local('Noto Sans JP');
+  }
+
+  @font-face {
+    font-family: 'NotoSans-W7';
+    src: local('Noto Sans'), local('Noto Sans CJK JP'), local('Noto Sans JP');
+  }
+
+  @font-face {
+    font-family: 'NotoSans-W9';
+    src: local('Noto Sans'), local('Noto Sans CJK JP'), local('Noto Sans JP');
+  }
+
+  /*
+   * Avenir (英数字)
+   * -------------------------------------
+   * 「Medium 300」、「DemiBold 400」、「DemiBold 500」、「Bold 700」、
+   * 「「Heavy 800」、「Heavy 900」
+   */
+  @font-face {
+    font-family: 'AvenirNext-W3';
+    src: local('AvenirNext-Medium'), local('Avenir Next Medium'),
+      local('Avenir Next'), local('Avenir');
+  }
+
+  @font-face {
+    font-family: 'AvenirNext-W4';
+    src: local('AvenirNext-DemiBold'), local('Avenir Next Demi Bold'),
+      local('Avenir Next'), local('Avenir');
+  }
+
+  @font-face {
+    font-family: 'AvenirNext-W5';
+    src: local('AvenirNext-DemiBold'), local('Avenir Next Demi Bold'),
+      local('Avenir Next'), local('Avenir');
+  }
+
+  @font-face {
+    font-family: 'AvenirNext-W7';
+    src: local('AvenirNext-Bold'), local('Avenir Next Bold'),
+      local('Avenir Next'), local('Avenir');
+  }
+
+  @font-face {
+    font-family: 'AvenirNext-W8';
+    src: local('AvenirNext-Heavy'), local('Avenir Next Heavy'),
+      local('Avenir Next'), local('Avenir');
+  }
+
+  @font-face {
+    font-family: 'AvenirNext-W9';
+    src: local('AvenirNext-Heavy'), local('Avenir Next Heavy'),
+      local('Avenir Next'), local('Avenir');
+  }
+
+  /*
+   * NotoSerifJP (明朝、アンドロイド、windows pc用)
+   * -------------------------------------
+   */
+  @font-face {
+    font-family: 'Noto Serif JP';
+    src: url('assets/fonts/notoserifJP/NotoSerifJP-Regular.otf')
+      format('opentype');
+  }
+
+  // etc...
+}
+
+/* variables */
+// Based on 375px screen size
+// px / em convertor: https://www.w3schools.com/tags/ref_pxtoemconversion.asp
+// percent convertor: https://percentagecalculator.net/
+:root {
+  --font-size-10: 0.625rem; // 10px 10px以下にならないようにvwを使わない
+  --font-size-12: calc(0.5rem + 1.07vw); // 12px
+  --font-size-small: calc(0.625rem + 1.07vw); // 14px
+  --font-size-medium: calc(0.75rem + 1.07vw); // 16px
+  --font-size-large: calc(0.875em + 1.07vw); // 18px
+  --font-size-20: calc(1em + 1.07vw); // 20px
+  --font-size-24: calc(1.25rem + 1.07vw); // 24px
+  --font-size-28: calc(1.5rem + 1.07vw); // 28px
+  --font-size-32: calc(1.75rem + 1.07vw); // 32px
+}
+
+@media (min-width: 375px) {
+  :root {
+    --font-size-12: 0.75rem;
+    --font-size-small: 0.875rem;
+    --font-size-medium: 1rem;
+    --font-size-large: 1.125rem;
+    --font-size-20: 1.25rem;
+    --font-size-24: 1.5rem;
+  }
+}
+
+/* class */
+// font size
+// 10px
+.font-mini {
+  font-size: var(--font-size-10) !important;
+}
+
+// 12px
+.font-extra-small {
+  font-size: var(--font-size-12) !important;
+}
+
+// 14px
+.font-small {
+  font-size: var(--font-size-small) !important;
+}
+
+// 16px
+.font-medium {
+  font-size: var(--font-size-medium) !important;
+}
+
+// 18px
+.font-large {
+  font-size: var(--font-size-large) !important;
+}
+
+// 20px
+.font-medium-large {
+  font-size: var(--font-size-20) !important;
+}
+
+// 24px
+.font-extra-large {
+  font-size: var(--font-size-24) !important;
+}
+
+@media (min-width: 1024px) {
+  // 10px
+  .font-mini {
+    font-size: 0.625rem !important;
+  }
+
+  // 12px
+  .font-extra-small {
+    font-size: 0.75rem !important;
+  }
+
+  // 14px
+  .font-small {
+    font-size: 0.875rem !important;
+  }
+
+  // 16px
+  .font-medium {
+    font-size: 1rem !important;
+  }
+
+  // 18px
+  .font-large {
+    font-size: 1.125rem !important;
+  }
+
+  // 20px
+  .font-medium-large {
+    font-size: 1.25rem !important;
+  }
+
+  // 24px
+  .font-extra-large {
+    font-size: 1.5rem !important;
+  }
+}
+
+// color
+/*
+  例:
+  [class="red-text"] {
+    color: var(--ion-color-danger);
+  }
+*/
+
+$colorConfig: 'red' --ion-color-danger, 'green' --ion-color-success,
+  'gray' --ion-color-step-400;

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <clipPath id="clip-ios-complete-circle">
+      <rect width="40" height="40"/>
+    </clipPath>
+  </defs>
+  <g id="ios-complete-circle" clip-path="url(#clip-ios-complete-circle)">
+    <g id="_00_icon_success" data-name="00_icon_success">
+      <path id="楕円形_2" data-name="楕円形 2" d="M20,0A20,20,0,1,1,0,20,20,20,0,0,1,20,0Z" fill="#003a77"/>
+      <g id="グループ_276" data-name="グループ 276" transform="translate(9.556 12.514)">
+        <path id="パス_109" data-name="パス 109" d="M328.922,441.995l6.5,6.778h-.664l13.663-12.9-13,13.557-.316.33-.349-.33-6.831-6.448Z" transform="translate(-327.034 -434.988)" fill="#fff" stroke="#fff" stroke-width="1"/>
+        <path id="パス_110" data-name="パス 110" d="M335.693,451.289a.721.721,0,0,1-.493-.195l-7.3-6.947a.716.716,0,0,1-.224-.51.726.726,0,0,1,.209-.516l1.015-1.015a.687.687,0,0,1,.516-.209.718.718,0,0,1,.51.224l5.794,6.089,13.018-12.384a.716.716,0,0,1,1.012,1.012l-13.54,14.232A.7.7,0,0,1,335.693,451.289Z" transform="translate(-327.674 -435.626)" fill="#fff" stroke="#fff" stroke-width="1"/>
+      </g>
+    </g>
+  </g>
+</svg>

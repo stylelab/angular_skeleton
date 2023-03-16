@@ -1,0 +1,90 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": [
+          "HMW78N327J.net.edesign.ande.dev",
+          "HMW78N327J.net.edesign.ande.ita",
+          "HMW78N327J.net.edesign.ande.itb",
+          "HMW78N327J.net.edesign.ande.uat",
+          "HMW78N327J.net.edesign.ande.test1",
+          "HMW78N327J.net.edesign.ande.test2",
+          "HMW78N327J.net.edesign.ande.st",
+          "HMW78N327J.net.edesign.ande.staging",
+          "HMW78N327J.net.edesign.ande"
+        ],
+        "components": [
+          {
+            "#": "no_universal_links",
+            "exclude": true,
+          },
+          {
+            "/": "/ande/*"
+          }
+        ]
+      },
+      {
+        "appID": "HMW78N327J.net.edesign.ande.ita",
+        "paths": [
+          "/ande/*"
+        ]
+      },
+      {
+        "appID": "HMW78N327J.net.edesign.ande.itb",
+        "paths": [
+          "/ande/*"
+        ]
+      },
+      {
+        "appID": "HMW78N327J.net.edesign.ande.uat",
+        "paths": [
+          "/ande/*"
+        ]
+      },
+      {
+        "appID": "HMW78N327J.net.edesign.ande.test1",
+        "paths": [
+          "/ande/*"
+        ]
+      },
+      {
+        "appID": "HMW78N327J.net.edesign.ande.test2",
+        "paths": [
+          "/ande/*"
+        ]
+      },
+      {
+        "appID": "HMW78N327J.net.edesign.ande.st",
+        "paths": [
+          "/ande/*"
+        ]
+      },
+      {
+        "appID": "HMW78N327J.net.edesign.ande.staging",
+        "paths": [
+          "/ande/*"
+        ]
+      },
+      {
+        "appID": "HMW78N327J.net.edesign.ande",
+        "paths": [
+          "/ande/*"
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": [
+      "HMW78N327J.net.edesign.ande.dev",
+      "HMW78N327J.net.edesign.ande.ita",
+      "HMW78N327J.net.edesign.ande.itb",
+      "HMW78N327J.net.edesign.ande.uat",
+      "HMW78N327J.net.edesign.ande.test1",
+      "HMW78N327J.net.edesign.ande.test2",
+      "HMW78N327J.net.edesign.ande.st",
+      "HMW78N327J.net.edesign.ande.staging",
+      "HMW78N327J.net.edesign.ande"
+    ]
+  }
+}

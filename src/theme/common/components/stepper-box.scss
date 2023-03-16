@@ -1,0 +1,135 @@
+/*
+ * Stepper Box
+ * ----------------------------------------------------------------------------
+ *
+ */
+.stepper-box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--space-size-20);
+  padding-right: calc(var(--space-size-15) + 11px);
+  padding-left: var(--space-size-15);
+  list-style: none;
+
+  &.progressStyle {
+    padding-right: var(--space-size-20);
+    .progress-bar-step {
+      &:not(.active) {
+        .progress {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &.progressEnd {
+    padding-right: calc(var(--space-size-15) + 11px);
+  }
+
+  $lineHeight: 3px;
+  $dotDiameterForProgress: 3px;
+  $dotDiameterForDot: 11px;
+
+  .progress-bar-step {
+    position: relative;
+    width: 100%;
+    height: var(--space-size-35);
+
+    &:before {
+      position: absolute;
+      top: calc(var(--space-size-25) + 4px);
+      width: 100%;
+      height: $lineHeight;
+      background-color: var(--ion-color-step-200);
+      opacity: 0.3;
+      content: '';
+    }
+
+    &:last-child {
+      &:before {
+        opacity: 1;
+      }
+      width: 0px;
+    }
+  }
+
+  .progress-bar-dot {
+    position: absolute;
+    display: inline-block;
+    background-color: var(--ion-color-step-25);
+    border-radius: 50%;
+
+    &.progress {
+      top: calc(var(--space-size-25) + 4px);
+      width: $dotDiameterForProgress;
+      height: $dotDiameterForProgress;
+    }
+    &.dot {
+      top: var(--space-size-25);
+      width: $dotDiameterForDot;
+      height: $dotDiameterForDot;
+    }
+  }
+
+  .active {
+    .progress-bar-dot {
+      background-color: var(--ion-color-custom-dark-gold);
+      opacity: 1;
+    }
+
+    &.progress-bar-step {
+      &:before {
+        background-color: var(--ion-color-custom-dark-gold);
+        opacity: 1;
+      }
+    }
+
+    &.landing {
+      .progress-bar-dot {
+        background-color: var(--ion-color-custom-white);
+        opacity: 1;
+      }
+
+      &.progress-bar-step {
+        &:before {
+          background-color: var(--ion-color-custom-white);
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  #currentStep {
+    &:before {
+      background-color: var(--ion-color-step-200);
+      opacity: 0.3;
+    }
+
+    .progress-bar-car {
+      opacity: 1;
+    }
+
+    .progress {
+      top: var(--space-size-25);
+      width: $dotDiameterForDot;
+      height: $dotDiameterForDot;
+    }
+  }
+
+  .progress-bar-car {
+    position: absolute;
+    top: 0px;
+    left: -15px;
+    display: block;
+    width: 43px;
+    height: 16px;
+    opacity: 0;
+    ion-icon {
+      width: 43px;
+      height: 16px;
+      &.none {
+        display: none;
+      }
+    }
+  }
+}

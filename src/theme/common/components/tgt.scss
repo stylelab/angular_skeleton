@@ -1,0 +1,37 @@
+/*
+ * TGT
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+.tgt-01 {
+  margin: var(--space-size-30) 0 0 0;
+
+  @at-root {
+    @include auto-margin-top-calculate(#{&});
+  }
+
+  .bac-box {
+    padding: var(--space-size-30) var(--space-size-15) !important;
+
+    .text-info {
+      margin-bottom: var(--space-size-15);
+    }
+
+    .tgt-title {
+      color: var(--ion-color-custom-dark-blue);
+    }
+
+    .text-normal {
+      margin: 0;
+    }
+
+    .text-small {
+      margin-bottom: var(--space-size-5);
+    }
+
+    .tgt-small-content {
+      margin-top: var(--space-size-10);
+    }
+  }
+}

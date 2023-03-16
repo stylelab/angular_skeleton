@@ -1,0 +1,83 @@
+/*
+ * Chg Box
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+.chg-01 {
+  .chg-arrow-flex {
+    display: flex;
+    justify-content: center;
+  }
+
+  .chg-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .text-normal {
+      margin: 0;
+    }
+
+    .chg-line-left,
+    li {
+      min-width: 140px;
+    }
+
+    .chg-line-right {
+      text-align: right;
+    }
+  }
+
+  .chg-arrow {
+    width: 0;
+    height: 0;
+
+    @include border(
+      $corner: top,
+      $width: 16px,
+      $style: solid,
+      $color: var(--ion-color-custom-gold)
+    );
+
+    @include border(
+      $corner: right,
+      $width: 60px,
+      $style: solid,
+      $color: transparent
+    );
+
+    @include border(
+      $corner: bottom,
+      $width: 0,
+      $style: solid,
+      $color: transparent
+    );
+
+    @include border(
+      $corner: left,
+      $width: 60px,
+      $style: solid,
+      $color: transparent
+    );
+  }
+
+  &[SRT-01] {
+    margin-top: var(--space-size-30);
+
+    [TXT-01-04] {
+      margin-bottom: var(--space-size-15);
+    }
+  }
+
+  &[UNI-G8-01],
+  &[CHG-01] {
+    dl > p {
+      margin-bottom: var(--space-size-10);
+    }
+
+    dd {
+      margin: 0;
+    }
+  }
+}

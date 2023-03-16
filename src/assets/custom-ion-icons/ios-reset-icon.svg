@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-ios-reset-icon">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="ios-reset-icon" clip-path="url(#clip-ios-reset-icon)">
+    <g id="_00_icon_link_restore" data-name="00_icon_link_restore" transform="translate(-480 -144)">
+      <rect id="長方形_68" data-name="長方形 68" width="24" height="24" transform="translate(480 144)" fill="none" stroke="none"/>
+      <g id="グループ_265" data-name="グループ 265">
+        <path id="パス_93" data-name="パス 93" d="M483.33,156h7.655A9.03,9.03,0,0,0,500,147.5h0" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        <path id="パス_94" data-name="パス 94" d="M488.5,150l-4.586,4.586a2,2,0,0,0,0,2.828L488.5,162" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      </g>
+    </g>
+  </g>
+</svg>

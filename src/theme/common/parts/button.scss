@@ -1,0 +1,504 @@
+/*
+ * Button
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+/* button-landing-normal */
+.button-landing-normal {
+  @extend .button-base;
+
+  --padding-end: var(--space-size-25);
+  --padding-start: var(--space-size-25);
+  --border-radius: var(--space-size-5);
+
+  &.button-split {
+    margin: 0 0 var(--space-size-20) !important;
+  }
+
+  .modal-box .content-box & {
+    &.button-split:nth-last-child(1),
+    &.button-split:nth-last-child(2) {
+      margin: 0 0 0 !important;
+    }
+  }
+
+  &[fill='outline'] {
+    --border-width: 2px;
+  }
+
+  @include font($font-family: $hiragino-font, $size: var(--font-size-medium));
+}
+
+/* button-landing-big */
+.button-landing-big {
+  @extend .button-base;
+
+  margin: var(--space-size-10);
+
+  --padding-top: var(--space-size-30);
+  --padding-end: var(--space-size-25);
+  --padding-bottom: var(--space-size-30);
+  --padding-start: var(--space-size-25);
+  --border-radius: var(--space-size-15);
+
+  &.button-split {
+    margin: 0 0 var(--space-size-20) !important;
+  }
+
+  &[fill='outline'] {
+    --border-width: 1px;
+  }
+
+  @include font($font-family: $hiragino-font, $size: var(--font-size-medium));
+}
+
+/* button-wrap */
+.button-wrap {
+  margin: var(--space-size-30) 0 !important;
+  padding: 0 var(--space-size-20);
+
+  @at-root {
+    @include auto-margin-top-calculate(#{&});
+  }
+
+  @include pc {
+    max-width: 640px;
+    margin-right: auto !important;
+    margin-left: auto !important;
+
+    &[PC-FLEX-CHILD-01] {
+      width: 40%;
+    }
+  }
+
+  &[SLC-CAR-01-01],
+  &[SLC-CAR-01-02],
+  &[UNI-G13-01] {
+    padding: 0;
+  }
+
+  &[BTN-IUP-01-04] {
+    label {
+      display: flex;
+      align-items: center;
+    }
+
+    ion-icon {
+      width: var(--space-size-25);
+      height: var(--space-size-25);
+      padding-left: var(--space-size-10);
+    }
+  }
+
+  &[SLC-CAR-01-01],
+  &[SLC-CAR-01-02] {
+    .select-car-content {
+      width: 100%;
+      overflow: hidden;
+
+      .select-car-label {
+        .text-label {
+          min-width: 80px;
+        }
+      }
+
+      .text-normal {
+        white-space: normal;
+      }
+    }
+  }
+
+  &[UNI-G13-01] {
+    .select-car-content {
+      width: 100%;
+      overflow: hidden;
+      p {
+        display: flex;
+        margin-bottom: var(--space-size-15);
+        line-height: 1.4rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        span {
+          margin-bottom: 0;
+          &:last-child {
+            white-space: normal;
+          }
+        }
+      }
+    }
+  }
+
+  &[BTN-more-01] {
+    ion-icon {
+      width: calc(var(--space-size-20) + 3px);
+      height: calc(var(--space-size-20) + 3px);
+    }
+  }
+
+  .modal-box .content-box & {
+    padding: 0;
+  }
+}
+
+/* button-wrap-slim */
+.button-wrap-slim {
+  @extend .button-wrap;
+
+  margin: var(--space-size-5) 0 !important;
+}
+
+/* button-normal */
+.button-normal {
+  @extend .button-base;
+
+  min-width: calc(
+    var(--space-size-70) + var(--space-size-70) + var(--space-size-30)
+  );
+  @include pc {
+    height: 64px;
+  }
+}
+
+/* button-slc-car */
+.button-slc-car {
+  @extend .button-base;
+
+  --padding-top: var(--space-size-20);
+  --padding-bottom: var(--space-size-20);
+
+  &[iconSlotEnd] {
+    --padding-start: var(--space-size-20);
+    --padding-end: var(--space-size-40);
+  }
+
+  min-width: calc(
+    var(--space-size-70) + var(--space-size-70) + var(--space-size-30)
+  );
+
+  &[fill='outline'] {
+    --border-width: 1px;
+  }
+}
+
+/* button-slim */
+.button-slim {
+  @extend .button-base;
+
+  --padding-top: var(--space-size-10);
+  --padding-end: var(--space-size-20);
+  --padding-bottom: var(--space-size-10);
+  --padding-start: var(--space-size-20);
+
+  @include font($font-family: $hiragino-font, $size: var(--font-size-medium));
+}
+
+/* for LNK-03 */
+.button-link {
+  @extend .button-base;
+
+  --padding-top: var(--space-size-10);
+  --padding-end: var(--space-size-5);
+  --padding-bottom: var(--space-size-10);
+  --padding-start: var(--space-size-5);
+
+  @include font($font-family: $hiragino-font, $size: var(--font-size-medium));
+
+  // inherit button color
+  ion-icon {
+    stroke: var(--ion-default-icon-color);
+  }
+}
+
+/* button-wrap-left */
+.button-left-wrap {
+  display: flex;
+  justify-content: flex-start;
+  margin: var(--space-size-30) 0;
+
+  @at-root {
+    @include auto-margin-top-calculate(#{&});
+  }
+}
+
+/* button-left */
+.button-left {
+  @extend .button-base;
+}
+
+/* button-center-wrap */
+.button-center-wrap {
+  display: flex;
+  justify-content: center;
+  margin: var(--space-size-30) 0;
+
+  @at-root {
+    @include auto-margin-top-calculate(#{&});
+  }
+}
+
+/* button-center */
+.button-center {
+  @extend .button-base;
+}
+
+/* button-right-wrap */
+.button-right-wrap {
+  display: flex;
+  justify-content: flex-end;
+  margin: var(--space-size-30) 0;
+
+  @at-root {
+    @include auto-margin-top-calculate(#{&});
+  }
+}
+
+/* button-right */
+.button-right {
+  @extend .button-base;
+}
+
+/* button-split */
+.button-split-wrap {
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: var(--space-size-30) 0;
+
+  @at-root {
+    @include auto-margin-top-calculate(#{&});
+  }
+
+  &[uni-g11-02] {
+    ion-button {
+      --padding-top: var(--space-size-25);
+      --padding-end: var(--space-size-15);
+      --padding-bottom: var(--space-size-25);
+      --padding-start: var(--space-size-15);
+    }
+  }
+}
+
+.button-split {
+  @extend .button-base;
+
+  width: calc(50% - var(--space-size-10));
+  margin: 0 !important;
+}
+
+/* button-upload */
+
+/* button-icon-box */
+.button-icon-box {
+  display: flex;
+  align-items: center;
+  margin: var(--space-size-20) 0;
+  padding: var(--space-size-15) var(--space-size-30) var(--space-size-15)
+    var(--space-size-30);
+  color: var(--ion-default-text-color) !important;
+  text-decoration: none;
+
+  @include border($color: var(--ion-form-border-color));
+  @include border-radius($radius: var(--space-size-15));
+
+  @at-root {
+    @include auto-margin-top-calculate(#{&});
+  }
+
+  span {
+    display: block;
+    flex-grow: 1;
+    margin: 0;
+    padding-right: var(--space-size-10);
+  }
+
+  ion-thumbnail {
+    flex-shrink: 0;
+    width: calc(var(--space-size-50) + var(--space-size-60));
+    height: var(--space-size-70);
+  }
+}
+
+@for $i from 1 through 3 {
+  /* button-icon-#{$i}-wrap */
+  .button-icon-#{$i}-wrap {
+    margin: var(--space-size-30) 0;
+
+    @include button-icon-base(#{$i});
+
+    @at-root {
+      @include auto-margin-top-calculate(#{&});
+    }
+
+    .link-normal {
+      margin: 0 !important;
+      @include font($size: var(--font-size-small));
+    }
+  }
+}
+
+@for $i from 1 through 3 {
+  /* button-iup-{$i}-wrap */
+  .button-iup-#{$i}-wrap {
+    margin: var(--space-size-30) 0;
+
+    @include button-iupload-base(#{$i});
+
+    @at-root {
+      @include auto-margin-top-calculate(#{&});
+    }
+
+    .button-iup-element {
+      // for safari
+      min-width: calc(var(--space-size-10) * 28 / #{$i});
+    }
+
+    .button-iup-footer {
+      margin: 0 auto var(--space-size-reset) auto;
+    }
+
+    .button-iup-box {
+      .text-normal {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.button-iup-2-wrap {
+  & > .button-iup-element {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: calc(var(--space-size-80) * 2);
+    ion-thumbnail {
+      width: 100%;
+      height: calc(
+        var(--space-size-50) + var(--space-size-50) + var(--space-size-10)
+      );
+    }
+    .div-align-height {
+      height: var(--space-size-60);
+    }
+    .text-normal {
+      margin-bottom: var(--space-size-5);
+    }
+  }
+  .button-iup-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: calc(var(--space-size-80) * 2);
+    margin-top: 0;
+    padding: var(--space-size-20);
+  }
+
+  .btn-iup-thumbnail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: calc(var(--space-size-80) * 2);
+
+    @include border($color: var(--ion-color-step-150));
+    ion-thumbnail {
+      margin-bottom: 0;
+    }
+  }
+
+  .link-normal {
+    margin-top: var(--space-size-10);
+
+    a {
+      @include font(
+        $font-family: $hiragino-font,
+        $size: var(--font-size-medium)
+      );
+
+      ion-icon {
+        width: var(--space-size-20);
+        height: var(--space-size-20);
+        padding-left: var(--space-size-5);
+        stroke: var(--ion-color-link);
+      }
+    }
+  }
+}
+
+.button-iup-2-wrap.long-label {
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: revert;
+  column-gap: revert;
+  row-gap: revert;
+  .button-iup-element-flex {
+    display: flex;
+    justify-content: space-between;
+
+    &:last-child {
+      margin-top: var(--space-size-5);
+    }
+    .text-normal,
+    .button-iup-box {
+      flex-basis: calc(50% - 7.5px);
+      margin-bottom: 0;
+      .text-normal {
+        margin-left: 0;
+      }
+    }
+    .button-iup-element {
+      display: flex;
+      flex-basis: calc(50% - 7.5px);
+      flex-direction: column;
+      align-items: flex-start;
+      min-height: calc(var(--space-size-80) * 2);
+      ion-thumbnail {
+        width: 100%;
+        height: calc(
+          var(--space-size-50) + var(--space-size-50) + var(--space-size-10)
+        );
+      }
+    }
+  }
+}
+
+.button-iup-2-wrap.headered-button-header {
+  margin-bottom: 0;
+}
+
+.button-iup-2-wrap.headered-button-button {
+  margin-top: 0;
+}
+
+/* ion-button click時の挙動制御*/
+ion-button {
+  &[fill='outline'] {
+    &[color='blue'] {
+      &.ion-activated {
+        background: var(--ion-color-blue);
+        border-radius: 4px;
+      }
+    }
+    &[color='brown'] {
+      &.ion-activated {
+        background: var(--ion-color-brown);
+        border-radius: 4px;
+      }
+    }
+  }
+  &:not([fill]) {
+    &[color='blue'],
+    &[color='brown'] {
+      &.ion-activated {
+        opacity: 0.3;
+      }
+    }
+  }
+}

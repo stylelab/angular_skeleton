@@ -1,0 +1,13 @@
+<svg id="_00_icon_link_メディカルコール" data-name="00_icon_link_メディカルコール" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38">
+  <rect id="_area" width="38" height="38" fill="none"/>
+  <g id="グループ_691" data-name="グループ 691" transform="translate(-193.866 -204.087)">
+    <rect id="長方形_335" data-name="長方形 335" width="2.653" height="5.632" rx="1" transform="matrix(0.985, -0.174, 0.174, 0.985, 199.614, 206.291)" fill="#c6a465"/>
+    <rect id="長方形_336" data-name="長方形 336" width="2.653" height="5.632" rx="1" transform="matrix(0.985, 0.174, -0.174, 0.985, 210.345, 205.861)" fill="#c6a465"/>
+    <path id="パス_72" data-name="パス 72" d="M212.294,209.228l1.6.665a2.946,2.946,0,0,1,1.415,3.153l-1.465,8.308" fill="none" stroke="#c6a465" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="パス_72-2" data-name="パス 72" d="M199.929,209.259l-1.6.665a2.945,2.945,0,0,0-1.415,3.153l1.465,8.308" fill="none" stroke="#c6a465" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  </g>
+  <circle id="楕円形_72" data-name="楕円形 72" cx="0.385" cy="0.385" r="0.385" transform="translate(32.241 20.624)" stroke-width="1.5" stroke="#c6a465" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <circle id="楕円形_102" data-name="楕円形 102" cx="3.139" cy="3.139" r="3.139" transform="translate(29.487 17.87)" stroke-width="1.5" stroke="#c6a465" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path id="パス_976" data-name="パス 976" d="M206.594,233V235.6c0,1.966.639,5.393,6.328,5.393h0c5.161,0,6.28-4.55,6.28-8.166,0-5.525,3.838-6.467,3.838-6.467" transform="translate(-193.866 -204.087)" fill="none" stroke="#c6a465" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  <path id="パス_977" data-name="パス 977" d="M213.263,223.806c0,5.025-3.38,8.606-7.151,8.606h0c-3.772,0-7.152-3.581-7.152-8.606" transform="translate(-193.866 -204.087)" fill="none" stroke="#c6a465" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+</svg>

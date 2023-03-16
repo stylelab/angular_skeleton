@@ -1,0 +1,138 @@
+/*
+ * Slider Box
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+/* slider-box */
+.slider-box {
+  position: relative;
+  padding: 0 var(--space-size-40);
+
+  ion-slides {
+    height: auto;
+    min-height: 193px;
+    background: var(--ion-default-bg-color);
+
+    --bullet-background: var(--ion-color-step-200);
+    --bullet-background-active: var(--ion-color-custom-dark-gold);
+
+    .slider-caption-box {
+      width: 100%;
+
+      .link-image-1 {
+        margin: 0 0 var(--space-size-40);
+
+        p {
+          margin-top: var(--space-size-10);
+          text-align: left;
+          word-break: break-all;
+          overflow-wrap: anywhere;
+        }
+      }
+    }
+  }
+
+  &.web-top-page-btm-slider {
+    padding: 0 var(--space-size-30);
+
+    .link-normal {
+      @include font(
+        $font-family: $hiragino-font,
+        $size: var(--font-size-medium)
+      );
+
+      align-self: flex-start;
+    }
+  }
+
+  .slider-btn-base {
+    width: var(--space-size-40);
+    height: calc(var(--space-size-30) * 7);
+    margin: 0;
+
+    --background: none;
+    --background-hover: none;
+    --background-activated: none;
+    --border-radius: 0;
+    --box-shadow: none;
+
+    ion-icon {
+      min-width: var(--space-size-15);
+      fill: var(--ion-carousel-icon-color);
+    }
+
+    &:hover {
+      @include opacity(0.5);
+    }
+  }
+
+  .slider-prev-btn {
+    @extend .slider-btn-base;
+    @include position-absolute(0, auto, 0, 0);
+
+    &.web-top-page {
+      --padding-start: 0;
+    }
+  }
+
+  .slider-next-btn {
+    @extend .slider-btn-base;
+    @include position-absolute(0, 0, 0, auto);
+
+    &.web-top-page {
+      --padding-end: 0;
+    }
+  }
+}
+
+.slider-web-top-car-wrap {
+  position: relative;
+  top: -12px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 0;
+  padding: 0 var(--space-size-20);
+
+  .slider-prev-btn {
+    width: var(--space-size-40);
+    margin: 0;
+
+    --background: none;
+    --background-hover: none;
+    --background-activated: none;
+    --border-radius: 0;
+    --box-shadow: none;
+
+    ion-icon {
+      width: var(--space-size-10);
+      fill: var(--ion-carousel-icon-color);
+    }
+
+    &:hover {
+      @include opacity(0.5);
+    }
+  }
+
+  .slider-next-btn {
+    width: var(--space-size-40);
+    margin: 0;
+
+    --background: none;
+    --background-hover: none;
+    --background-activated: none;
+    --border-radius: 0;
+    --box-shadow: none;
+
+    ion-icon {
+      width: var(--space-size-10);
+      fill: var(--ion-carousel-icon-color);
+    }
+
+    &:hover {
+      @include opacity(0.5);
+    }
+  }
+}

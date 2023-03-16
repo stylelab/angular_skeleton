@@ -1,0 +1,249 @@
+/*
+ * Footer Box
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+.sticky-footer-wrap {
+  position: sticky;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+
+  &.recalc {
+    dl {
+      background: var(--ion-color-custom-light-gold);
+    }
+
+    dt {
+      span:first-of-type {
+        display: inline-block;
+        margin-right: var(--space-size-20);
+
+        @include font(
+          $font-family: $hiragino-font,
+          $size: var(--font-size-small)
+        );
+      }
+      strong {
+        display: inline-block;
+        word-break: keep-all;
+        em {
+          color: var(--ion-disabled-text-color);
+        }
+      }
+    }
+
+    dd {
+      display: flex;
+      align-items: center;
+      align-self: stretch;
+      justify-content: center;
+      width: 50%;
+      padding: var(--space-size-10) 0;
+
+      .button-wrap {
+        width: 100%;
+      }
+    }
+  }
+
+  dl {
+    display: flex;
+    align-items: center;
+    width: auto;
+    background: var(--ion-default-bg-color);
+    box-shadow: -1px 0px 10px rgba(0, 0, 0, 0.3);
+
+    dt {
+      width: 60%;
+      padding: var(--space-size-5);
+      text-align: center;
+      background: var(--ion-color-custom-light-gold);
+
+      span:first-of-type {
+        display: inline-block;
+        margin-right: var(--space-size-20);
+
+        @include font(
+          $font-family: $hiragino-font,
+          $size: var(--font-size-small)
+        );
+      }
+
+      strong {
+        @include font(
+          $font-family: $hiragino-font,
+          $size: var(--font-size-medium),
+          $weight: bold
+        );
+
+        em {
+          @include font(
+            $font-family: $hiragino-font,
+            $size: var(--font-size-20),
+            $weight: bold
+          );
+          font-style: normal;
+        }
+      }
+
+      span:last-of-type {
+        display: block;
+        margin-bottom: var(--space-size-5);
+
+        @include font($font-family: $hiragino-font, $size: var(--font-size-12));
+      }
+    }
+
+    dd {
+      flex-shrink: 0;
+      width: 40%;
+      padding: var(--space-size-10) 0;
+      background: var(--ion-color-custom-white);
+    }
+  }
+}
+
+.footer {
+  .footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 0;
+    padding: var(--space-size-15);
+  }
+  .footer-nav-item {
+    flex: 0 0 100%;
+    width: 100%;
+    min-width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    &.footer-nav-item-half {
+      flex-basis: calc(50% - var(--space-size-15) / 2);
+      width: calc(50% - var(--space-size-15) / 2);
+      min-width: calc(50% - var(--space-size-15) / 2);
+    }
+  }
+
+  .footer-nav-button {
+    display: flex;
+    flex: 0 0 100%;
+    align-items: center;
+    width: 100%;
+    min-width: 100%;
+    min-height: calc(var(--font-size-medium) * 1.7);
+    margin: 0;
+    padding-bottom: 0;
+    text-decoration: none;
+  }
+
+  .link-icon {
+    padding-bottom: 0;
+
+    &.link-icon-non-stroke {
+      stroke: none;
+    }
+  }
+
+  .border-dashed {
+    flex: 0 0 100%;
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .copyright {
+    margin-top: 0;
+    color: var(--ion-color-custom-white);
+    text-align: center;
+  }
+}
+
+/*
+ * Static Footer CSS
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+/* ----- footerArea ----- */
+#footerArea {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 15px;
+  background-color: #ffffff;
+  @include font(
+    $font-family: $hiragino-static-font,
+    $size: var(--font-size-small)
+  );
+  @include pc {
+    max-width: 100%;
+  }
+}
+
+/* ----- footerLinkBlock ----- */
+#footerLinkBlock {
+  margin: 0 -15px;
+  padding: 30px 5px;
+  text-align: center;
+  background-color: #f4f4f8;
+}
+#footerLinkBlock > ul {
+  display: inline-block;
+  vertical-align: top;
+  @include pc {
+    width: 100%;
+  }
+}
+#footerLinkBlock > ul > li {
+  float: left;
+  margin: 0.7em 0 0 10px;
+  padding-left: 10px;
+  line-height: 1.2;
+  border-left: 1px solid #cccccc;
+  @include pc {
+    display: inline-block;
+    float: none;
+  }
+  a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    text-decoration: none;
+    vertical-align: baseline;
+    background: transparent;
+  }
+}
+#footerLinkBlock > ul > li:nth-child(2n + 1) {
+  clear: left;
+  margin-left: 0;
+  padding-left: 0;
+  border-left: none;
+}
+#footerLinkBlock > ul > li:nth-child(3) {
+  @include pc {
+    margin: 0.7em 0 0 10px;
+    padding-left: 10px;
+    border-left: 1px solid #cccccc;
+  }
+}
+#footerLinkBlock > ul > li:nth-child(-n + 2) {
+  margin-top: 0;
+}
+#footerLinkBlock > ul > li > a {
+  color: #111111;
+}
+#footerCopyBlock {
+  margin: 0 -15px;
+  padding: 12px 15px;
+  color: #ffffff;
+  @include font(
+    $font-family: $hiragino-static-font,
+    $size: var(--font-size-10)
+  );
+  line-height: 1.6;
+  text-align: center;
+  background-color: #003a77;
+}

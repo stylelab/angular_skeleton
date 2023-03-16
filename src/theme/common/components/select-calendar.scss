@@ -1,0 +1,141 @@
+/*
+ * Select Calendar
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+ion-calendar {
+  padding: 0 !important;
+
+  /* action bar */
+  .title {
+    margin: 0 var(--space-size-5) !important;
+    padding: 0 25% !important;
+    background: var(--ion-color-custom-dark-gold) !important;
+
+    @include border-radius($corner: border-top-left, $radius: 4px);
+    @include border-radius($corner: border-top-right, $radius: 4px);
+
+    ion-button {
+      color: var(--ion-color-custom-white) !important;
+      @include font(
+        $font-family: $hiragino-font,
+        $size: var(--font-size-medium) !important,
+        $weight: bold
+      );
+
+      &.back {
+        background: url("assets/custom-ion-icons/ios-calendar-chevron-back-icon.svg")
+          no-repeat 50% 50%;
+        background-size: var(--space-size-10) auto;
+      }
+
+      &.forward {
+        background: url("assets/custom-ion-icons/ios-calendar-chevron-forward-icon.svg")
+          no-repeat 50% 50%;
+        background-size: var(--space-size-10) auto;
+      }
+    }
+
+    ion-icon {
+      display: none;
+    }
+  }
+
+  /* weeks view */
+  ion-calendar-week {
+    ion-toolbar {
+      .week-title {
+        height: var(--space-size-35) !important;
+        padding: var(--space-size-10) var(--space-size-5) !important;
+        color: var(--ion-default-text-color) !important;
+
+        @include font(
+          $font-family: $hiragino-font,
+          $size: var(--font-size-small) !important
+        );
+      }
+    }
+  }
+
+  /* months picker view */
+  ion-calendar-month-picker {
+    .month-packer-item {
+      button {
+        @include font($font-family: $hiragino-font, $weight: normal);
+      }
+
+      &.this-month {
+        button {
+          color: var(--ion-color-custom-white) !important;
+          font-weight: bold !important;
+          background: var(--ion-color-step-150) !important;
+          border: none !important;
+          border-radius: 0 !important;
+        }
+      }
+    }
+  }
+
+  /* months view */
+  ion-calendar-month {
+    .days {
+      min-height: var(--space-size-60);
+      margin-bottom: 2px !important;
+      background: #f7f7f7;
+
+      @include border(
+        $corner: right,
+        $width: 1px,
+        $style: solid,
+        $color: var(--ion-default-bg-color)
+      );
+
+      button {
+        width: 100% !important;
+        height: var(--space-size-60) !important;
+        margin: 0 !important;
+        padding-bottom: var(--space-size-5) !important;
+        border-radius: 0 !important;
+
+        p {
+          @include font($font-family: $hiragino-font, $weight: normal);
+        }
+
+        &.today {
+          border: 1px solid #28a69a;
+
+          p {
+            color: #333 !important;
+            font-weight: bold !important;
+          }
+        }
+
+        &.p-inherit {
+          p {
+            color: inherit !important;
+            font-weight: inherit !important;
+          }
+        }
+
+        &.on-selected {
+          background: var(--ion-color-custom-dark-gold) !important;
+
+          p {
+            color: var(--ion-color-custom-white) !important;
+            font-weight: bold !important;
+          }
+        }
+      }
+
+      &:nth-child(7n) {
+        background: #eaf2fc;
+        border-right: none;
+      }
+
+      &:nth-child(7n + 1) {
+        background: var(--ion-color-custom-pink);
+      }
+    }
+  }
+}

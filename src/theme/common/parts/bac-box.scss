@@ -1,0 +1,211 @@
+/*
+ * BAC
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+.bac-box {
+  position: relative;
+  min-height: 20px;
+  margin: var(--space-size-15) 0;
+  padding: var(--space-size-10);
+  background-color: var(--ion-emphasis-bg-color);
+
+  @at-root {
+    @include auto-margin-top-calculate(#{&});
+  }
+
+  p {
+    @include font($font-family: $hiragino-font);
+  }
+
+  dl {
+    text-align: center;
+
+    dt {
+      color: var(--ion-color-custom-dark-green);
+
+      @include font(
+        $font-family: $hiragino-font,
+        $size: var(--font-size-large),
+        $weight: bold
+      );
+
+      &[black] {
+        color: var(--ion-color-custom-black);
+      }
+
+      &[sizeMedium] {
+        font-size: var(--font-size-medium);
+      }
+    }
+
+    dd {
+      span {
+        color: var(--ion-color-custom-black) !important;
+
+        @include font(
+          $font-family: $hiragino-font,
+          $size: var(--font-size-small)
+        );
+      }
+    }
+  }
+
+  [UNI-CMP-01] & {
+    [textmiddle] {
+      @include font($size: var(--font-size-large), $weight: bold);
+    }
+  }
+
+  //UNI-CMP-01タイトル用
+  [textmiddle] {
+    margin-bottom: var(--space-size-15);
+  }
+
+  //UNI-CNF-01
+  .unique-box-07 {
+    margin-top: var(--space-size-15);
+  }
+
+  ion-item:not(.item-has-placeholder) {
+    background: var(--ion-default-bg-color);
+  }
+
+  .checkbox-button-normal {
+    @extend .checkbox-button-base;
+
+    &.item-checkbox-checked {
+      --background: var(--ion-default-bg-color);
+      background: var(--ion-default-bg-color);
+    }
+  }
+
+  > .box {
+    margin-top: 0;
+  }
+
+  > .text-normal {
+    ion-icon {
+      width: calc(var(--space-size-20) + 4px);
+      height: calc(var(--space-size-20) + 4px);
+      line-height: 16px;
+      vertical-align: -5px;
+      cursor: pointer;
+      fill: var(--ion-form-icon-color);
+    }
+  }
+  // ***** 2021/7/27 UIブラッシュアップ #38363 INTEC 木村 = START *****
+  &[marginXReset] {
+    padding: var(--space-size-20) var(--space-size-15);
+  }
+  // ***** 2021/7/27 UIブラッシュアップ #38363 INTEC 木村 = END *****
+  &[arrow] {
+    margin-top: var(--space-size-15);
+    background-color: var(--ion-color-step-115);
+
+    &:after {
+      display: block;
+      content: '';
+
+      @include position-absolute(
+        calc(var(--space-size-10) * -1),
+        auto,
+        auto,
+        var(--space-size-10)
+      );
+
+      @include border($corner: top, $color: transparent, $width: 0);
+
+      @include border(
+        $corner: right,
+        $color: transparent,
+        $width: var(--space-size-10)
+      );
+
+      @include border(
+        $corner: bottom,
+        $color: var(--ion-color-step-115),
+        $width: var(--space-size-10)
+      );
+
+      @include border(
+        $corner: left,
+        $color: transparent,
+        $width: var(--space-size-10)
+      );
+
+      &[center] {
+        @include position-absolute(
+          calc(var(--space-size-10) * -1),
+          auto,
+          auto,
+          calc(50% - calc(var(--space-size-10) / 2))
+        );
+      }
+    }
+    > [FRM-02-01] {
+      margin-top: var(--space-top-0);
+    }
+  }
+
+  &[black] {
+    background-color: var(--ion-color-custom-black);
+  }
+
+  &[gold] {
+    background-color: var(--ion-color-custom-light-gold);
+  }
+
+  &[blue] {
+    background-color: var(--ion-color-blue);
+  }
+
+  &[white] {
+    background-color: var(--ion-color-custom-white);
+
+    @include border-radius($radius: 4px);
+
+    &[arrow]:after {
+      @include position-absolute(
+        auto,
+        auto,
+        -8px,
+        calc(50% - var(--space-size-10))
+      );
+
+      @include border(
+        $corner: top,
+        $color: var(--ion-color-custom-white),
+        $width: var(--space-size-10)
+      );
+
+      @include border(
+        $corner: right,
+        $color: transparent,
+        $width: var(--space-size-5)
+      );
+
+      @include border($corner: bottom, $color: transparent, $width: 0);
+      @include border(
+        $corner: left,
+        $color: transparent,
+        $width: var(--space-size-5)
+      );
+    }
+  }
+
+  &[textMiddle] {
+    text-align: center;
+  }
+
+  &[borderGold] {
+    border: 1px solid var(--ion-color-gold);
+  }
+}
+
+.content-box > [UNI-CMP-01] {
+  &:first-child {
+    margin-top: var(--space-size-40);
+  }
+}

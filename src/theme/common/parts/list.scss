@@ -1,0 +1,568 @@
+/*
+ * Paragraph
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+/* list dot */
+.list-dot {
+  @extend .list-base;
+  margin: var(--space-size-30) 0;
+
+  @at-root {
+    @include auto-margin-top-calculate(#{&});
+  }
+
+  & > li {
+    margin-left: 16px !important;
+    line-height: 1.75rem;
+    text-indent: -8px;
+
+    &::before {
+      display: inline-block;
+      padding-right: 8px;
+      line-height: 0;
+      vertical-align: middle;
+      content: url('assets/custom-ion-icons/list-dot-icon.svg');
+      counter-increment: step;
+    }
+
+    [small] & {
+      margin: var(--space-size-10) 0;
+    }
+
+    span {
+      vertical-align: middle;
+    }
+
+    &.list-icon {
+      span {
+        margin-left: -5px;
+        vertical-align: bottom;
+      }
+    }
+
+    ion-icon {
+      display: inline-block;
+      width: calc(var(--space-size-20) + 4px);
+      height: calc(var(--space-size-20) + 4px);
+      margin-top: -4px;
+      margin-left: 5px;
+      vertical-align: middle;
+      cursor: pointer;
+      fill: var(--ion-form-icon-color);
+    }
+  }
+
+  .list-decimal-04 {
+    margin: var(--space-size-15) 0 0 var(--space-size-20);
+
+    & > li {
+      margin-left: 16px;
+      line-height: 1.75rem;
+    }
+  }
+
+  .list-sharp {
+    & > li:first-child {
+      margin-top: var(--space-size-5);
+    }
+  }
+}
+
+/* list dot 2 */
+.list-dot-2 {
+  li {
+    margin-bottom: var(--space-size-5);
+    margin-left: 16px !important;
+    line-height: 1.75rem;
+    text-indent: -8px;
+
+    &::before {
+      display: inline-block;
+      padding-right: 8px;
+      line-height: 0;
+      vertical-align: middle;
+      content: url('assets/custom-ion-icons/list-dot-icon.svg');
+      counter-increment: step;
+    }
+  }
+}
+
+/* ***** 2021/08/10 UIブラッシュアップ #78753 INTEC 朴慶煥 新規 START ***** */
+/* list dot 3 */
+.list-dot-3 {
+  @extend .list-base;
+  margin: var(--space-size-30) 0;
+
+  @at-root {
+    @include auto-margin-top-calculate(#{&});
+  }
+
+  & > li {
+    margin-left: 16px !important;
+    line-height: 1.75rem;
+    text-indent: -8px;
+
+    &::before {
+      display: inline-block;
+      padding-right: 8px;
+      line-height: 0;
+      vertical-align: middle;
+      content: url('assets/custom-ion-icons/list-dot-icon.svg');
+      counter-increment: step;
+    }
+
+    [small] & {
+      margin: var(--space-size-10) 0;
+    }
+
+    span {
+      vertical-align: middle;
+    }
+
+    &.list-icon {
+      span {
+        margin-left: -5px;
+        vertical-align: bottom;
+      }
+    }
+
+    ion-icon {
+      display: inline-block;
+      margin-top: -4px;
+      vertical-align: middle;
+      cursor: pointer;
+      stroke: var(--ion-link-icon-color);
+    }
+  }
+
+  .list-decimal-04 {
+    margin: var(--space-size-15) 0 0 var(--space-size-20);
+
+    & > li {
+      margin-left: 16px;
+      line-height: 1.75rem;
+    }
+  }
+
+  .list-sharp {
+    & > li:first-child {
+      margin-top: var(--space-size-5);
+    }
+  }
+}
+
+/* list dot 4 */
+.list-dot-4 {
+  li {
+    margin-bottom: var(--space-size-5);
+    margin-left: 16px !important;
+    line-height: 1.75rem;
+    text-indent: -8px;
+    color: var(--ion-link-text-color) !important;
+
+    &::before {
+      display: inline-block;
+      padding-right: 8px;
+      line-height: 0;
+      vertical-align: middle;
+      content: url('assets/custom-ion-icons/list-dot-icon.svg');
+      counter-increment: step;
+    }
+  }
+}
+/* ***** 2021/08/10 UIブラッシュアップ #78753 INTEC 朴慶煥 新規 END ***** */
+
+/* ***** 2022/04/05 UIブラッシュアップ #89483 INTEC 小川 新規 START ***** */
+/* list dot 5 */
+.list-dot-5 {
+  @extend .list-base;
+  margin: var(--space-size-30) 0;
+
+  @at-root {
+    @include auto-margin-top-calculate(#{&});
+  }
+
+  & > li {
+    margin-left: 9% !important;
+    line-height: 1.75rem;
+    text-indent: -8px;
+
+    &::before {
+      display: inline-block;
+      padding-right: 8px;
+      line-height: 0;
+      vertical-align: middle;
+      content: url('assets/custom-ion-icons/list-dot-icon.svg');
+      counter-increment: step;
+    }
+
+    [small] & {
+      margin: var(--space-size-10) 0;
+    }
+
+    span {
+      vertical-align: middle;
+    }
+
+    &.list-icon {
+      span {
+        margin-left: -5px;
+        vertical-align: bottom;
+      }
+    }
+
+    ion-icon {
+      width: calc(var(--space-size-20) + 4px);
+      height: calc(var(--space-size-20) + 4px);
+      padding-top: 1px;
+      fill: var(--ion-form-icon-color);
+      vertical-align: middle;
+      margin-top: -4px;
+    }
+  }
+
+  .list-decimal-04 {
+    margin: var(--space-size-15) 0 0 var(--space-size-20);
+
+    & > li {
+      margin-left: 16px;
+      line-height: 1.75rem;
+    }
+  }
+
+  .list-sharp {
+    & > li:first-child {
+      margin-top: var(--space-size-5);
+    }
+  }
+
+  .indent {
+    margin-left: 4%;
+  }
+}
+
+/* ***** 2022/04/05 UIブラッシュアップ #89483 INTEC 小川 新規 END ***** */
+/* list decimal */
+.list-decimal {
+  @extend .list-base;
+  margin-left: var(--space-size-15);
+  list-style: decimal;
+
+  &[indentNone] {
+    text-indent: 0;
+  }
+}
+
+/* list decimal 02 */
+.list-decimal-02 {
+  @extend .list-base;
+
+  counter-reset: step;
+
+  & > li {
+    padding-left: var(--space-size-10);
+
+    &::before {
+      content: '(' counter(step) ')';
+      counter-increment: step;
+
+      @include position-absolute(auto, auto, auto, -24px);
+    }
+  }
+}
+
+/* list decimal 03 */
+.list-decimal-03 {
+  @extend .list-base;
+
+  counter-reset: step;
+
+  & > dl > dt {
+    position: relative;
+    display: flex;
+    margin: 0 0 var(--space-size-5) var(--space-size-25);
+    padding-left: var(--space-size-10);
+
+    &::before {
+      width: var(--space-size-25);
+      height: var(--space-size-25);
+      color: var(--ion-table-header-text-color);
+      line-height: var(--space-size-25);
+      text-align: center;
+      background: var(--ion-form-icon-color);
+      content: counter(step);
+      counter-increment: step;
+
+      @include position-absolute(
+        auto,
+        auto,
+        auto,
+        calc(-1 * var(--space-size-25))
+      );
+
+      @include font(
+        $font-family: $hiragino-font,
+        $size: var(--font-size-12),
+        $weight: bold
+      );
+
+      @include border-radius($radius: 50%);
+    }
+  }
+
+  & > dl > dd {
+    p {
+      margin-left: var(--space-size-35);
+    }
+  }
+
+  &.long-contents > dl > dt {
+    margin: 0 0 var(--space-size-20) var(--space-size-10);
+
+    .list-decimal-03-num {
+      width: var(--space-size-25);
+      height: var(--space-size-25);
+      margin-left: var(--space-size-15);
+      color: var(--ion-table-header-text-color);
+      line-height: var(--space-size-25);
+      text-align: center;
+      background: var(--ion-form-icon-color);
+
+      @include position-absolute(
+        auto,
+        auto,
+        auto,
+        calc(-1 * var(--space-size-25))
+      );
+
+      @include font(
+        $font-family: $hiragino-font,
+        $size: var(--font-size-12),
+        $weight: bold
+      );
+
+      @include border-radius($radius: 50%);
+    }
+
+    dd {
+      .button-wrap {
+        margin: var(--space-size-20) 0 !important;
+      }
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .modal-box & > dl > dt {
+    padding-right: var(--space-size-15);
+    padding-left: var(--space-size-25);
+  }
+
+  .modal-box & > dl > dd > p {
+    margin: 0;
+  }
+
+  .button-iup-1-wrap {
+    input {
+      display: none;
+    }
+
+    .button-iup-box {
+      margin-top: 0;
+    }
+  }
+}
+
+/* list decimal 04 */
+.list-decimal-04 {
+  $circle_numbers: '\002460', '\002461', '\002462', '\002463', '\002464',
+    '\002465', '\002466', '\002467', '\002468', '\002469', '\00246a', '\00246b',
+    '\00246c', '\00246d', '\00246e', '\00246f', '\002470', '\002471', '\002472',
+    '\002473';
+
+  @extend .list-base;
+
+  & > li {
+    &::before {
+      @include position-absolute(auto, auto, auto, -24px);
+    }
+    @each $circle_number in $circle_numbers {
+      $key: index($circle_numbers, $circle_number);
+      &:nth-of-type(#{$key}):before {
+        content: '#{nth($circle_numbers, $key)}';
+      }
+    }
+  }
+}
+
+/* list alphabetical */
+.list-alphabetical {
+  @extend .list-base;
+
+  margin: var(--space-size-30) 0;
+  counter-reset: step;
+
+  @at-root {
+    @include auto-margin-top-calculate(#{&});
+  }
+
+  & > li {
+    &::before {
+      @include position-absolute(auto, auto, auto, -24px);
+      content: counter(step, upper-alpha) ')';
+      counter-increment: step;
+    }
+  }
+}
+
+/* list example */
+.list-example {
+  @extend .list-base;
+
+  margin: var(--space-size-30) 0;
+  counter-reset: step;
+
+  @at-root {
+    @include auto-margin-top-calculate(#{&});
+  }
+
+  & > li {
+    padding-left: var(--space-size-10);
+    &::before {
+      @include position-absolute(auto, auto, auto, -24px);
+      content: '(例)';
+      counter-increment: step;
+    }
+  }
+}
+
+/* list sharp */
+.list-sharp {
+  @extend .list-base;
+
+  margin: var(--space-size-30) 0;
+  counter-reset: step;
+
+  @at-root {
+    @include auto-margin-top-calculate(#{&});
+  }
+
+  & > li {
+    margin: 0 0 var(--space-size-5) var(--space-size-25);
+    font-size: var(--font-size-small);
+
+    &::before {
+      @include position-absolute(auto, auto, auto, -24px);
+      content: '※';
+      counter-increment: step;
+    }
+  }
+}
+
+.list-sharp-ja {
+  @extend .list-sharp;
+
+  & > li {
+    margin: 0 0 var(--space-size-5) var(--space-size-30);
+
+    &::before {
+      @include position-absolute(auto, auto, auto, -30px);
+      content: '(注)';
+    }
+  }
+}
+
+/* list sharp 02 */
+.list-sharp-02 {
+  @extend .list-base;
+
+  margin: var(--space-size-30) 0;
+  counter-reset: step;
+
+  @at-root {
+    @include auto-margin-top-calculate(#{&});
+  }
+
+  & > li {
+    margin: 0 0 var(--space-size-5) var(--space-size-25);
+    padding-left: var(--space-size-10);
+    font-size: var(--font-size-small);
+
+    &::before {
+      content: '※' counter(step);
+      counter-increment: step;
+
+      @include position-absolute(auto, auto, auto, -24px);
+    }
+  }
+}
+
+/* 2021/12/08 UI【代扱】#85312 CAP Raka 新規追加 START */
+/* list sharp 03 */
+.list-sharp-03 {
+  @extend .list-base;
+
+  margin: var(--space-size-30) 0;
+  counter-reset: step;
+
+  @at-root {
+    @include auto-margin-top-calculate(#{&});
+  }
+
+  & > li {
+    margin: 0 0 var(--space-size-5) var(--space-size-25);
+    padding-left: var(--space-size-10);
+    font-size: var(--font-size-medium);
+
+    &::before {
+      content: '（' counter(step) '） ';
+      counter-increment: step;
+
+      @include position-absolute(auto, auto, auto, -24px);
+    }
+  }
+}
+/* 2021/12/08 UI【代扱】#85312 CAP Raka 新規追加 END */
+
+.list-sharp-02-from2 {
+  @extend .list-sharp-02;
+  counter-reset: step 1;
+}
+
+.list-sharp-02-from3 {
+  @extend .list-sharp-02;
+  counter-reset: step 2;
+}
+
+.list-sharp-02-from4 {
+  @extend .list-sharp-02;
+  counter-reset: step 3;
+}
+
+.paragraph-explanation {
+  margin: var(--space-size-30) 0;
+
+  @at-root {
+    @include auto-margin-top-calculate(#{&});
+  }
+
+  dt {
+    margin-bottom: var(--space-size-15);
+  }
+
+  dd {
+    margin-bottom: var(--space-size-25);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &[textLeft] {
+    text-align: left;
+  }
+}

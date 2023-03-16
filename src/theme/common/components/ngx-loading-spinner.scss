@@ -1,0 +1,68 @@
+// Ngx Loading Spinner
+
+// 設定
+$spinner-animation-speed: 1s;
+
+// style
+ngx-loading-spinner {
+  z-index: 100000 !important;
+
+  .loader > img {
+    max-width: 25%;
+  }
+
+  &.default > div {
+    @include animation(spinner-fade $spinner-animation-speed linear 0s);
+  }
+
+  &.fast > div {
+    @include animation(fast-spinner-fade $spinner-animation-speed linear 0s);
+  }
+
+  &.transparent {
+    & > div {
+      @include animation(spinner-fade $spinner-animation-speed linear 0s);
+    }
+    .spinner {
+      background: rgba(0, 0, 0, 0) !important;
+    }
+    .sk-fading-circle .sk-circle:before {
+      background-color: var(--ion-text-color) !important;
+    }
+  }
+
+  &.invisible {
+    .spinner {
+      background: rgba(0, 0, 0, 0) !important;
+    }
+
+    .sk-fading-circle .sk-circle:before {
+      background-color: rgba(0, 0, 0, 0) !important;
+    }
+  }
+}
+
+// animations
+@include keyframes(spinner-fade) {
+  0% {
+    @include opacity(0);
+  }
+
+  50% {
+    @include opacity(0);
+  }
+
+  100% {
+    @include opacity(1);
+  }
+}
+
+@include keyframes(fast-spinner-fade) {
+  0% {
+    @include opacity(0);
+  }
+
+  10% {
+    @include opacity(1);
+  }
+}

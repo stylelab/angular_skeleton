@@ -1,0 +1,258 @@
+/*
+ * Select Image
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+/* select-image-01 */
+
+.select-image-01,
+.select-image-02,
+[slc-img-02] {
+  margin: var(--space-size-30) 0 0 0;
+
+  .text-normal {
+    margin: 0 0 var(--space-size-15) 0;
+    
+    a {
+      ion-icon {
+        margin-top: -4px;
+      }
+    }
+  }
+
+  .frm-normal-header {
+    margin: 0 0 var(--space-size-15) 0;
+  }
+
+  .frm-normal [FRM-05] {
+    margin: var(--space-size-20) 0 0 0;
+  }
+
+  .checkbox-button-split-wrap {
+    margin: var(--space-size-15) 0;
+  }
+
+  .checkbox-button-split {
+    --inner-padding-end: 0;
+
+    ion-thumbnail {
+      margin-top: 0;
+      padding: var(--space-size-15);
+    }
+
+    .checkbox-button-split-flex-column {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      .checkbox-button-split-flex-label {
+        @extend .checkbox-button-base;
+
+        display: flex !important;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        margin: 0 !important;
+        border: none !important;
+
+        ion-label {
+          width: 100%;
+          white-space: normal !important;
+        }
+
+        ion-checkbox {
+          min-width: 18px;
+        }
+      }
+    }
+  }
+
+  .radio-button-split-wrap {
+    margin: var(--space-size-15) 0;
+  }
+
+  .radio-button-split-wrap-noflex {
+    margin: var(--space-size-15) 0;
+
+    .radio-button-split {
+      width: 100%;
+    }
+  }
+
+  .radio-button-split {
+    --inner-padding-end: 0;
+
+    ion-thumbnail {
+      margin-top: 0;
+      padding: var(--space-size-15);
+    }
+
+    .radio-button-split-flex-column {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      .radio-button-split-thumbnail {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        ion-radio {
+          min-width: 20px;
+        }
+      }
+
+      .radio-button-split-flex-label {
+        @extend .radio-button-base;
+
+        display: flex !important;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        margin: 0 !important;
+        border: none !important;
+
+        ion-label {
+          width: 100%;
+          white-space: normal !important;
+        }
+
+        ion-radio {
+          min-width: 20px;
+        }
+
+        &[textMiddle] {
+          margin-bottom: var(--space-size-15) !important;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  &[UNI-G11-07] {
+    margin-top: var(--space-size-30);
+
+    .radio-button-split-wrap {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: var(--space-size-15);
+      row-gap: var(--space-size-15);
+
+      .radio-button-split {
+        width: 100%;
+      }
+    }
+
+    .radio-button-split-flex-column {
+      .radio-button-split-flex-label {
+        margin-top: var(--space-size-10) !important;
+        margin-bottom: var(--space-size-10) !important;
+      }
+    }
+
+    ion-label {
+      position: relative;
+      bottom: var(--space-size-10);
+      padding-right: var(--space-size-15);
+    }
+
+    ion-radio {
+      align-self: flex-start !important;
+      margin: -6px calc(var(--space-size-20) / 2) var(--space-size-15)
+        var(--space-size-15) !important;
+    }
+
+    .frm-normal-header {
+      margin-top: var(--space-size-15);
+    }
+  }
+}
+
+/* select-car-content */
+.select-car-content {
+  margin-right: auto;
+
+  @include font(
+    $font-family: $hiragino-font,
+    $size: var(--font-size-medium),
+    $weight: normal
+  );
+
+  .text-normal {
+    margin: 0;
+    margin-bottom: var(--space-size-15);
+  }
+
+  .select-car-label {
+    margin-bottom: var(--space-size-10);
+  }
+
+  .select-car-content-date {
+    margin-top: var(--space-size-10);
+
+    .text-normal:first-child {
+      margin-right: var(--space-size-20);
+    }
+
+    .text-normal:only-child {
+      margin-right: 0;
+    }
+  }
+
+  &.period-before-wrap {
+    .select-car-label {
+      .text-label {
+        color: var(--ion-color-custom-white);
+        background: var(--ion-color-custom-dark-green);
+
+        @include border($color: var(--ion-color-custom-dark-green));
+      }
+    }
+  }
+
+  &.period-before-wrap2 {
+    .select-car-label {
+      .text-label {
+        color: var(--ion-color-blue);
+
+        @include border($color: var(--ion-color-blue));
+      }
+    }
+  }
+
+  &.period-current-wrap {
+    .select-car-label {
+      .text-label {
+        color: var(--ion-color-custom-white);
+        background: var(--ion-color-custom-dark-blue);
+
+        @include border($color: var(--ion-color-custom-dark-blue));
+      }
+    }
+  }
+
+  &.period-after-wrap {
+    .select-car-label {
+      .text-label {
+        color: var(--ion-color-custom-white);
+        background: var(--ion-color-custom-dark-gold);
+
+        @include border($color: var(--ion-color-custom-dark-gold));
+      }
+    }
+  }
+
+  &.termination-wrap {
+    .select-car-label {
+      .text-label {
+        color: var(--ion-color-custom-white);
+        background: var(--ion-color-step-400);
+
+        @include border($color: var(--ion-color-step-400));
+      }
+    }
+  }
+}

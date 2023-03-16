@@ -1,0 +1,152 @@
+/*
+ * Landing Page
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+/* landing-form-box */
+.landing-form-box {
+  .landing-form-separator {
+    width: calc(var(--space-size-45) * 4);
+    height: var(--space-size-5);
+    margin: var(--space-size-40) auto 0;
+    background: url(assets/images/landing-dot-icon.png) repeat-x 0 0;
+    background-size: 10px;
+  }
+
+  .landing-form-selection-box {
+    padding: var(--space-size-45) var(--space-size-30);
+    background: #f8f3eb;
+
+    .unique-box-02 {
+      text-align: center;
+
+      @include border-radius($radius: 0);
+      @include border-radius(border-top-right, 8px);
+      @include border-radius(border-bottom-left, 8px);
+
+      dd {
+        padding: var(--space-size-25) var(--space-size-20);
+
+        .link-image-2 > div {
+          min-height: calc(var(--space-size-20) * 8);
+
+          ion-thumbnail {
+            height: calc(var(--space-size-50) + var(--space-size-45));
+            margin-bottom: var(--space-size-10);
+          }
+
+          a {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  .landing-form-button-box {
+    padding: var(--space-size-50) var(--space-size-30);
+
+    dt {
+      margin-bottom: var(--space-size-20);
+
+      @include font($size: var(--font-size-small));
+      text-align: center;
+
+      &.landing-form-button-box-top {
+        @include font(
+          $font-family: $hiragino-font,
+          $weight: normal,
+          $size: var(--font-size-small)
+        );
+
+        margin: 0;
+        color: var(--ion-color-custom-dark-blue);
+        text-align: center;
+      }
+
+      &.landing-form-button-box-mid {
+        @include font(
+          $font-family: $hiragino-font,
+          $weight: bold,
+          $size: var(--font-size-large)
+        );
+
+        margin: 0 0 var(--space-size-15) 0;
+        color: var(--ion-color-custom-dark-blue);
+        text-align: center;
+      }
+    }
+  }
+}
+
+/* landing-footer-box */
+.landing-footer-box {
+  color: var(--ion-table-header-text-color);
+  background: var(--ion-color-step-650);
+
+  @include font($font-family: $hiragino-font, $size: var(--font-size-medium));
+
+  strong {
+    display: block;
+    margin-bottom: var(--space-size-40);
+    padding: var(--space-size-10) var(--space-size-20) 0;
+    letter-spacing: 0.2rem;
+  }
+
+  dl {
+    dt {
+      margin-bottom: var(--space-size-10);
+      padding: 0 var(--space-size-15);
+
+      @include font($size: var(--font-size-12));
+    }
+  }
+
+  .slider-box {
+    margin: 0 0 var(--space-size-45);
+    padding: 0 var(--space-size-70);
+
+    ion-slides {
+      height: 140px;
+      background: var(--ion-carousel-icon-color);
+    }
+
+    .slider-prev-btn,
+    .slider-next-btn {
+      width: var(--space-size-50);
+      --background: var(--ion-carousel-icon-color);
+    }
+  }
+
+  .landing-link-box {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-size-40) var(--space-size-30) var(--space-size-50);
+
+    @include border($corner: top, $color: var(--ion-color-custom-white));
+
+    & > div {
+      display: flex;
+      justify-content: center;
+      width: 50%;
+
+      ul {
+        li {
+          min-height: var(--space-size-25);
+          margin: 0 0 var(--space-size-15) 0;
+
+          a {
+            @include font(
+              $font-family: $hiragino-font,
+              $size: var(--font-size-12),
+              $weight: bold
+            );
+
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

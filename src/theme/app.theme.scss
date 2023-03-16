@@ -1,0 +1,60 @@
+/*
+ * App Theme
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+/* import */
+@import 'fonts';
+@import 'spaces';
+
+/* 設定 */
+@include base-font-face();
+
+/* ion container base */
+body {
+  background: var(--ion-color-step-50);
+
+  ion-app {
+    max-width: 640px;
+    margin: 0 auto;
+
+    // ios-safari for iOS12.2-4
+    &.ios ion-content {
+      pointer-events: auto;
+    }
+
+    @include pc {
+      max-width: 1200px;
+    }
+  }
+}
+
+:root {
+  // default theme mode
+  --ion-font-family: #{$hiragino-font};
+  font-size: var(--font-size-medium);
+  line-height: 1.6;
+
+  // default backdrop
+  .sc-ion-modal-md-h,
+  .sc-ion-modal-ios-h {
+    --backdrop-opacity: var(--ion-backdrop-opacity, 0.7);
+  }
+
+  // datepicker touch-action
+  .sc-ion-picker-ios-h {
+    touch-action: none;
+  }
+
+  // modal
+  .modal-wrapper.sc-ion-modal-md,
+  .modal-wrapper.sc-ion-modal-ios {
+    background: none;
+
+    & > .ion-page {
+      margin: var(--space-size-15);
+      color: var(--ion-link-text-color, red) !important;
+    }
+  }
+}

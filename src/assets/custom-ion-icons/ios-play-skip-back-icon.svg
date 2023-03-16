@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-ios-play-skip-back-icon">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="ios-play-skip-back-icon" clip-path="url(#clip-ios-play-skip-back-icon)">
+    <g id="_00_icon_pagination_left02" data-name="00_icon_pagination_left02" transform="translate(6 4)">
+      <g id="_" data-name="&gt;" transform="translate(13 16.142) rotate(180)">
+        <path id="_2" data-name="&gt;" d="M.293,15.849a1,1,0,0,1,0-1.414L6.656,8.071.293,1.707A1,1,0,0,1,1.706.293L9.485,8.071,1.706,15.849a1,1,0,0,1-1.414,0Z"/>
+      </g>
+      <rect id="line" width="1" height="16" transform="translate(0 0)"/>
+    </g>
+  </g>
+</svg>

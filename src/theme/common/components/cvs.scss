@@ -1,0 +1,31 @@
+/*
+ * CVS
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+.cvs-01 {
+  .unique-box-07 {
+    margin: var(--space-size-15) 0 0 0;
+    padding: 0;
+    .price-gray {
+      color: var(--ion-disabled-text-color);
+    }
+  }
+
+  .bg-gold {
+    background: var(--ion-color-custom-gold);
+
+    p {
+      background: var(--ion-color-custom-light-gold);
+
+      @include border($color: var(---ion-color-custom-light-gold));
+      strong {
+        color: var(--ion-color-custom-black);
+      }
+    }
+  }
+  &.bg-white {
+    background: var(--ion-color-custom-white);
+  }
+}

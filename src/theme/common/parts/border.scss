@@ -1,0 +1,26 @@
+/*
+ * Border
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+/* border-normal */
+.border-normal {
+  @extend .border-base;
+
+  margin: var(--space-size-40) 0;
+}
+
+.border-dashed {
+  @extend .border-dotted-base;
+}
+
+.unique-g13-03 + .link-normal + .border-normal {
+  margin: var(--space-size-25) 0;
+}
+
+// ***** 2021/11/09 移行継続　INTEC 朴承訓 更新 START *****
+.border-bottom-line {
+  border-bottom: 3px solid var(--ion-default-border-color);
+}
+// ***** 2021/11/09 移行継続　INTEC 朴承訓 更新 END *****

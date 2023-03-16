@@ -1,0 +1,112 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "net.edesign.ande.dev",
+      "sha256_cert_fingerprints": [
+        "28:CE:55:49:33:1D:82:3F:06:B9:72:BB:4B:0F:9C:80:22:D6:C8:01:F8:D3:56:60:61:AE:43:5F:89:53:CB:B3"
+      ]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "net.edesign.ande.ita",
+      "sha256_cert_fingerprints": [
+        "28:CE:55:49:33:1D:82:3F:06:B9:72:BB:4B:0F:9C:80:22:D6:C8:01:F8:D3:56:60:61:AE:43:5F:89:53:CB:B3"
+      ]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "net.edesign.ande.itb",
+      "sha256_cert_fingerprints": [
+        "28:CE:55:49:33:1D:82:3F:06:B9:72:BB:4B:0F:9C:80:22:D6:C8:01:F8:D3:56:60:61:AE:43:5F:89:53:CB:B3"
+      ]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "net.edesign.ande.itb",
+      "sha256_cert_fingerprints": [
+        "56:BA:46:71:9A:7E:55:13:3D:E2:16:13:C8:37:50:FA:82:49:7B:62:F4:98:49:BC:8B:FB:2C:DC:F9:0F:96:88"
+      ]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "net.edesign.ande.uat",
+      "sha256_cert_fingerprints": [
+        "28:CE:55:49:33:1D:82:3F:06:B9:72:BB:4B:0F:9C:80:22:D6:C8:01:F8:D3:56:60:61:AE:43:5F:89:53:CB:B3"
+      ]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "net.edesign.ande.test1",
+      "sha256_cert_fingerprints": [
+        "28:CE:55:49:33:1D:82:3F:06:B9:72:BB:4B:0F:9C:80:22:D6:C8:01:F8:D3:56:60:61:AE:43:5F:89:53:CB:B3"
+      ]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "net.edesign.ande.test2",
+      "sha256_cert_fingerprints": [
+        "28:CE:55:49:33:1D:82:3F:06:B9:72:BB:4B:0F:9C:80:22:D6:C8:01:F8:D3:56:60:61:AE:43:5F:89:53:CB:B3"
+      ]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "net.edesign.ande.st",
+      "sha256_cert_fingerprints": [
+        "28:CE:55:49:33:1D:82:3F:06:B9:72:BB:4B:0F:9C:80:22:D6:C8:01:F8:D3:56:60:61:AE:43:5F:89:53:CB:B3"
+      ]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "net.edesign.ande.staging",
+      "sha256_cert_fingerprints": [
+        "28:CE:55:49:33:1D:82:3F:06:B9:72:BB:4B:0F:9C:80:22:D6:C8:01:F8:D3:56:60:61:AE:43:5F:89:53:CB:B3"
+      ]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "net.edesign.ande",
+      "sha256_cert_fingerprints": [
+        "28:CE:55:49:33:1D:82:3F:06:B9:72:BB:4B:0F:9C:80:22:D6:C8:01:F8:D3:56:60:61:AE:43:5F:89:53:CB:B3"
+      ]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "net.edesign.ande",
+      "sha256_cert_fingerprints": [
+        "FC:84:B8:5B:FC:E4:38:B4:89:FF:4C:57:9B:9D:DA:61:CD:9D:0B:63:41:AC:8A:3F:8E:65:67:A0:99:E5:A1:CF"
+      ]
+    }
+  }
+]

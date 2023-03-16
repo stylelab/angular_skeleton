@@ -1,0 +1,39 @@
+/*
+ * List Selection Button Base
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+.list-selection-button-base,
+%list-selection-button-base {
+  margin: var(--space-size-10) 0;
+  cursor: pointer;
+
+  --background: transparent;
+  --background-hover: transparent;
+  --min-height: 1px;
+  --padding-start: var(--space-size-15);
+  --min-height: auto;
+  --inner-padding-end: var(--space-size-10);
+
+  @include border($color: var(--ion-color-custom-light-green));
+
+  ion-label.sc-ion-label-md-h {
+    margin: 0;
+    color: var(--ion-default-text-color);
+
+    @include font($font-family: $hiragino-font, $size: var(--font-size-medium));
+  }
+
+  &:hover {
+    --background: var(--ion-color-custom-super-light-green);
+  }
+
+  .landing-theme & {
+    --padding-top: var(--space-size-15);
+    --padding-bottom: var(--space-size-15);
+
+    @include border($color: var(--ion-color-custom-white));
+    @include border-radius($radius: var(--space-size-15));
+  }
+}

@@ -1,0 +1,522 @@
+.p-customer-plan {
+  text-align: center;
+  color: var(--ion-color-blue);
+}
+
+.span-margin-add {
+  margin-top: 35px;
+}
+
+.div-recommend-message-transition {
+  padding: 0px 0 5px 4px;
+  display: flex;
+  justify-content: space-between;
+  background: #faf7f1;
+  align-items: center;
+
+  .div-recommend-message-detail-transition {
+    background-color: white;
+    padding: 8px;
+    border-radius: 4px;
+    flex-shrink: 1;
+    flex-grow: 10;
+    flex-basis: 0;
+  }
+
+  p {
+    line-height: 16px;
+    margin-bottom: 20px !important;
+  }
+
+  .div-recommend-message-link-transition {
+    margin-top: 0px !important;
+  }
+
+  .div-recommend-message-img-transition {
+    width: 44px;
+
+    img {
+      padding: 0;
+      margin-left: 0px;
+      display: block;
+      width: 42px;
+      margin: 0 auto;
+      height: auto;
+    }
+  }
+}
+
+.div-recommend-message {
+  padding: 0px 0 5px 4px;
+  display: flex;
+  justify-content: space-between;
+  background: #faf7f1;
+  align-items: center;
+
+  p {
+    padding: 8px;
+    flex-shrink: 1;
+    flex-grow: 10;
+    flex-basis: 0;
+    text-align: left;
+    background-color: white;
+    border-radius: 4px;
+    line-height: 16px;
+  }
+
+  div {
+    width: 44px;
+
+    img {
+      padding: 0;
+      margin-left: 0px;
+      display: block;
+      width: 42px;
+      margin: 0 auto;
+      height: auto;
+    }
+  }
+}
+
+.div-pay-detail {
+  margin-top: -15px !important;
+
+  .div-pay-detail-coverage {
+    padding-top: 15px !important;
+    margin-top: 0 !important;
+
+    div {
+      #div2-style {
+        justify-content: flex-start;
+      }
+
+      > img {
+        height: 55px;
+        width: 55px;
+        padding: 0;
+        max-width: 100%;
+        display: block;
+        margin-right: 10px;
+      }
+
+      a {
+        ion-icon {
+          fill: var(--ion-form-icon-color);
+          width: calc(var(--space-size-20) + 4px);
+          height: calc(var(--space-size-20) + 4px);
+          padding-top: 1px;
+          vertical-align: middle;
+        }
+      }
+    }
+
+    .amount-span {
+      padding-top: 10px;
+    }
+  }
+}
+
+#dl-style {
+  dt {
+    width: 55%;
+  }
+}
+
+#dd1-style {
+  background: none;
+  width: 14%;
+
+  div {
+    padding-right: 0;
+    padding-left: 7px;
+    margin: 0 !important;
+    ion-button {
+      margin: 0;
+
+      ion-text {
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+#dd2-style {
+  width: 31%;
+  padding-right: 0;
+  margin: 0 !important;
+  padding-top: 6.581px;
+  padding-bottom: 6.581px;
+
+  div {
+    padding-left: 8px;
+
+    ion-button {
+      --border-width: 2px;
+      background: #003a77;
+      overflow: hidden;
+      border-radius: 5px;
+
+      ion-text {
+        color: white;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+.main-service-list1 {
+  margin-top: 20px !important;
+  margin-bottom: 15px;
+
+  ion-item-group {
+    ion-item-divider {
+      height: 35px !important;
+      border: 0 !important;
+      padding-left: 0 !important;
+      margin-top: 0px !important;
+      padding-top: 0px;
+      padding-bottom: 1px;
+
+      > ion-text {
+        margin-bottom: 15px !important;
+        margin-top: 25px;
+      }
+
+      ion-icon {
+        margin-top: 0px;
+        margin-bottom: 15px;
+      }
+    }
+
+    .main-service-list1-hr1 {
+      margin-bottom: 0px;
+      margin-top: 0px;
+    }
+  }
+
+  dl {
+    border: 0 !important;
+    padding: 0 0 15px 0 !important;
+    padding-bottom: 0px !important;
+
+    .div-first-line {
+      text-align: center;
+      padding-top: 15px;
+      img {
+        box-shadow: 0px 0px 0px 1px #003a77;
+        border-radius: 4px;
+      }
+    }
+
+    .div-second-line {
+      padding-top: 15px;
+      text-align: center;
+      img {
+        box-shadow: 0px 0px 0px 1px #003a77;
+        border-radius: 4px;
+      }
+    }
+
+    > div {
+      display: flex;
+
+      > div {
+        flex: 1;
+        position: relative;
+
+        p {
+          font-size: 14px;
+          text-align: center;
+          line-height: 16px;
+        }
+      }
+
+      .service-item {
+        margin: 0 15px;
+      }
+
+      .service-item-right {
+        margin-right: 1px;
+      }
+
+      .service-item-left {
+        margin-left: 1px;
+      }
+    }
+
+    .main-service-list1-hr2 {
+      margin-top: 15px;
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.main-service-list2 {
+  margin-top: 25px !important;
+
+  ion-item-group {
+    ion-item-divider {
+      border: 0 !important;
+      padding-left: 0 !important;
+      margin-top: 0px !important;
+      padding-top: 0px;
+      padding-bottom: 1px;
+
+      > ion-text {
+        margin-bottom: 15px !important;
+        margin-top: 25px;
+
+        > a {
+          ion-icon {
+            width: calc(var(--space-size-20) + 4px);
+            height: calc(var(--space-size-20) + 4px);
+            vertical-align: middle;
+            fill: var(--ion-form-icon-color);
+            padding-bottom: 1px;
+          }
+        }
+      }
+
+      .icon-accordion {
+        margin-top: 0px;
+        margin-bottom: 15px !important;
+      }
+    }
+
+    .main-service-list2-hr1 {
+      margin-bottom: 0px;
+      margin-top: 0px;
+    }
+  }
+
+  dl {
+    border: 0 !important;
+    padding: 0 0 15px 0 !important;
+
+    .div-first-line {
+      text-align: center;
+      padding-top: 15px;
+      img {
+        box-shadow: 0px 0px 0px 1px #003a77;
+        border-radius: 4px;
+      }
+    }
+
+    .div-second-line {
+      text-align: center;
+      padding-top: 15px;
+      img {
+        box-shadow: 0px 0px 0px 1px #003a77;
+        border-radius: 4px;
+      }
+    }
+
+    > div {
+      display: flex;
+
+      > div {
+        flex: 1;
+        position: relative;
+
+        p {
+          font-size: 14px;
+          text-align: center;
+          line-height: 16px;
+        }
+      }
+
+      .service-item {
+        margin: 0 15px;
+      }
+
+      .service-item-right {
+        margin-right: 1px;
+      }
+
+      .service-item-left {
+        margin-left: 1px;
+      }
+    }
+  }
+}
+
+.point-msg {
+  margin-top: 15px !important;
+  box-shadow: 0px 0px 0px 1px #dcd2be;
+  border-radius: 4px;
+  background: #f9f7f2 0% 0% no-repeat padding-box;
+
+  ion-item-group {
+    /** header */
+    ion-item-divider {
+      background-color: #faf7f1;
+      border: 0 !important;
+      padding-top: 0px;
+      padding-bottom: 2px;
+
+      ion-text {
+        text-align: center;
+        width: 100%;
+
+        .point-msg-title-span1 {
+          top: 1148px;
+          left: 130px;
+          width: 106px;
+          height: 14px;
+          text-align: center;
+          font: normal normal normal 10px/16px Hiragino Sans;
+          letter-spacing: 0px;
+          color: #c0a56d;
+          opacity: 1;
+          font-family: "ヒラギノ角ゴ ProN", "HiraKakuProN", "ヒラギノ角ゴ Pro",
+            "HiraKakuPro", "Hiragino Kaku Gothic ProN",
+            "Hiragino Kaku Gothic Pro", "Hiragino Sans", Roboto, "Noto Sans",
+            "Noto Sans CJK JP", "Noto Sans JP", system-ui, Verdana, "游ゴシック",
+            YuGothic, "メイリオ", Meiryo, sans-serif;
+        }
+
+        .point-msg-title-span2 {
+          top: 1164px;
+          left: 97px;
+          width: 181px;
+          height: 19px;
+          text-align: center;
+          font: normal normal normal 14px/19px Hiragino Sans;
+          letter-spacing: 0px;
+          color: #111111;
+          opacity: 1;
+          font-family: "ヒラギノ角ゴ ProN", "HiraKakuProN", "ヒラギノ角ゴ Pro",
+            "HiraKakuPro", "Hiragino Kaku Gothic ProN",
+            "Hiragino Kaku Gothic Pro", "Hiragino Sans", Roboto, "Noto Sans",
+            "Noto Sans CJK JP", "Noto Sans JP", system-ui, Verdana, "游ゴシック",
+            YuGothic, "メイリオ", Meiryo, sans-serif;
+        }
+      }
+
+      ion-icon {
+        color: #c6a465;
+        margin-right: 8px;
+        margin-top: 11px;
+        width: 24px;
+        height: 24px;
+      }
+
+      // .ion-icon-class1 {
+      //   color: #c6a465;
+      //   margin-right: 8px;
+      //   margin-top: 11px;
+      // }
+
+      // .ion-icon-class2 {
+      //   color: #c6a465;
+      //   margin-right: 8px;
+      //   margin-top: 11px;
+      //   transform: rotate(180deg);
+      // }
+    }
+
+    /** body */
+    ion-list {
+      background: none;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      dl {
+        border-bottom-width: 0px;
+        padding-left: 11px;
+        border-top-style: solid;
+        border-top-color: #dcd2be;
+        border-top-width: 1px;
+        padding-top: 9px;
+        padding-bottom: 0px;
+
+        .point-div {
+          display: flex;
+
+          .point-number-message {
+            flex: 1;
+            position: relative;
+            padding-bottom: 7px;
+
+            .point-message {
+              top: 0px;
+              left: 144px;
+              width: 6px;
+              height: 16px;
+              text-align: left;
+              font: normal normal normal 12px/16px Hiragino Sans;
+              letter-spacing: 0px;
+              color: #111111;
+              font-family: "ヒラギノ角ゴ ProN", "HiraKakuProN",
+                "ヒラギノ角ゴ Pro", "HiraKakuPro", "Hiragino Kaku Gothic ProN",
+                "Hiragino Kaku Gothic Pro", "Hiragino Sans", Roboto, "Noto Sans",
+                "Noto Sans CJK JP", "Noto Sans JP", system-ui, Verdana,
+                "游ゴシック", YuGothic, "メイリオ", Meiryo, sans-serif;
+
+              span {
+                top: 16px;
+                left: 65px;
+                width: 155px;
+                height: 16px;
+                text-align: left;
+                font: normal normal normal 12px/16px Hiragino Sans;
+                letter-spacing: 0px;
+                color: #063b79;
+                font-weight: bold;
+                font-family: "ヒラギノ角ゴ ProN", "HiraKakuProN",
+                  "ヒラギノ角ゴ Pro", "HiraKakuPro", "Hiragino Kaku Gothic ProN",
+                  "Hiragino Kaku Gothic Pro", "Hiragino Sans", Roboto,
+                  "Noto Sans", "Noto Sans CJK JP", "Noto Sans JP", system-ui,
+                  Verdana, "游ゴシック", YuGothic, "メイリオ", Meiryo,
+                  sans-serif;
+              }
+            }
+
+            .point-number {
+              top: 1381px;
+              left: 24px;
+              height: 18px;
+              background: #c0a56d 0% 0% no-repeat padding-box;
+              border-radius: 2px;
+              opacity: 1;
+              margin-bottom: 7px;
+
+              span {
+                padding-left: 11px;
+                top: 1384px;
+                left: 34px;
+                width: 56px;
+                height: 13px;
+                text-align: left;
+                font: normal normal bold 10px/13px Montserrat;
+                letter-spacing: 0px;
+                color: #ffffff;
+                opacity: 1;
+                display: table-cell;
+                padding-top: 3px;
+              }
+            }
+
+            .point-message-div {
+              line-height: 16px;
+            }
+          }
+
+          .img001 {
+            padding: 0 9px 0 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.test-page {
+  background: #fff !important;
+  .btn {
+    cursor: pointer;
+  }
+}
+
+//↑globalに出てしまっている。以下せめてclass内でパッケージ化する
+.official-approximation-result {
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-ios-chevron-back-icon">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="ios-chevron-back-icon" clip-path="url(#clip-ios-chevron-back-icon)">
+    <g id="_00_icon_pagination_left01" data-name="00_icon_pagination_left01" transform="translate(7 4)">
+      <path id="_" data-name="&gt;" d="M572.793,1053.778a1,1,0,0,1,0-1.414l6.364-6.364-6.364-6.364a1,1,0,0,1,1.414-1.415l7.778,7.779-1.414,1.415h0l-6.363,6.363a1,1,0,0,1-1.414,0Z" transform="translate(581.985 1054.071) rotate(180)"/>
+    </g>
+  </g>
+</svg>

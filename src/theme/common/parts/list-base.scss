@@ -1,0 +1,29 @@
+/*
+ * Paragraph Base
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+.list-base {
+  @extend .text-normal;
+  margin: var(--space-size-30) 0 0 0;
+  list-style: none;
+
+  & > li {
+    position: relative;
+    margin: 0 0 var(--space-size-15) var(--space-size-25);
+
+    @at-root {
+      @include auto-margin-top-calculate(#{&});
+    }
+
+    // リストの中のリストの場合
+    & > ul > li {
+      margin-left: var(--space-size-30);
+
+      &:first-child {
+        margin-top: var(--space-size-15);
+      }
+    }
+  }
+}

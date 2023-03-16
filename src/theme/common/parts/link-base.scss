@@ -1,0 +1,96 @@
+/*
+ * Link Base
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+.link-base {
+  margin: var(--space-size-20) 0;
+
+  @at-root {
+    @include auto-margin-top-calculate(#{&});
+  }
+
+  a {
+    @extend .text-base;
+
+    color: var(--ion-link-text-color) !important;
+    text-decoration: none;
+
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+      color: var(--ion-link-text-color);
+    }
+
+    ion-icon {
+      flex-shrink: 0;
+    }
+  }
+
+  .landing-theme & {
+    a {
+      color: var(--ion-default-text-color) !important;
+
+      ion-icon {
+        stroke: var(--ion-color-custom-dark-green);
+      }
+    }
+  }
+
+  &[link-green] {
+    a {
+      color: var(--ion-default-text-color) !important;
+
+      ion-icon {
+        stroke: var(--ion-color-custom-dark-green);
+      }
+    }
+  }
+
+  &[linkMiddle],
+  [linkMiddle] {
+    text-align: center;
+  }
+
+  &[linkRight],
+  [linkRight] {
+    text-align: right;
+  }
+}
+
+/* link-image-base */
+@mixin link-image-base($size) {
+  display: grid;
+  grid-template-columns: repeat($size, 1fr);
+  margin-top: var(--space-size-30);
+  column-gap: var(--space-size-15);
+  row-gap: var(--space-size-30);
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    ion-thumbnail {
+      width: 100%;
+      margin-bottom: var(--space-size-15);
+    }
+
+    a {
+      color: var(--ion-default-text-color);
+      font-size: var(--font-size-small);
+      text-align: left;
+      word-break: break-all;
+      overflow-wrap: anywhere;
+    }
+
+    .landing-theme & {
+      padding: var(--space-size-10);
+
+      @include border($color: var(--ion-form-border-color));
+      @include border-radius($radius: var(--space-size-15));
+    }
+  }
+}

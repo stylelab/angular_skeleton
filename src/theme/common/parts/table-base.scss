@@ -1,0 +1,98 @@
+/*
+ * Table Base
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+/* table-base */
+.table-base {
+  width: 100%;
+  // ***** 2021/09/02 UIブラッシュアップ #83331 INTEC 木村 新規 START *****
+  height: 100%;
+  // ***** 2021/09/02 UIブラッシュアップ #83331 INTEC 木村 新規 END *****
+  margin: var(--space-size-30) 0;
+  border-collapse: collapse;
+
+  @include font($font-family: $hiragino-font, $size: var(--font-size-medium));
+  @include border($style: hidden);
+  @include border-radius($radius: 4px);
+  box-shadow: 0 0 0 1px var(--ion-form-border-color);
+
+  @at-root {
+    @include auto-margin-top-calculate(#{&});
+  }
+
+  th,
+  td {
+    @include border($color: var(--ion-form-border-color));
+    padding: var(--space-size-10);
+    vertical-align: top;
+  }
+
+  thead th {
+    color: var(--ion-table-header-text-color);
+    background-color: var(--ion-table-header-bg-color);
+
+    &:first-child {
+      border-top-left-radius: 4px;
+    }
+
+    &:last-child {
+      border-top-right-radius: 4px;
+    }
+  }
+
+  tbody {
+    &[center] {
+      text-align: center;
+    }
+  }
+  tbody th {
+    padding: var(--space-size-10);
+    background-color: var(--ion-table-form-bg-color);
+
+    @include font($weight: normal);
+
+    .link-normal {
+      margin: var(--space-size-10) 0;
+    }
+  }
+  tr,
+  td {
+    &[left] {
+      text-align: left;
+    }
+
+    &[center] {
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    &[right] {
+      text-align: right;
+    }
+  }
+
+  tbody tr:last-child {
+    th {
+      border-bottom-left-radius: 4px;
+    }
+  }
+
+  [tbl-01] & {
+    thead:not(:first-child) {
+      th {
+        padding: var(--space-size-10);
+        border-radius: 0;
+      }
+    }
+  }
+  // ***** 2021/09/02 UIブラッシュアップ #83331 INTEC 木村 新規 START *****
+  table,
+  tbody,
+  tr,
+  th {
+    height: 100%;
+  }
+  // ***** 2021/09/02 UIブラッシュアップ #83331 INTEC 木村 新規 START *****
+}

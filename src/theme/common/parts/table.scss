@@ -1,0 +1,73 @@
+/*
+ * Table
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+/* .table-normal */
+.table-normal {
+  @extend .table-base;
+
+  tbody {
+    th {
+      min-width: 125px;
+      font-weight: bold;
+    }
+    td {
+      font-size: var(--font-size-small);
+    }
+  }
+}
+
+[tbl-01],
+[tbl-04] {
+  padding: 1px;
+}
+
+[tbl-02],
+[tbl-03] {
+  .table-normal {
+    margin-top: var(--space-size-30);
+    tbody {
+      td {
+        width: 50%;
+      }
+    }
+  }
+}
+
+[tbl-03] {
+  padding: 1px;
+  .table-normal {
+    margin-top: var(--space-size-30);
+  }
+}
+
+.modal-box .content-box > [tbl-02] {
+  .table-normal {
+    margin-top: 0;
+  }
+}
+
+/* .table-fixed */
+.table-fixed {
+  @extend .table-base;
+
+  thead th:not(:first-child) {
+    min-width: 212px;
+  }
+
+  tbody th {
+    min-width: 180px;
+  }
+}
+
+/* table-scroll-box */
+.table-scroll-box {
+  margin: var(--space-size-15) 0;
+  overflow-x: scroll;
+
+  @at-root {
+    @include auto-margin-top-calculate(#{&});
+  }
+}

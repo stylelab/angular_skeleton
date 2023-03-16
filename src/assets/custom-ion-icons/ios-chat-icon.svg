@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14">
+  <g id="グループ_319" data-name="グループ 319" transform="translate(-347.177 -451.45)">
+    <path id="パス_550" data-name="パス 550" d="M348.152,453.473l8.208,7.12a1.086,1.086,0,0,0,1.635,0l8.207-7.12" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <line id="線_40" data-name="線 40" y1="4.649" x2="5.895" transform="translate(348.152 458.832)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <line id="線_41" data-name="線 41" x1="5.895" y1="4.649" transform="translate(360.307 458.832)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <g id="長方形_196" data-name="長方形 196" transform="translate(347.177 451.45)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1">
+      <rect width="20" height="14" rx="2" stroke="none"/>
+      <rect x="0.5" y="0.5" width="19" height="13" rx="1.5" fill="none"/>
+    </g>
+  </g>
+</svg>

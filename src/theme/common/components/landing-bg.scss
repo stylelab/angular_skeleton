@@ -1,0 +1,46 @@
+/*
+ * Landing Bg (IMG-01)
+ * ----------------------------------------------------------------------------
+ *
+ */
+
+.landing-bg {
+  ion-header,
+  ion-toolbar,
+  ion-content {
+    --background: none;
+  }
+}
+
+@mixin background($url: 'assets/images/05_01_2-img001.png') {
+  background: url(#{$url}) no-repeat center;
+  background-color: var(--ion-color-custom-black);
+  background-size: cover;
+}
+
+/* background parallax pages */
+app-approximation-result {
+  background: url('assets/images/05_01_2-img001.png') no-repeat top;
+  background-color: var(--ion-color-custom-black);
+  background-size: 100% auto;
+
+  @extend .landing-bg;
+}
+
+/* background center pages */
+app-maker-selection,
+app-driver-info,
+app-license-info,
+app-prefecture-selection,
+app-purpose-selection,
+app-running-distance,
+app-remind-sign-in,
+app-remind-sign-in-complete,
+app-driver-info-bis,
+app-grade,
+app-enquete-bis {
+  @extend .landing-bg;
+  @include background(
+    'https://www.e-design.net/image/illustration/05_01_2/05_01_2-img001.png'
+  );
+}

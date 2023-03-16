@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <clipPath id="clip-ios-complete-circle_1">
+      <rect width="40" height="40"/>
+    </clipPath>
+  </defs>
+  <g id="ios-complete-circle_1" data-name="ios-complete-circle – 1" clip-path="url(#clip-ios-complete-circle_1)">
+    <g id="_00_icon_error02" data-name="00_icon_error02" transform="translate(0 -0.039)">
+      <circle id="楕円形_2" data-name="楕円形 2" cx="20" cy="20" r="20" fill="#c00"/>
+      <path id="パス_80" data-name="パス 80" d="M393.913,591.326l-.578,13.055h-2.444l-.471-13.055c0-1.366.667-1.936,1.747-1.936S393.913,589.954,393.913,591.326Zm-3.747,18.233a2,2,0,0,1,4,0h0a2,2,0,1,1-4,0Z" transform="translate(-371.984 -580.299)" fill="#fff" stroke="#fff" stroke-width="0.5"/>
+    </g>
+  </g>
+</svg>

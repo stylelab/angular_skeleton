@@ -1,0 +1,93 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Reset SCSS */
+@import "./theme/reset.scss";
+
+/* Base SCSS */
+@import "./theme/_fonts.scss";
+@import "./theme/_mixin.scss";
+@import "./theme/_variables.scss";
+@import "./theme/_spaces.scss";
+@import "./theme/_temporary.scss";
+
+/* App SCSS */
+@import "./theme/app.theme.scss";
+
+// screens
+@import "./theme/common/pages/page.scss";
+@import "./theme/common/pages/landing-page.scss";
+@import "./theme/common/pages/webtop-page.scss";
+@import "./theme/common/pages/static-page.scss";
+@import "./theme/common/pages/official-approximation-result.scss";
+@import "./theme/common/pages/referral-page.scss";
+@import "./theme/common/pages/overview-of-referrals.scss";
+
+// components
+@import "./theme/common/components/accordion-box.scss";
+@import "./theme/common/components/anchor-list-box.scss";
+@import "./theme/common/components/box.scss";
+@import "./theme/common/components/select-calendar.scss";
+@import "./theme/common/components/chg.scss";
+@import "./theme/common/components/cnf-box.scss";
+@import "./theme/common/components/content-box.scss";
+@import "./theme/common/components/credit-card-box.scss";
+@import "./theme/common/components/cvs.scss";
+@import "./theme/common/components/form-box.scss";
+@import "./theme/common/components/footer-box.scss";
+@import "./theme/common/components/header-box.scss";
+@import "./theme/common/components/landing-bg.scss";
+@import "./theme/common/components/loading-circular.scss";
+@import "./theme/common/components/loading-edsp.scss";
+@import "./theme/common/components/modal-box.scss";
+@import "./theme/common/components/new.scss";
+@import "./theme/common/components/pay-box.scss";
+@import "./theme/common/components/select-box.scss";
+@import "./theme/common/components/select-by-letter-box.scss";
+@import "./theme/common/components/select-image.scss";
+@import "./theme/common/components/slider-box.scss";
+@import "./theme/common/components/stepper-box.scss";
+@import "./theme/common/components/tab-box.scss";
+@import "./theme/common/components/tgt.scss";
+@import "./theme/common/components/unique-box.scss";
+@import "./theme/common/components/mask.scss";
+
+// parts
+@import "./theme/common/parts/bac-box.scss";
+@import "./theme/common/parts/button-base.scss";
+@import "./theme/common/parts/button.scss";
+@import "./theme/common/parts/border-base.scss";
+@import "./theme/common/parts/border.scss";
+@import "./theme/common/parts/checkbox-button-base.scss";
+@import "./theme/common/parts/checkbox-button.scss";
+@import "./theme/common/parts/controller-box.scss";
+@import "./theme/common/parts/image-base.scss";
+@import "./theme/common/parts/image.scss";
+@import "./theme/common/parts/input-base.scss";
+@import "./theme/common/parts/input.scss";
+@import "./theme/common/parts/link-base.scss";
+@import "./theme/common/parts/link.scss";
+@import "./theme/common/parts/list-base.scss";
+@import "./theme/common/parts/list.scss";
+@import "./theme/common/parts/list-selection-button-base.scss";
+@import "./theme/common/parts/list-selection-button.scss";
+@import "./theme/common/parts/margin.scss";
+@import "./theme/common/parts/radio-button-base.scss";
+@import "./theme/common/parts/radio-button.scss";
+@import "./theme/common/parts/table-base.scss";
+@import "./theme/common/parts/table.scss";
+@import "./theme/common/parts/text-base.scss";
+@import "./theme/common/parts/text.scss";
+@import "./theme/common/parts/text-color.scss";
+@import "./theme/common/parts/title.scss";
+// ***** 2021/09/01 UIブラッシュアップ #78988 INTEC 朴慶煥 新規 START *****
+@import "./theme/common/parts/dropdown.scss";
+// ***** 2021/09/01 UIブラッシュアップ #78988 INTEC 朴慶煥 新規 END *****

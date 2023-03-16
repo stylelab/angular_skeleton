@@ -1,0 +1,25 @@
+<svg id="_00_icon_link_その他契約変更" data-name="00_icon_link_その他契約変更" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38">
+  <g id="list">
+    <rect id="長方形_114" data-name="長方形 114" width="38" height="38" fill="none"/>
+  </g>
+  <g id="グループ_316" data-name="グループ 316" transform="translate(-164.793 -1968)">
+    <g id="グループ_301" data-name="グループ 301" transform="translate(170.794 1970.365)">
+      <path id="パス_226" data-name="パス 226" d="M193.836,1999.451a3.153,3.153,0,0,1-3.153,3.153h-17.34a3.152,3.152,0,0,1-3.153-3.153v-26.8a3.152,3.152,0,0,1,3.153-3.152h17.34a3.153,3.153,0,0,1,3.153,3.152v9.248" transform="translate(-170.191 -1969.5)" fill="none" stroke="#c6a465" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <line id="線_25" data-name="線 25" x2="6.305" transform="translate(5.517 23.645)" fill="none" stroke="#c6a465" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <line id="線_26" data-name="線 26" x2="8.054" transform="translate(5.517 16.552)" fill="none" stroke="#c6a465" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <line id="線_27" data-name="線 27" x2="12.611" transform="translate(5.517 9.458)" fill="none" stroke="#c6a465" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    </g>
+    <g id="switch-sync" transform="translate(186.472 1986.358)">
+      <g id="グループ_304" data-name="グループ 304">
+        <g id="グループ_302" data-name="グループ 302">
+          <path id="パス_227" data-name="パス 227" d="M185.057,1982.63h1.791a1.193,1.193,0,0,0,1.193-1.193v-1.791" transform="translate(-177.301 -1979.646)" fill="none" stroke="#c6a465" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+          <path id="パス_228" data-name="パス 228" d="M180.137,1985.314a5.668,5.668,0,0,1,10.429-3.077" transform="translate(-180.137 -1979.646)" fill="none" stroke="#c6a465" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        </g>
+        <g id="グループ_303" data-name="グループ 303" transform="translate(0.596 5.668)">
+          <path id="パス_229" data-name="パス 229" d="M183.5,1984.945h-1.791a1.194,1.194,0,0,0-1.193,1.194v1.789" transform="translate(-180.515 -1982.26)" fill="none" stroke="#c6a465" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+          <path id="パス_230" data-name="パス 230" d="M191.141,1983.242a5.669,5.669,0,0,1-10.429,3.077" transform="translate(-180.401 -1983.242)" fill="none" stroke="#c6a465" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

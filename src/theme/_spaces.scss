@@ -1,0 +1,103 @@
+/*
+ * Spaces Reset
+ * ----------------------------------------------------------------------------
+ * Common Spaces Should Be Set Here.
+ */
+
+/* variables */
+// Based on 375px screen size
+// px / em convertor: https://www.w3schools.com/tags/ref_pxtoemconversion.asp
+// percent convertor: https://percentagecalculator.net/
+
+// vw definition
+// 375px = 1vw = 3.75px
+// 5 / 3.75 = 1.33333333...
+// 5px = 1.34vw
+
+:root {
+  --space-size-5: 1.34vw;
+  --space-size-10: 2.68vw;
+  --space-size-15: 4.02vw;
+  --space-size-20: 5.36vw;
+  --space-size-25: 6.7vw;
+  --space-size-30: 8.04vw;
+  --space-size-35: 9.38vw;
+  --space-size-40: 10.72vw;
+  --space-size-45: 12.06vw;
+  --space-size-50: 13.4vw;
+  --space-size-55: 14.74vw;
+  --space-size-60: 16.08vw;
+  --space-size-65: 17.42vw;
+  --space-size-70: 18.76vw;
+  --space-size-75: 20.1vw;
+  --space-size-80: 21.44vw;
+  --space-size-85: 22.78vw;
+
+  //content-box padding15 reset
+  --space-size-reset: -4.02vw;
+
+  // ***** 2021/09/01 UIブラッシュアップ #79923 INTEC 廣瀬善之 新規 START ****
+  --space-size-0: 0vw;
+  --space-size--40: -10.72vw;
+  // ***** 2021/09/01 UIブラッシュアップ #79923 INTEC 廣瀬善之 新規 END ****
+}
+
+// rem definition
+// root font size = 16px;
+// 1rem = 16px
+// 1/16 = 0.0625
+// 5px = 0.0625 * 5 = 0.3125rem
+
+@media (min-width: 375px) {
+  :root {
+    --space-size-5: 0.3125rem;
+    --space-size-10: 0.625rem;
+    --space-size-15: 0.9375rem;
+    --space-size-20: 1.25rem;
+    --space-size-25: 1.5625rem;
+    --space-size-30: 1.875rem;
+    --space-size-35: 2.1875rem;
+    --space-size-40: 2.5rem;
+    --space-size-45: 2.8125rem;
+    --space-size-50: 3.125rem;
+    --space-size-55: 3.4375rem;
+    --space-size-60: 3.75rem;
+    --space-size-65: 4.0625rem;
+    --space-size-70: 4.375rem;
+    --space-size-75: 4.6875rem;
+    --space-size-80: 5rem;
+    --space-size-85: 5.3125rem;
+
+    //content-box padding15 reset
+    --space-size-reset: -0.9375rem;
+
+    // ***** 2021/09/01 UIブラッシュアップ #79923 INTEC 廣瀬善之 新規 START ****
+    --space-size-0: 0rem;
+    --space-size--40: -2.5rem;
+    // ***** 2021/09/01 UIブラッシュアップ #79923 INTEC 廣瀬善之 新規 END ****
+  }
+}
+
+// padding
+.ion-padding {
+  -webkit-padding-start: var(--ion-padding, var(--space-size-25));
+  padding-inline-start: var(--ion-padding, var(--space-size-25));
+  -webkit-padding-end: var(--ion-padding, var(--space-size-25));
+  padding-inline-end: var(--ion-padding, var(--space-size-25));
+  -webkit-padding-top: var(--ion-padding, var(--space-size-25));
+  padding-top: var(--ion-padding, var(--space-size-25));
+  -webkit-padding-bottom: var(--ion-padding, var(--space-size-25));
+  padding-bottom: var(--ion-padding, var(--space-size-25));
+}
+
+// margin
+.ion-margin {
+  -webkit-margin-start: var(--ion-margin, var(--space-size-25));
+  margin-inline-start: var(--ion-paddmargining, var(--space-size-25));
+  -webkit-margin-end: var(--ion-margin, var(--space-size-25));
+  margin-inline-end: var(--ion-margin, var(--space-size-25));
+  -webkit-margin-top: var(--ion-margin, var(--space-size-25));
+  margin-top: var(--ion-margin, var(--space-size-25));
+  -webkit-margin-bottom: var(--ion-margin, var(--space-size-25));
+  margin-bottom: var(--ion-margin, var(--space-size-25));
+}

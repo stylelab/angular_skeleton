@@ -1,0 +1,45 @@
+/*
+ * Temporary
+ * ----------------------------------------------------------------------------
+ * 開発者は一時的にコードを書く時はこちらに描いてください。
+ * XDチームが定期的に回収していきます。
+ *
+ * コードが壊れないように下記のルールにきをつけてください：
+ * 必ずIDかクラスを使ってください。タグ定義は禁止です。
+ * good：
+ * li.my-class {}
+ *
+ * bad:
+ * li {}
+ */
+
+/* 非活性時のスタイル統一 */
+ion-item[class*='-disabled'] {
+  opacity: 0.4;
+  ion-input,
+  ion-select,
+  select,
+  ion-label,
+  ion-checkbox,
+  ion-radio {
+    opacity: 1;
+  }
+}
+ion-input[aria-disabled] {
+  opacity: 0.4;
+  .native-input[disabled].sc-ion-input-md {
+    opacity: 1;
+  }
+}
+
+/** 正式見積結果画面の静的コンテンツ画像を縮ませない対応 */
+.text-info {
+  .static-image {
+    flex-shrink: 0;
+    align-self: center;
+  }
+}
+
+.price-undetermined {
+  color: gray;
+}
