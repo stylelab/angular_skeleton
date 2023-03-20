@@ -519,4 +519,30 @@
 
 //↑globalに出てしまっている。以下せめてclass内でパッケージ化する
 .official-approximation-result {
+  ul.tab-button {
+    display: flex;
+    justify-content: center;
+    li {
+      border: 1px solid #000;
+      width: 25%;
+      background: #ccc;
+    }
+  }
+  .tab-content {
+    margin-top: 10px;
+    display: block;
+    margin: 0 auto;
+    background: #eee;
+    width: 50%;
+    .tab-table {
+      th {
+        background: #ccc;
+      }
+      td {
+        &.current {
+          background: #f00;
+        }
+      }
+    }
+  }
 }

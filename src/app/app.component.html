@@ -1,10 +1,47 @@
 <div class="test-page official-approximation-result">
   <p class="btn" (click)="scrollToElement('scrolltest')">
-    ページ内スクロールしてみる↓↓
+    ページ内スクロールしてみる!！！↓↓
   </p>
 
   <p class="btn" (click)="toggleAccordion('ac01')">toggleボタン</p>
   <p *ngIf="isOpenAc01">accordion01</p>
+
+  <br /><br /><br /><br /><br /><br />
+
+  <h2>タブレスポンシブ(sp時タブにする。あとはmedia-query仕込めば良い)</h2>
+  <ul class="tab-button">
+    <li (click)="setCurrentTabNum(0)">シンプルプラン</li>
+    <li (click)="setCurrentTabNum(1)">おすすめプラン</li>
+  </ul>
+  <div class="tab-content">
+    <table class="tab-table">
+      <tr>
+        <th>プラン名</th>
+        <td [class.current]="currentTabNum == 0">標準ブラン</td>
+        <td [class.current]="currentTabNum == 1">安心プラン</td>
+      </tr>
+      <tr>
+        <th>1回払保険料</th>
+        <td [class.current]="currentTabNum == 0">標準ブランの支払い額1000円</td>
+        <td [class.current]="currentTabNum == 1">安心ブランの支払い額5000円</td>
+      </tr>
+    </table>
+  </div>
+
+  <br /><br /><br /><br /><br /><br />
+  <h2>アニメーション（angular animation）</h2>
+  <button>赤くする</button>
+
+  <br /><br /><br /><br /><br /><br />
+
+  <div style="text-align: center">
+    <apx-chart
+      [series]="chartOptions.series"
+      [chart]="chartOptions.chart"
+      [xaxis]="chartOptions.xaxis"
+      [title]="chartOptions.title"
+    ></apx-chart>
+  </div>
 
   <br /><br /><br /><br /><br /><br />
 

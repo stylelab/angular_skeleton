@@ -1,5 +1,7 @@
 # AngularSkeleton
 
+# ng-apexcharts について、バージョンが最新だと"ng-apexcharts": "^1.7.4"-> "ng-apexcharts": "1.6.0" にすると良いかも？？？
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.3.
 
 ## Development server
