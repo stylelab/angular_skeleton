@@ -7,6 +7,10 @@
   <p *ngIf="isOpenAc01">accordion01</p>
 
   <br /><br /><br /><br /><br /><br />
+  <p (click)="setCounterData(123456789)">カウンター変更ボタン</p>
+  <!-- <p>{{ testCounterData }}</p> -->
+  <counter-component [currentData]="counterData"></counter-component>
+  <br /><br /><br /><br /><br /><br />
 
   <h2>タブレスポンシブ(sp時タブにする。あとはmedia-query仕込めば良い)</h2>
   <ul class="tab-button">

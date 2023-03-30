@@ -1,4 +1,4 @@
-import { Component, ViewChild } from "@angular/core";
+import { Component, ViewChild, Input } from "@angular/core";
 
 //apex-charts
 import {
@@ -214,5 +214,12 @@ export class AppComponent {
   public setCurrentTabNum($number: number): void {
     this.currentTabNum = $number;
     console.log($number);
+  }
+
+  //counter
+  counterData: number = 12445;
+  public setCounterData($number: number): void {
+    this.counterData = $number;
+    console.log(this.counterData);
   }
 }

@@ -5,9 +5,10 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { NgApexchartsModule } from "ng-apexcharts";
+import { CounterComponent } from "../business/counter/counter.component";
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, CounterComponent], //コンポネ登録
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -16,6 +17,6 @@ import { NgApexchartsModule } from "ng-apexcharts";
     NgApexchartsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent, CounterComponent], //ここにもコンポネ登録
 })
 export class AppModule {}
