@@ -524,23 +524,96 @@
     justify-content: center;
     li {
       border: 1px solid #000;
-      width: 25%;
+      width: 50%;
       background: #ccc;
+    }
+    @include pc {
+      display: none;
     }
   }
   .tab-content {
     margin-top: 10px;
-    display: block;
     margin: 0 auto;
-    background: #eee;
-    width: 50%;
-    .tab-table {
-      th {
-        background: #ccc;
+    width: 100%;
+
+    .flex-table {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+
+      //1行目
+      &.tbl-01 {
+        .th {
+          display: none;
+        }
+        .td {
+          width: 100%;
+          display: none;
+          &.current {
+            display: block;
+          }
+        }
+        @include pc {
+          .th {
+            display: block;
+            width: 34%;
+          }
+          .td {
+            display: block;
+            width: 33%;
+          }
+        }
       }
-      td {
-        &.current {
-          background: #f00;
+
+      //2行目
+      &.tbl-02 {
+        .th {
+          width: 100%;
+          background: #eee;
+        }
+        .td {
+          width: 100%;
+          display: none;
+          text-align: center;
+          &.current {
+            display: block;
+          }
+        }
+        @include pc {
+          .th {
+            width: 34%;
+          }
+          .td {
+            display: block;
+            width: 33%;
+            text-align: right;
+          }
+        }
+      }
+
+      //3,4,5行目
+      &.tbl-03,
+      &.tbl-04,
+      &.tbl-05 {
+        .th {
+          width: 60%;
+        }
+        .td {
+          width: 40%;
+          display: none;
+          text-align: right;
+          &.current {
+            display: block;
+          }
+        }
+        @include pc {
+          .th {
+            width: 34%;
+          }
+          .td {
+            display: block;
+            width: 33%;
+          }
         }
       }
     }
