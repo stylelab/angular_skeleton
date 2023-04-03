@@ -17,6 +17,6 @@ import { CounterComponent } from "../business/counter/counter.component";
     NgApexchartsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent, CounterComponent], //ここにもコンポネ登録
+  bootstrap: [AppComponent], //ここにもコンポネ登録
 })
 export class AppModule {}

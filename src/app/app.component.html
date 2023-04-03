@@ -4,7 +4,10 @@
   </p>
 
   <p class="btn" (click)="toggleAccordion('ac01')">toggleボタン</p>
-  <p *ngIf="isOpenAc01">accordion01</p>
+  <!-- <p *ngIf="isOpenAc01">accordion01</p> -->
+  <div class="toggle" [class.isOpen]="isOpenAc01">
+    アニメーションで。<br />アニメーションで。<br />アニメーションで。<br />アニメーションで。<br />アニメーションで。<br />アニメーションで。<br />アニメーションで。<br />
+  </div>
 
   <br /><br /><br /><br /><br /><br />
   <p (click)="setCounterData(123456789)">カウンター変更ボタン</p>

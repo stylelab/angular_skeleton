@@ -545,4 +545,12 @@
       }
     }
   }
+  .toggle {
+    overflow: hidden;
+    padding: 0;
+    transition: all 1s;
+  }
+  .isOpen {
+    padding: 10px 0;
+  }
 }

@@ -219,7 +219,10 @@ export class AppComponent {
   //counter
   counterData: number = 12445;
   public setCounterData($number: number): void {
-    this.counterData = $number;
-    console.log(this.counterData);
+    //this.counterData = $number;
+    //this.counterData = 50000;
+    let n = Math.ceil(Math.random() * 20000);
+    console.log(n);
+    this.counterData = n;
   }
 }
