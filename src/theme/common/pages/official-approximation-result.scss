@@ -626,4 +626,20 @@
   .isOpen {
     padding: 10px 0;
   }
+
+  //sticky
+  .stickyTestBox {
+    overflow: scroll;
+    width: 100%;
+    background: #eee;
+    height: 500px;
+  }
+  .stickyItem {
+    background: #f00;
+    &.fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+  }
 }

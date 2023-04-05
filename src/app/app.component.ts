@@ -1,4 +1,4 @@
-import { Component, ViewChild, Input } from "@angular/core";
+import { Component, ViewChild, Input, AfterViewInit } from "@angular/core";
 
 //apex-charts
 import {
@@ -40,7 +40,7 @@ export type ChartOptions2 = {
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.scss"],
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
   title = "AngularSkeleton";
 
   //apex-charts
@@ -224,5 +224,36 @@ export class AppComponent {
     let n = Math.ceil(Math.random() * 20000);
     console.log(n);
     this.counterData = n;
+  }
+
+  //sticky
+  public stickyItem;
+  public stickyBox;
+  public isStickyFix = false;
+  ngAfterViewInit(): void {
+    //todo:stickyItemそのものを固定するか、別のDOMを登場させるかでやり方が変わる。今はそのものを固定してy座標が変わってしまうので一度fixしてしまうとバグってる。この場合は実装を変える必要あり。
+    //stickyItemの位置ではなく、その下の要素の位置を検知して計算すれば良さそう。
+
+    this.stickyItem = document.querySelector(".stickyItem");
+    this.stickyBox = document.querySelector(".stickyTestBox");
+    this.checkScrollValue();
+
+    this.stickyBox.addEventListener("scroll", () => {
+      this.checkScrollValue();
+    });
+    window.addEventListener("resize", () => {
+      this.checkScrollValue();
+    });
+  }
+
+  public checkScrollValue(): void {
+    let stickyBoxPosY = this.stickyBox.getBoundingClientRect().top;
+    let stickyItemPosY = this.stickyItem.getBoundingClientRect().top;
+
+    if (stickyBoxPosY - stickyItemPosY > 0) {
+      this.isStickyFix = true;
+    } else {
+      this.isStickyFix = false;
+    }
   }
 }
