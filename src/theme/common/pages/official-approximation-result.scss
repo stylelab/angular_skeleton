@@ -634,12 +634,62 @@
     background: #eee;
     height: 500px;
   }
-  .stickyItem {
-    background: #f00;
+  .stickyObject {
+    display: none;
+    width: 100%;
     &.fixed {
+      display: block;
       position: fixed;
       top: 0;
       left: 0;
     }
+
+    //appのwrapperと同じ幅設定をする必要がある。
+    .stickyObjectInner {
+      width: 100%;
+      max-width: 980px;
+      display: flex;
+      margin: 0 auto;
+      justify-content: center;
+      .item {
+        position: relative;
+        &.item-01 {
+          flex-basis: 34%;
+          background: #f00;
+        }
+        &.item-02 {
+          flex-basis: 33%;
+          background: #0f0;
+        }
+        &.item-03 {
+          flex-basis: 33%;
+          background: #00f;
+        }
+        .priceDiff {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100px;
+          height: 50px;
+          background: #ccc;
+        }
+      }
+    }
+  }
+  .stickyTrigger {
+    width: 100%;
+    background: #0f0;
+  }
+}
+
+// add taku
+// @include pc {
+//   font-size: 24px;
+// }
+
+/************* Break Point *****************/
+@mixin pc {
+  @media screen and (min-width: 641px) {
+    @content;
   }
 }

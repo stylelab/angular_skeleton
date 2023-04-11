@@ -217,25 +217,31 @@ export class AppComponent implements AfterViewInit {
   }
 
   //counter
-  counterData: number = 12445;
+  counterData: number = 12445; //シンプル用
+  counterData2: number = 12445; //おすすめ用
+
   public setCounterData($number: number): void {
     //this.counterData = $number;
     //this.counterData = 50000;
     let n = Math.ceil(Math.random() * 20000);
-    console.log(n);
     this.counterData = n;
+    let m = Math.ceil(Math.random() * 20000);
+    this.counterData2 = m;
   }
 
   //sticky
-  public stickyItem;
+  public stickyObject;
   public stickyBox;
+  public stickyTrigger; //このオブジェクトの位置でstickyObjectの表示が切り替わる
   public isStickyFix = false;
   ngAfterViewInit(): void {
-    //todo:stickyItemそのものを固定するか、別のDOMを登場させるかでやり方が変わる。今はそのものを固定してy座標が変わってしまうので一度fixしてしまうとバグってる。この場合は実装を変える必要あり。
-    //stickyItemの位置ではなく、その下の要素の位置を検知して計算すれば良さそう。
+    //todo:stickyObjectそのものを固定するか、別のDOMを登場させるかでやり方が変わる。今はそのものを固定してy座標が変わってしまうので一度fixしてしまうとバグってる。この場合は実装を変える必要あり。
+    //stickyObjectの位置ではなく、その下の要素の位置を検知して計算すれば良さそう。
 
-    this.stickyItem = document.querySelector(".stickyItem");
-    this.stickyBox = document.querySelector(".stickyTestBox");
+    this.stickyObject = document.querySelector(".stickyObject");
+    this.stickyBox = document.querySelector(".stickyTestBox"); //本家だと大本のdivのwrapperがこれになりそう。＝いらない。
+    this.stickyTrigger = document.querySelector(".stickyTrigger");
+
     this.checkScrollValue();
 
     this.stickyBox.addEventListener("scroll", () => {
@@ -247,10 +253,10 @@ export class AppComponent implements AfterViewInit {
   }
 
   public checkScrollValue(): void {
-    let stickyBoxPosY = this.stickyBox.getBoundingClientRect().top;
-    let stickyItemPosY = this.stickyItem.getBoundingClientRect().top;
+    let stickyTriggerPosY = this.stickyTrigger.getBoundingClientRect().top;
+    let stickyBoxPosY = this.stickyBox.getBoundingClientRect().top; //本家だと0で良いかも？
 
-    if (stickyBoxPosY - stickyItemPosY > 0) {
+    if (stickyBoxPosY - stickyTriggerPosY > 0) {
       this.isStickyFix = true;
     } else {
       this.isStickyFix = false;

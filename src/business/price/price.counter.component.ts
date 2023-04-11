@@ -7,11 +7,11 @@ import {
 } from "@angular/core";
 
 @Component({
-  selector: "counter-component",
-  templateUrl: "./counter.component.html",
+  selector: "price-counter-component",
+  templateUrl: "./price.counter.component.html",
   styleUrls: [],
 })
-export class CounterComponent implements OnInit {
+export class PriceCounterComponent implements OnInit {
   @Input() currentData: number;
 
   test: number;
@@ -35,7 +35,7 @@ export class CounterComponent implements OnInit {
   startShuffle(previous: number, current: number) {
     console.log("startShuffle");
     console.log(previous, current);
-    const speed = 10;
+    const speed = 20;
 
     //let inc = 555;
     let inc = Math.ceil(Math.abs(current - previous) / 30);

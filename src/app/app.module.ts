@@ -5,10 +5,10 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { NgApexchartsModule } from "ng-apexcharts";
-import { CounterComponent } from "../business/counter/counter.component";
+import { PriceCounterComponent } from "../business/price/price.counter.component";
 
 @NgModule({
-  declarations: [AppComponent, CounterComponent], //コンポネ登録
+  declarations: [AppComponent, PriceCounterComponent], //コンポネ登録
   imports: [
     BrowserModule,
     HttpClientModule,

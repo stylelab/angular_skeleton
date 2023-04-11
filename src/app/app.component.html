@@ -58,8 +58,39 @@
           </div>
 
           <br /><br /><br /><br /><br /><br /><br /><br />
+          <div class="stickyObject" [class.fixed]="isStickyFix">
+            <div class="stickyObjectInner">
+              <div class="item item-01">
+                <div class="bx">ロゴ</div>
+              </div>
+              <div class="item item-02">
+                <div class="priceDiff">3000<span>円</span></div>
+                <div class="plan">シンプルプラン</div>
+                <div class="price">
+                  <price-counter-component
+                    [currentData]="counterData"
+                  ></price-counter-component
+                  ><span>円</span>
+                </div>
+              </div>
+              <div class="item item-03">
+                <div class="priceDiff">8000<span>円</span></div>
+                <div class="plan">おすすめプラン</div>
+                <div class="price">
+                  <price-counter-component
+                    [currentData]="counterData2"
+                  ></price-counter-component
+                  ><span>円</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <p>オーバーフロー養素内のスティッキー</p>
           <div class="stickyTestBox" id="stickyTestBox">
+            <div class="stickyTrigger">
+              <p>スティッキートリガー</p>
+            </div>
             <p>
               あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />
               あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />
@@ -75,9 +106,7 @@
               あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />
               あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />
             </p>
-            <div class="stickyItem" [class.fixed]="isStickyFix">
-              <p>スティッキーアイテム</p>
-            </div>
+
             <p>
               かかかきききききききくく<br />かかかきききききききくく<br />かかかきききききききくく<br />かかかきききききききくく<br />かかかきききききききくく<br />かかかきききききききくく<br />かかかきききききききくく<br />かかかきききききききくく<br />かかかきききききききくく<br />かかかきききききききくく<br />かかかきききききききくく<br />かかかきききききききくく<br />かかかきききききききくく<br />
               かかかきききききききくく<br />かかかきききききききくく<br />かかかきききききききくく<br />かかかきききききききくく<br />かかかきききききききくく<br />かかかきききききききくく<br />かかかきききききききくく<br />かかかきききききききくく<br />かかかきききききききくく<br />かかかきききききききくく<br />かかかきききききききくく<br />かかかきききききききくく<br />かかかきききききききくく<br />
@@ -111,7 +140,9 @@
           <br /><br /><br /><br /><br /><br />
           <p (click)="setCounterData(123456789)">カウンター変更ボタン</p>
           <!-- <p>{{ testCounterData }}</p> -->
-          <counter-component [currentData]="counterData"></counter-component>
+          <price-counter-component
+            [currentData]="counterData"
+          ></price-counter-component>
           <br /><br /><br /><br /><br /><br />
 
           <h2>
