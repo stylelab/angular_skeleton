@@ -6,9 +6,10 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { NgApexchartsModule } from "ng-apexcharts";
 import { PriceCounterComponent } from "../business/price/price.counter.component";
+import { PriceDiffComponent } from "../business/price/price.diff.component";
 
 @NgModule({
-  declarations: [AppComponent, PriceCounterComponent], //コンポネ登録
+  declarations: [AppComponent, PriceCounterComponent, PriceDiffComponent], //コンポネ登録
   imports: [
     BrowserModule,
     HttpClientModule,

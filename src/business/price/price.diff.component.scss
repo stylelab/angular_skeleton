@@ -1,0 +1,62 @@
+.price-diff-component {
+  opacity: 0;
+
+  position: absolute;
+  top: 20px;
+  right: 0;
+  z-index: 100;
+
+  width: 100px;
+  height: 50px;
+
+  font-weight: bold;
+  background: #ccc;
+
+  // transition: all 0.5s ease-out 0.5s;
+
+  .sign {
+    font-size: 10px;
+  }
+  .number {
+    font-size: 14px;
+  }
+  .yen {
+    font-size: 10px;
+  }
+
+  // &.isView {
+  //   opacity: 1;
+  //   top: 0;
+  // }
+  &.isView {
+    animation: fadeInAnime forwards 0.5s 1 ease-out 0.5s normal;
+    //animation: fadeOutAnime backwards 0.5s 1 ease-out 1.5s normal;
+
+    // animation-name: fadeInAnime; /*1で解説*/
+    // animation-fill-mode: backwards; /*2で解説*/
+    // animation-duration: 3s; /*3で解説*/
+    // animation-iteration-count: infinite; /*4で解説*/
+    // animation-timing-function: ease; /*5で解説*/
+    // animation-delay: 0.5s; /*6で解説*/
+    // animation-direction: normal; /*7で解説*/
+  }
+}
+
+@keyframes fadeInAnime {
+  0% {
+    opacity: 0;
+    top: 20px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+@keyframes fadeOutAnime {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

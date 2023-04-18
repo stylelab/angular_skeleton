@@ -14,13 +14,11 @@ import {
 export class PriceCounterComponent implements OnInit {
   @Input() currentData: number;
 
-  test: number;
-
   public currentPrice: number = 0;
+  public timer;
 
   constructor() {}
   ngOnInit(): void {
-    this.test = 99999;
     console.log("currentData::", this.currentData);
   }
 
@@ -33,11 +31,9 @@ export class PriceCounterComponent implements OnInit {
   }
 
   startShuffle(previous: number, current: number) {
-    console.log("startShuffle");
-    console.log(previous, current);
     const speed = 20;
+    clearInterval(this.timer);
 
-    //let inc = 555;
     let inc = Math.ceil(Math.abs(current - previous) / 30);
     let isIncrease: boolean = true;
     if (previous < current) {
@@ -45,15 +41,12 @@ export class PriceCounterComponent implements OnInit {
     } else {
       isIncrease = false;
     }
-    console.log("isIncrease", isIncrease);
 
     let setNum = () => {
       if (isIncrease) {
         //増加パターン
         if (this.currentPrice >= current) {
           this.currentPrice = current;
-          clearInterval(timer);
-          console.log("clearA");
         } else {
           this.currentPrice += inc;
         }
@@ -61,14 +54,12 @@ export class PriceCounterComponent implements OnInit {
         //減少パターン
         if (this.currentPrice <= current) {
           this.currentPrice = current;
-          clearInterval(timer);
-          console.log("clearB");
         } else {
           this.currentPrice -= inc;
         }
       }
     };
 
-    let timer = setInterval(setNum, speed);
+    this.timer = setInterval(setNum, speed);
   }
 }

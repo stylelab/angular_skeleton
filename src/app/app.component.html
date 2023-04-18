@@ -64,17 +64,26 @@
                 <div class="bx">ロゴ</div>
               </div>
               <div class="item item-02">
-                <div class="priceDiff">3000<span>円</span></div>
+                <div class="priceDiff">
+                  <price-diff-component
+                    [currentData]="counterData"
+                  ></price-diff-component>
+                </div>
                 <div class="plan">シンプルプラン</div>
                 <div class="price">
-                  <price-counter-component
-                    [currentData]="counterData"
-                  ></price-counter-component
+                  <span style="color: #f00">
+                    <price-counter-component
+                      [currentData]="counterData"
+                    ></price-counter-component></span
                   ><span>円</span>
                 </div>
               </div>
               <div class="item item-03">
-                <div class="priceDiff">8000<span>円</span></div>
+                <div class="priceDiff">
+                  <price-diff-component
+                    [currentData]="counterData2"
+                  ></price-diff-component>
+                </div>
                 <div class="plan">おすすめプラン</div>
                 <div class="price">
                   <price-counter-component
@@ -123,13 +132,11 @@
             </p>
           </div>
 
-          <br /><br /><br /><br /><br /><br /><br /><br />
-
           <p class="btn" (click)="scrollToElement('scrolltest')">
             ページ内スクロールしてみる!！！↓↓
           </p>
 
-          <br /><br /><br /><br /><br /><br /><br /><br />
+          <br /><br /><br /><br />
 
           <p class="btn" (click)="toggleAccordion('ac01')">toggleボタン</p>
           <!-- <p *ngIf="isOpenAc01">accordion01</p> -->
@@ -137,7 +144,7 @@
             アニメーションで。<br />アニメーションで。<br />アニメーションで。<br />アニメーションで。<br />アニメーションで。<br />アニメーションで。<br />アニメーションで。<br />
           </div>
 
-          <br /><br /><br /><br /><br /><br />
+          <br /><br /><br />
           <p (click)="setCounterData(123456789)">カウンター変更ボタン</p>
           <!-- <p>{{ testCounterData }}</p> -->
           <price-counter-component
