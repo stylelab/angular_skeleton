@@ -517,11 +517,12 @@
   }
 }
 
-//↑globalに出てしまっている。以下せめてclass内でパッケージ化する
+//result専用のclassでパッケージ化する
 .official-approximation-result {
   ul.tab-button {
     display: flex;
     justify-content: center;
+    margin-top: var(--space-size-55);
     li {
       border: 1px solid #000;
       width: 50%;
@@ -532,35 +533,150 @@
     }
   }
   .tab-content {
-    margin-top: 10px;
     margin: 0 auto;
     width: 100%;
+    box-sizing: border-box;
+    border: 2px solid var(--ion-color-custom-dark-green);
+    @include pc {
+      margin-top: var(--space-size-55);
+      border: none;
+    }
 
     .flex-table {
       display: flex;
       flex-wrap: wrap;
       width: 100%;
 
+      //共通th
+      .th {
+        width: 100%;
+        font-weight: bold;
+        .inner {
+          padding: 16px 0 16px 16px;
+          @include pc {
+            padding: 16px;
+          }
+        }
+        @include pc {
+          width: 34%;
+          box-sizing: border-box;
+          border-right: 1px solid #d8d8d8;
+          border-bottom: 1px solid #d8d8d8;
+          border-left: 1px solid #d8d8d8;
+          display: flex;
+          align-items: center;
+        }
+      }
+      //共通td
+      .td {
+        position: relative;
+        width: 100%;
+        vertical-align: bottom;
+        display: none;
+        justify-content: flex-end;
+        align-items: center;
+        .inner {
+          padding: 16px 16px 16px 0;
+          @include pc {
+            padding: 16px;
+          }
+        }
+        &.current {
+          display: flex;
+        }
+        @include pc {
+          width: 33%;
+          box-sizing: border-box;
+          border-right: 1px solid #d8d8d8;
+          border-bottom: 1px solid #d8d8d8;
+          display: flex;
+        }
+
+        //共通span
+        span {
+          display: inline-block;
+          &.price {
+            margin-right: 3px;
+            @extend .font-medium-large;
+            vertical-align: bottom;
+          }
+          &.yen {
+            @extend .font-medium;
+            vertical-align: bottom;
+          }
+        }
+      }
+
+      //共通label
+      .ul-label {
+        li {
+          display: inline-block;
+          margin-right: 10px;
+          padding: 2px 10px;
+          border-radius: 6px;
+          font-weight: normal;
+          @extend .font-medium;
+          &.label-red {
+            background: #fff;
+            color: #f00;
+          }
+        }
+      }
+
       //1行目
       &.tbl-01 {
         .th {
           display: none;
+          @include pc {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-left: 0;
+            text-align: center;
+            img {
+              padding-top: 60px;
+              width: 90%;
+              height: auto;
+            }
+          }
         }
         .td {
-          width: 100%;
           display: none;
+          padding: 0 0 100px 0;
+
+          .box-hd {
+            display: none;
+            @extend .font-extra-large;
+          }
           &.current {
             display: block;
           }
-        }
-        @include pc {
-          .th {
-            display: block;
-            width: 34%;
+          .ul-btn {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+
+            li {
+              width: 80%;
+              margin: 10px auto;
+              background: #f00;
+            }
           }
-          .td {
+          @include pc {
             display: block;
-            width: 33%;
+
+            .box-hd {
+              display: block;
+              padding: 16px;
+              white-space: nowrap;
+              font-weight: bold;
+              color: #fff;
+              background: var(--ion-color-custom-dark-green);
+            }
+            .box-text {
+              padding: 16px;
+            }
           }
         }
       }
@@ -568,51 +684,100 @@
       //2行目
       &.tbl-02 {
         .th {
-          width: 100%;
           background: #eee;
+          .inner {
+            @include pc {
+              display: flex;
+              flex-flow: column;
+              justify-content: space-between;
+              height: 100%;
+            }
+
+            p {
+              @include pc {
+                padding: 16px 0;
+              }
+              .span-01 {
+                @extend .font-extra-large;
+              }
+            }
+          }
         }
         .td {
-          width: 100%;
-          display: none;
-          text-align: center;
-          &.current {
-            display: block;
+          text-align: right;
+          .total-price {
+            font-size: 40px;
+            font-weight: bold;
+            color: var(--ion-color-custom-dark-green);
+            line-height: 1;
           }
-        }
-        @include pc {
-          .th {
-            width: 34%;
+          .total-yen {
+            @extend .font-medium-large;
+            color: var(--ion-color-custom-dark-green);
+            line-height: 1;
           }
-          .td {
-            display: block;
-            width: 33%;
-            text-align: right;
+          .split-price {
+            margin-left: 5px;
+            @extend .font-extra-large;
+            color: var(--ion-color-custom-dark-green);
+            font-weight: bold;
+            line-height: 1;
+          }
+          .split-yen {
+            margin-right: 5px;
+            @extend .font-medium;
+            color: var(--ion-color-custom-dark-green);
+            font-weight: bold;
+          }
+          .text-01 {
+            @extend .font-medium;
+            font-weight: bold;
+          }
+          .text-02 {
+            @extend .font-medium;
           }
         }
       }
-
-      //3,4,5行目
+      //3-6行目
       &.tbl-03,
       &.tbl-04,
-      &.tbl-05 {
+      &.tbl-05,
+      &.tbl-06 {
+        border-bottom: 2px dotted #d8d8d8;
+        @include pc {
+          border-bottom: none;
+        }
+
         .th {
           width: 60%;
+          @include pc {
+            width: 34%;
+          }
         }
         .td {
           width: 40%;
-          display: none;
-          text-align: right;
-          &.current {
-            display: block;
+          font-weight: bold;
+          @include pc {
+            width: 33%;
           }
         }
+      }
+      &.tbl-05 {
+        border-bottom: 2px solid #d8d8d8;
         @include pc {
-          .th {
-            width: 34%;
-          }
-          .td {
-            display: block;
-            width: 33%;
+          border-bottom: none;
+        }
+      }
+      //6行目
+      &.tbl-06 {
+        border-bottom: none;
+        .th {
+          background: #fcecec;
+        }
+        .td {
+          background: #fcecec;
+          @include pc {
+            justify-content: flex-start;
           }
         }
       }

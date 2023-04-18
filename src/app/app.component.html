@@ -17,84 +17,189 @@
         <div class="tab-content">
           <div class="flex-table tbl-01">
             <div class="th">
-              画像画像画像画像画像画像画像画像画像画像画像画像画像画像
+              <p>
+                <img src="assets/images/sample_result_01.png" alt="" />
+              </p>
             </div>
             <div class="td" [class.current]="currentTabNum == 0">
               <div class="box-hd">シンプルプラン</div>
-              <p class="text-normal" TXT-01-01>
-                「対人賠償」「対物賠償」「人身傷害（車内のみ補償」のシンプルなプランです。
-              </p>
+              <div class="box-text">
+                <p class="text-normal" TXT-01-01>
+                  「対人賠償」「対物賠償」「人身傷害（車内のみ補償」のシンプルなプランです。
+                </p>
+              </div>
+
+              <ul class="ul-btn">
+                <li>ぼたん1</li>
+                <li>ぼたん2</li>
+              </ul>
             </div>
             <div class="td" [class.current]="currentTabNum == 1">
               <div class="box-hd">おすすめプラン</div>
-              <p class="text-normal" TXT-01-01>
-                もらい事故でも安心な「弁護士特約」と、自転車に乗る方におすすめの「個人賠償特約」を付けたプランです。
-              </p>
+              <div class="box-text">
+                <p class="text-normal" TXT-01-01>
+                  もらい事故でも安心な「弁護士特約」と、自転車に乗る方におすすめの「個人賠償特約」を付けたプランです。
+                </p>
+              </div>
+              <ul class="ul-btn">
+                <li>ぼたん1</li>
+                <li>ぼたん2</li>
+              </ul>
             </div>
           </div>
 
           <div class="flex-table tbl-02">
-            <div class="th">保険料一括ばらい<br />ボタン</div>
-            <div class="td" [class.current]="currentTabNum == 0">15,789円</div>
-            <div class="td" [class.current]="currentTabNum == 1">28,234円</div>
+            <div class="th">
+              <div class="inner">
+                <p><span class="span-01">保険料</span></p>
+                <p><span>保険料の内訳を閉じる</span></p>
+              </div>
+            </div>
+            <div class="td" [class.current]="currentTabNum == 0">
+              <div class="inner">
+                <p>
+                  <span class="total-price">1234567</span
+                  ><span class="total-yen">円</span>
+                </p>
+                <p>
+                  <span class="text-01">12回払</span
+                  ><span class="split-price">1234</span
+                  ><span class="split-yen">円</span
+                  ><span class="text-01">/回</span>
+                </p>
+                <p><span class="text-02">（総額1234567円）</span></p>
+              </div>
+            </div>
+            <div class="td" [class.current]="currentTabNum == 1">
+              <div class="inner">
+                <p>
+                  <span class="price">28,234</span><span class="yen">円</span>
+                </p>
+              </div>
+            </div>
           </div>
 
           <div class="aco---dion---">
             <div class="flex-table tbl-03">
-              <div class="th">相手方への補填<br />お車による怪我の補填</div>
-              <div class="td" [class.current]="currentTabNum == 0">179円</div>
-              <div class="td" [class.current]="currentTabNum == 1">834円</div>
+              <div class="th">
+                <div class="inner">
+                  <p>相手方への補填<br />お車による怪我の補填</p>
+                </div>
+              </div>
+              <div class="td" [class.current]="currentTabNum == 0">
+                <div class="inner">
+                  <p>
+                    <span class="price">179</span><span class="yen">円</span>
+                  </p>
+                </div>
+              </div>
+              <div class="td" [class.current]="currentTabNum == 1">
+                <div class="inner">
+                  <p>
+                    <span class="price">834</span><span class="yen">円</span>
+                  </p>
+                </div>
+              </div>
             </div>
             <div class="flex-table tbl-04">
-              <div class="th">ご自身のお車の補償</div>
-              <div class="td" [class.current]="currentTabNum == 0">200円</div>
-              <div class="td" [class.current]="currentTabNum == 1">480円</div>
+              <div class="th">
+                <div class="inner"><p>ご自身のお車の補償</p></div>
+              </div>
+              <div class="td" [class.current]="currentTabNum == 0">
+                <div class="inner">
+                  <p>
+                    <span class="price">200</span><span class="yen">円</span>
+                  </p>
+                </div>
+              </div>
+              <div class="td" [class.current]="currentTabNum == 1">
+                <div class="inner">
+                  <p>
+                    <span class="price">400</span><span class="yen">円</span>
+                  </p>
+                </div>
+              </div>
             </div>
             <div class="flex-table tbl-05">
-              <div class="th">その他の補償</div>
-              <div class="td" [class.current]="currentTabNum == 0">300円</div>
-              <div class="td" [class.current]="currentTabNum == 1">580円</div>
+              <div class="th">
+                <div class="inner"><p>その他の補償</p></div>
+              </div>
+              <div class="td" [class.current]="currentTabNum == 0">
+                <div class="inner">
+                  <p>
+                    <span class="price">300</span><span class="yen">円</span>
+                  </p>
+                </div>
+              </div>
+              <div class="td" [class.current]="currentTabNum == 1">
+                <div class="inner">
+                  <p>
+                    <span class="price">500</span><span class="yen">円</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="flex-table tbl-06">
+              <div class="th">
+                <div class="inner"><p>適用されている割引</p></div>
+              </div>
+              <div class="td" [class.current]="currentTabNum == 0">
+                <div class="inner">
+                  <ul class="ul-label">
+                    <li class="label-red">新車割引</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="td" [class.current]="currentTabNum == 1">
+                <div class="inner">
+                  <ul class="ul-label">
+                    <li class="label-red">新車割引</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
 
-          <br /><br /><br /><br /><br /><br /><br /><br />
-          <div class="stickyObject" [class.fixed]="isStickyFix">
-            <div class="stickyObjectInner">
-              <div class="item item-01">
-                <div class="bx">ロゴ</div>
+        <br /><br /><br /><br /><br /><br /><br /><br />
+        <div class="stickyObject" [class.fixed]="isStickyFix">
+          <div class="stickyObjectInner">
+            <div class="item item-01">
+              <div class="bx">ロゴ</div>
+            </div>
+            <div class="item item-02">
+              <div class="priceDiff">
+                <price-diff-component
+                  [currentData]="counterData"
+                ></price-diff-component>
               </div>
-              <div class="item item-02">
-                <div class="priceDiff">
-                  <price-diff-component
-                    [currentData]="counterData"
-                  ></price-diff-component>
-                </div>
-                <div class="plan">シンプルプラン</div>
-                <div class="price">
-                  <span style="color: #f00">
-                    <price-counter-component
-                      [currentData]="counterData"
-                    ></price-counter-component></span
-                  ><span>円</span>
-                </div>
-              </div>
-              <div class="item item-03">
-                <div class="priceDiff">
-                  <price-diff-component
-                    [currentData]="counterData2"
-                  ></price-diff-component>
-                </div>
-                <div class="plan">おすすめプラン</div>
-                <div class="price">
+              <div class="plan">シンプルプラン</div>
+              <div class="price">
+                <span style="color: #f00">
                   <price-counter-component
-                    [currentData]="counterData2"
-                  ></price-counter-component
-                  ><span>円</span>
-                </div>
+                    [currentData]="counterData"
+                  ></price-counter-component></span
+                ><span>円</span>
+              </div>
+            </div>
+            <div class="item item-03">
+              <div class="priceDiff">
+                <price-diff-component
+                  [currentData]="counterData2"
+                ></price-diff-component>
+              </div>
+              <div class="plan">おすすめプラン</div>
+              <div class="price">
+                <price-counter-component
+                  [currentData]="counterData2"
+                ></price-counter-component
+                ><span>円</span>
               </div>
             </div>
           </div>
+        </div>
 
+        <div>
           <p>オーバーフロー養素内のスティッキー</p>
           <div class="stickyTestBox" id="stickyTestBox">
             <div class="stickyTrigger">
