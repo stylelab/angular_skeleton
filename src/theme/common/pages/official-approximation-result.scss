@@ -552,9 +552,9 @@
         width: 100%;
         font-weight: bold;
         .inner {
-          padding: 16px 0 16px 16px;
+          padding: 12px 0 12px 12px;
           @include pc {
-            padding: 16px;
+            padding: 12px;
           }
         }
         @include pc {
@@ -576,9 +576,9 @@
         justify-content: flex-end;
         align-items: center;
         .inner {
-          padding: 16px 16px 16px 0;
+          padding: 12px 12px 12px 0;
           @include pc {
-            padding: 16px;
+            padding: 12px;
           }
         }
         &.current {
@@ -643,13 +643,75 @@
         .td {
           display: none;
           padding: 0 0 100px 0;
+          &.current {
+            display: block;
+          }
+          @include pc {
+            display: block;
+          }
 
           .box-hd {
             display: none;
             @extend .font-extra-large;
+            @include pc {
+              display: block;
+              padding: 12px;
+              white-space: nowrap;
+              font-weight: bold;
+              color: #fff;
+              background: var(--ion-color-custom-dark-green);
+            }
           }
-          &.current {
-            display: block;
+          .box-text {
+            @include pc {
+              padding: 12px;
+            }
+          }
+          .box-price {
+            padding: 12px;
+            text-align: center;
+            @include pc {
+              display: none;
+            }
+
+            .dt-01 {
+              @extend .font-medium-large;
+              font-weight: bold;
+            }
+
+            span {
+              line-height: 1;
+            }
+            .total-price {
+              font-size: 40px;
+              font-weight: bold;
+              color: var(--ion-color-custom-dark-green);
+              letter-spacing: 2px;
+            }
+            .total-yen {
+              @extend .font-medium-large;
+              color: var(--ion-color-custom-dark-green);
+              font-weight: bold;
+            }
+            .split-price {
+              margin-left: 5px;
+              @extend .font-extra-large;
+              color: var(--ion-color-custom-dark-green);
+              font-weight: bold;
+            }
+            .split-yen {
+              margin-right: 5px;
+              @extend .font-medium;
+              color: var(--ion-color-custom-dark-green);
+              font-weight: bold;
+            }
+            .text-01 {
+              @extend .font-medium;
+              font-weight: bold;
+            }
+            .text-02 {
+              @extend .font-medium;
+            }
           }
           .ul-btn {
             position: absolute;
@@ -663,65 +725,63 @@
               background: #f00;
             }
           }
-          @include pc {
-            display: block;
-
-            .box-hd {
-              display: block;
-              padding: 16px;
-              white-space: nowrap;
-              font-weight: bold;
-              color: #fff;
-              background: var(--ion-color-custom-dark-green);
-            }
-            .box-text {
-              padding: 16px;
-            }
-          }
         }
       }
 
       //2行目
       &.tbl-02 {
         .th {
-          background: #eee;
+          padding: 6px 0;
+          border-top: 2px solid #d8d8d8;
+          border-bottom: 2px solid #d8d8d8;
+
+          @include pc {
+            padding: 12px 0;
+            background: #eee;
+            border-top: none;
+            border-bottom: 1px solid #d8d8d8;
+          }
           .inner {
+            text-align: center;
             @include pc {
               display: flex;
               flex-flow: column;
               justify-content: space-between;
               height: 100%;
+              text-align: left;
             }
-
-            p {
-              @include pc {
-                padding: 16px 0;
-              }
-              .span-01 {
-                @extend .font-extra-large;
-              }
+            span {
+              line-height: 1;
+            }
+            .span-01 {
+              @extend .font-extra-large;
             }
           }
         }
         .td {
           text-align: right;
+          display: none; //SP時非表示(別位置に同じ別要素を表示される)
+          @include pc {
+            display: flex;
+          }
+          span {
+            line-height: 1;
+          }
           .total-price {
             font-size: 40px;
             font-weight: bold;
             color: var(--ion-color-custom-dark-green);
-            line-height: 1;
           }
           .total-yen {
             @extend .font-medium-large;
             color: var(--ion-color-custom-dark-green);
-            line-height: 1;
+            font-weight: bold;
           }
           .split-price {
             margin-left: 5px;
             @extend .font-extra-large;
             color: var(--ion-color-custom-dark-green);
             font-weight: bold;
-            line-height: 1;
           }
           .split-yen {
             margin-right: 5px;
@@ -743,13 +803,9 @@
       &.tbl-04,
       &.tbl-05,
       &.tbl-06 {
-        border-bottom: 2px dotted #d8d8d8;
-        @include pc {
-          border-bottom: none;
-        }
-
         .th {
           width: 60%;
+          border-bottom: 2px dotted #d8d8d8;
           @include pc {
             width: 34%;
           }
@@ -757,26 +813,32 @@
         .td {
           width: 40%;
           font-weight: bold;
+          border-bottom: 2px dotted #d8d8d8;
           @include pc {
             width: 33%;
           }
         }
       }
       &.tbl-05 {
-        border-bottom: 2px solid #d8d8d8;
-        @include pc {
-          border-bottom: none;
+        .th,
+        .td {
+          border-bottom: 1px solid #d8d8d8;
         }
       }
       //6行目
       &.tbl-06 {
-        border-bottom: none;
         .th {
-          background: #fcecec;
-        }
-        .td {
+          border-bottom: none;
           background: #fcecec;
           @include pc {
+            border-bottom: 1px solid #d8d8d8;
+          }
+        }
+        .td {
+          border-bottom: none;
+          background: #fcecec;
+          @include pc {
+            border-bottom: 1px solid #d8d8d8;
             justify-content: flex-start;
           }
         }
@@ -841,6 +903,19 @@
   .stickyTrigger {
     width: 100%;
     background: #0f0;
+  }
+
+  .sp-hide {
+    display: none;
+    @include pc {
+      display: block;
+    }
+  }
+  .pc-hide {
+    display: block;
+    @include pc {
+      display: none;
+    }
   }
 }
 

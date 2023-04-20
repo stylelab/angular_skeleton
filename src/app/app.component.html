@@ -28,6 +28,26 @@
                   「対人賠償」「対物賠償」「人身傷害（車内のみ補償」のシンプルなプランです。
                 </p>
               </div>
+              <div class="box-price">
+                <dl>
+                  <dt class="dt-01"><span>保険料（一括払）</span></dt>
+                  <dd class="dd-01">
+                    <span class="total-price">{{ counterData | number }}</span
+                    ><span class="total-yen">円</span>
+                  </dd>
+                  <dt class="dt-02">
+                    <span class="text-01">12回払</span
+                    ><span class="split-price">{{ 1234 | number }}</span
+                    ><span class="split-yen">円</span
+                    ><span class="text-01">/回</span>
+                  </dt>
+                  <dd class="dd-02">
+                    <span class="text-02"
+                      >（総額{{ counterData | number }}円）</span
+                    >
+                  </dd>
+                </dl>
+              </div>
 
               <ul class="ul-btn">
                 <li>ぼたん1</li>
@@ -41,6 +61,26 @@
                   もらい事故でも安心な「弁護士特約」と、自転車に乗る方におすすめの「個人賠償特約」を付けたプランです。
                 </p>
               </div>
+              <div class="box-price">
+                <dl>
+                  <dt class="dt-01"><span>保険料（一括払）</span></dt>
+                  <dd class="dd-01">
+                    <span class="total-price">{{ counterData2 | number }}</span
+                    ><span class="total-yen">円</span>
+                  </dd>
+                  <dt class="dt-02">
+                    <span class="text-01">12回払</span
+                    ><span class="split-price">{{ 1234 | number }}</span
+                    ><span class="split-yen">円</span
+                    ><span class="text-01">/回</span>
+                  </dt>
+                  <dd class="dd-02">
+                    <span class="text-02"
+                      >（総額{{ counterData2 | number }}円）</span
+                    >
+                  </dd>
+                </dl>
+              </div>
               <ul class="ul-btn">
                 <li>ぼたん1</li>
                 <li>ぼたん2</li>
@@ -51,29 +91,45 @@
           <div class="flex-table tbl-02">
             <div class="th">
               <div class="inner">
-                <p><span class="span-01">保険料</span></p>
-                <p><span>保険料の内訳を閉じる</span></p>
+                <p class="sp-hide"><span class="span-01">保険料</span></p>
+                <p class="p-01"><span>保険料の内訳を閉じる</span></p>
               </div>
             </div>
             <div class="td" [class.current]="currentTabNum == 0">
               <div class="inner">
                 <p>
-                  <span class="total-price">1234567</span
+                  <span class="total-price">{{ counterData | number }}</span
                   ><span class="total-yen">円</span>
                 </p>
                 <p>
                   <span class="text-01">12回払</span
-                  ><span class="split-price">1234</span
+                  ><span class="split-price">{{ 1234 | number }}</span
                   ><span class="split-yen">円</span
                   ><span class="text-01">/回</span>
                 </p>
-                <p><span class="text-02">（総額1234567円）</span></p>
+                <p>
+                  <span class="text-02"
+                    >（総額{{ counterData | number }}円）</span
+                  >
+                </p>
               </div>
             </div>
             <div class="td" [class.current]="currentTabNum == 1">
               <div class="inner">
                 <p>
-                  <span class="price">28,234</span><span class="yen">円</span>
+                  <span class="total-price">{{ counterData2 | number }}</span
+                  ><span class="total-yen">円</span>
+                </p>
+                <p>
+                  <span class="text-01">12回払</span
+                  ><span class="split-price">{{ 1234 | number }}</span
+                  ><span class="split-yen">円</span
+                  ><span class="text-01">/回</span>
+                </p>
+                <p>
+                  <span class="text-02"
+                    >（総額{{ counterData2 | number }}円）</span
+                  >
                 </p>
               </div>
             </div>
@@ -89,14 +145,16 @@
               <div class="td" [class.current]="currentTabNum == 0">
                 <div class="inner">
                   <p>
-                    <span class="price">179</span><span class="yen">円</span>
+                    <span class="price">{{ 1179 | number }}</span
+                    ><span class="yen">円</span>
                   </p>
                 </div>
               </div>
               <div class="td" [class.current]="currentTabNum == 1">
                 <div class="inner">
                   <p>
-                    <span class="price">834</span><span class="yen">円</span>
+                    <span class="price">{{ 1834 | number }}</span
+                    ><span class="yen">円</span>
                   </p>
                 </div>
               </div>
@@ -108,14 +166,16 @@
               <div class="td" [class.current]="currentTabNum == 0">
                 <div class="inner">
                   <p>
-                    <span class="price">200</span><span class="yen">円</span>
+                    <span class="price">{{ 1200 | number }}</span
+                    ><span class="yen">円</span>
                   </p>
                 </div>
               </div>
               <div class="td" [class.current]="currentTabNum == 1">
                 <div class="inner">
                   <p>
-                    <span class="price">400</span><span class="yen">円</span>
+                    <span class="price">{{ 1400 | number }}</span
+                    ><span class="yen">円</span>
                   </p>
                 </div>
               </div>
@@ -127,14 +187,16 @@
               <div class="td" [class.current]="currentTabNum == 0">
                 <div class="inner">
                   <p>
-                    <span class="price">300</span><span class="yen">円</span>
+                    <span class="price">{{ 1300 | number }}</span
+                    ><span class="yen">円</span>
                   </p>
                 </div>
               </div>
               <div class="td" [class.current]="currentTabNum == 1">
                 <div class="inner">
                   <p>
-                    <span class="price">500</span><span class="yen">円</span>
+                    <span class="price">{{ 1500 | number }}</span
+                    ><span class="yen">円</span>
                   </p>
                 </div>
               </div>
