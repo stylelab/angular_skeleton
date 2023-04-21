@@ -29,11 +29,11 @@ export class PriceDiffComponent implements OnInit {
     const previous = changes["currentData"].previousValue;
     const current = changes["currentData"].currentValue;
 
-    this.displayDiff(previous, current);
+    //this.displayDiff(previous, current);
     // //初回処理スルー(previous==undefine)
-    // if (previous > 0) {
-    //   this.displayDiff(previous, current);
-    // }
+    if (previous > 0) {
+      this.displayDiff(previous, current);
+    }
   }
 
   displayDiff(previous: number, current: number) {

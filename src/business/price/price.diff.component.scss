@@ -1,44 +1,65 @@
 .price-diff-component {
   opacity: 0;
-
   position: absolute;
   top: 20px;
-  right: 0;
+  right: 20px;
   z-index: 100;
-
   width: 100px;
   height: 50px;
-
-  font-weight: bold;
-  background: #ccc;
-
-  // transition: all 0.5s ease-out 0.5s;
-
-  .sign {
-    font-size: 10px;
-  }
-  .number {
-    font-size: 14px;
-  }
-  .yen {
-    font-size: 10px;
-  }
-
-  // &.isView {
-  //   opacity: 1;
-  //   top: 0;
-  // }
   &.isView {
     animation: fadeInAnime forwards 0.5s 1 ease-out 0.5s normal;
-    //animation: fadeOutAnime backwards 0.5s 1 ease-out 1.5s normal;
+  }
 
-    // animation-name: fadeInAnime; /*1で解説*/
-    // animation-fill-mode: backwards; /*2で解説*/
-    // animation-duration: 3s; /*3で解説*/
-    // animation-iteration-count: infinite; /*4で解説*/
-    // animation-timing-function: ease; /*5で解説*/
-    // animation-delay: 0.5s; /*6で解説*/
-    // animation-direction: normal; /*7で解説*/
+  .balloon {
+    display: none;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 4px;
+    min-width: 110px;
+    max-width: 100%;
+    height: 36px;
+    color: #cc0000;
+    font-size: 16px;
+    font-weight: bold;
+    background: #fff;
+    border: solid 2px #cc0000;
+    border-radius: 6px;
+    box-sizing: border-box;
+    text-align: center;
+    letter-spacing: 0.5px;
+    //box-shadow: 左右の向きpx  上下の向きpx ぼかしpx 広がりpx 色 内側指定;
+    box-shadow: 0px 3px 3px 2px rgba(0, 0, 0, 0.1);
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: -16px;
+      left: 50%;
+      margin-left: -3px;
+      border: 4px solid transparent;
+      border-top: 12px solid #fff;
+      z-index: 2;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      margin-left: -5px;
+      border: 6px solid transparent;
+      border-top: 14px solid #cc0000;
+      z-index: 1;
+    }
+
+    .sign {
+      //font-size: 14px;
+    }
+    .number {
+      //font-size: 16px;
+    }
+    .yen {
+      //font-size: 14px;
+    }
   }
 }
 
@@ -49,7 +70,7 @@
   }
   100% {
     opacity: 1;
-    top: 0;
+    top: 7px;
   }
 }
 @keyframes fadeOutAnime {

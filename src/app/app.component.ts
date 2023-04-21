@@ -238,9 +238,9 @@ export class AppComponent implements AfterViewInit {
     //todo:stickyObjectそのものを固定するか、別のDOMを登場させるかでやり方が変わる。今はそのものを固定してy座標が変わってしまうので一度fixしてしまうとバグってる。この場合は実装を変える必要あり。
     //stickyObjectの位置ではなく、その下の要素の位置を検知して計算すれば良さそう。
 
-    this.stickyObject = document.querySelector(".stickyObject");
-    this.stickyBox = document.querySelector(".stickyTestBox"); //本家だと大本のdivのwrapperがこれになりそう。＝いらない。
-    this.stickyTrigger = document.querySelector(".stickyTrigger");
+    this.stickyObject = document.querySelector(".sticky-object");
+    this.stickyBox = document.querySelector(".sticky-test-box"); //本家だと大本のdivのwrapperがこれになりそう。＝いらない。
+    this.stickyTrigger = document.querySelector(".sticky-trigger");
 
     this.checkScrollValue();
 
