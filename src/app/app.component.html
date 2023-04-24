@@ -24,7 +24,6 @@
                 <span class="total-price">{{ counterData | number }}</span>
                 <span class="total-yen">円</span>
               </p>
-              <span class="arrow"></span>
             </div>
           </li>
           <li
@@ -40,7 +39,6 @@
                 <span class="total-price">{{ counterData2 | number }}</span>
                 <span class="total-yen">円</span>
               </p>
-              <span class="arrow"></span>
             </div>
           </li>
         </ul>
@@ -259,12 +257,27 @@
 
         <br /><br /><br />
 
-        <div class="sticky-object" [class.fixed]="isStickyFix">
+        <div class="sticky-object" [class.show]="isStickyFix">
           <div class="sticky-object-inner">
+            <ul class="sticky-tab-button">
+              <li
+                [class.current]="currentTabNum == 0"
+                (click)="setCurrentTabNum(0)"
+              >
+                <span>シンプルプラン</span>
+              </li>
+              <li
+                [class.current]="currentTabNum == 1"
+                (click)="setCurrentTabNum(1)"
+              >
+                <span>おすすめプラン</span>
+              </li>
+            </ul>
+
             <div class="flex-table">
               <div class="th">
                 <div class="inner">
-                  <p>保険料一括払い</p>
+                  <p><span>保険料</span><br />（一括払）</p>
                   <span>
                     <img src="assets/images/sample_result_01.png" alt="" />
                   </span>
@@ -274,7 +287,10 @@
                 <div class="inner">
                   <div class="box-plan">
                     <div class="name">
-                      <p>シンプルプラン</p>
+                      <p>
+                        <span class="pc-only">シンプルプラン</span
+                        ><span class="sp-only">保険料（一括払）</span>
+                      </p>
                     </div>
                     <div class="price">
                       <price-counter-component
@@ -303,7 +319,10 @@
                 <div class="inner">
                   <div class="box-plan">
                     <div class="name">
-                      <p>おすすめプラン</p>
+                      <p>
+                        <span class="pc-only">おすすめプラン</span
+                        ><span class="sp-only">保険料（一括払）</span>
+                      </p>
                     </div>
                     <div class="price">
                       <price-counter-component
@@ -373,53 +392,14 @@
             ページ内スクロールしてみる!！！↓↓
           </p>
 
-          <br /><br /><br /><br />
-
-          <p class="btn" (click)="toggleAccordion('ac01')">toggleボタン</p>
-          <!-- <p *ngIf="isOpenAc01">accordion01</p> -->
-          <div class="toggle" [class.isOpen]="isOpenAc01">
-            アニメーションで。<br />アニメーションで。<br />アニメーションで。<br />アニメーションで。<br />アニメーションで。<br />アニメーションで。<br />アニメーションで。<br />
-          </div>
-
           <br /><br /><br />
           <p (click)="setCounterData(123456789)">カウンター変更ボタン</p>
           <!-- <p>{{ testCounterData }}</p> -->
           <price-counter-component
             [currentData]="counterData"
           ></price-counter-component>
-          <br /><br /><br /><br /><br /><br />
 
-          <h2>
-            タブレスポンシブ(sp時タブにする。あとはmedia-query仕込めば良い)
-          </h2>
-          <ul class="tab-button">
-            <li (click)="setCurrentTabNum(0)">シンプルプラン</li>
-            <li (click)="setCurrentTabNum(1)">おすすめプラン</li>
-          </ul>
-          <div class="tab-content">
-            <table class="tab-table">
-              <tr>
-                <th>プラン名</th>
-                <td [class.current]="currentTabNum == 0">標準ブラン</td>
-                <td [class.current]="currentTabNum == 1">安心プラン</td>
-              </tr>
-              <tr>
-                <th>1回払保険料</th>
-                <td [class.current]="currentTabNum == 0">
-                  標準ブランの支払い額1000円
-                </td>
-                <td [class.current]="currentTabNum == 1">
-                  安心ブランの支払い額5000円
-                </td>
-              </tr>
-            </table>
-          </div>
-
-          <br /><br /><br /><br /><br /><br />
-          <h2>アニメーション（angular animation）</h2>
-          <button>赤くする</button>
-
-          <br /><br /><br /><br /><br /><br />
+          <br /><br /><br />
 
           <div style="text-align: center">
             <apx-chart

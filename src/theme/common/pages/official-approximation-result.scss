@@ -530,17 +530,24 @@
     display: flex;
     justify-content: space-between;
     margin-top: var(--space-size-55);
+    @include pc {
+      display: none;
+    }
     li {
+      margin-top: auto;
       border: 2px solid #d8d8d8;
       border-bottom: none;
       width: 48.5%;
       background: #eeeeee;
       border-radius: 10px 10px 0 0;
-
+      min-height: 78px;
+      display: flex;
+      flex-direction: column;
       &.current {
         background: var(--ion-color-custom-dark-green);
         border-color: var(--ion-color-custom-dark-green);
         .tab-inner {
+          color: #fff;
           .img {
             display: block;
             position: absolute;
@@ -550,25 +557,18 @@
           }
           h2 {
             padding-top: 30px;
-            color: #fff;
-          }
-          .total-price,
-          .total-yen {
-            color: #fff;
-          }
-          .arrow {
-            display: none;
           }
         }
       }
       .tab-inner {
+        margin-top: auto;
         position: relative;
+        padding: 0 12px 18px;
         display: flex;
-        padding: 0 12px 0;
         flex-direction: column;
         text-align: center;
         line-height: 1;
-        min-height: 96px;
+        color: #13a0ff;
         .img {
           display: none;
         }
@@ -586,28 +586,10 @@
           font-size: 16px;
           font-weight: bold;
         }
-        .arrow {
-          display: inline-block;
-          &::after {
-            content: "";
-            width: 9px;
-            height: 9px;
-
-            border-top: solid 2px #0099ff; /* 好みで色を変えてください */
-            border-right: solid 2px #0099ff; /* 好みで色を変えてください */
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translate(-50%, -50%) rotate(135deg);
-            margin-top: -24px;
-          }
-        }
       }
     }
-    @include pc {
-      display: none;
-    }
   }
+
   .tab-content {
     margin: 0 auto;
     width: 100%;
@@ -628,9 +610,9 @@
         width: 100%;
         font-weight: bold;
         .inner {
-          padding: 12px 0 12px 12px;
+          padding: 16px 0 16px 16px;
           @include pc {
-            padding: 12px;
+            padding: 16px;
           }
         }
         @include pc {
@@ -652,9 +634,9 @@
         justify-content: flex-end;
         align-items: center;
         .inner {
-          padding: 12px 12px 12px 0;
+          padding: 16px 16px 16px 0;
           @include pc {
-            padding: 12px;
+            padding: 16px;
           }
         }
         &.current {
@@ -718,7 +700,7 @@
         }
         .td {
           display: none;
-          padding: 0 0 100px 0;
+          // padding: 0 0 80px 0;
           &.current {
             display: block;
           }
@@ -731,7 +713,7 @@
             @extend .font-extra-large;
             @include pc {
               display: block;
-              padding: 12px;
+              padding: 16px;
               white-space: nowrap;
               font-weight: bold;
               color: #fff;
@@ -740,11 +722,11 @@
           }
           .box-text {
             @include pc {
-              padding: 12px;
+              padding: 16px;
             }
           }
           .box-price {
-            padding: 12px;
+            padding: 16px;
             text-align: center;
             @include pc {
               display: none;
@@ -790,13 +772,14 @@
             }
           }
           .ul-btn {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
+            // position: absolute;
+            // bottom: 0;
+            // left: 0;
+            // width: 100%;
+            margin-top: auto;
 
             li {
-              width: 90%;
+              width: 80%;
               margin: 10px auto;
               background: #f00;
             }
@@ -931,27 +914,51 @@
   }
 
   .sticky-object {
-    display: none;
     width: 100%;
     background: #fff;
+    position: fixed;
+    top: -180px;
+    left: 0;
+    transition: all 0.3s ease-out;
     @include pc {
       min-height: 140px;
       border-bottom: 2px solid #d8d8d8;
-      box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.1);
+      box-shadow: 3px 1px 3px 3px rgba(0, 0, 0, 0.1);
     }
-    &.fixed {
-      display: block;
-      position: fixed;
+    &.show {
       top: 0;
-      left: 0;
     }
     .sticky-object-inner {
       padding: 0 20px;
+
+      .sticky-tab-button {
+        display: flex;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.1);
+
+        @include pc {
+          display: none;
+        }
+        li {
+          padding: 16px 0;
+          width: 50%;
+          text-align: center;
+          background: #eeeeee;
+          color: #0099ff;
+          font-weight: bold;
+          line-height: 1;
+          &.current {
+            background: var(--ion-color-custom-dark-green);
+            color: #fff;
+          }
+        }
+      }
+
       .flex-table {
         display: flex;
         margin: 0 auto;
         min-height: 107px;
-        border: 2px solid #f00;
+        border: 2px solid var(--ion-color-custom-dark-green);
         box-sizing: border-box;
         box-shadow: 0px 3px 3px 2px rgba(0, 0, 0, 0.1);
         @include pc {
@@ -963,27 +970,34 @@
 
         .th {
           display: none;
-          font-weight: bold;
-          position: relative;
           @include pc {
+            position: relative;
+            display: flex;
+            align-items: center;
             width: 34%;
             box-sizing: border-box;
             border-right: 2px solid #d8d8d8;
             border-left: 2px solid #d8d8d8;
-            display: flex;
-            align-items: center;
+            background: #f5f5f5;
+            font-weight: bold;
           }
           .inner {
-            span {
+            p {
               position: absolute;
-              right: 0;
-              bottom: 0;
-              img {
-                width: auto;
-                height: 50px;
+              left: 16px;
+              top: 14px;
+              font-size: 16px;
+              span {
+                font-size: 24px;
+                line-height: 1;
               }
             }
-            @include pc {
+            img {
+              position: absolute;
+              right: 16px;
+              bottom: 16px;
+              width: 135px;
+              height: auto;
             }
           }
         }
@@ -1003,9 +1017,9 @@
             display: flex;
           }
           .inner {
+            padding: 18px 20px;
             width: 100%;
             @include pc {
-              padding: 16px;
               border-top: 26px solid #28a69a;
             }
             .box-plan {
@@ -1013,10 +1027,16 @@
               justify-content: space-between;
               align-items: center;
               line-height: 1;
-              margin-top: 4px;
+              @include pc {
+                margin-top: 4px;
+              }
               .name {
                 font-size: 16px;
                 font-weight: bold;
+                //pc過程
+                @media screen and (min-width: 641px) and (max-width: 799px) {
+                  font-size: 14px;
+                }
               }
               .price {
                 margin-top: -4px;
@@ -1025,6 +1045,14 @@
                 color: #28a69a;
                 vertical-align: middle;
                 .yen {
+                  font-size: 20px;
+                  //pc過程
+                  @media screen and (min-width: 641px) and (max-width: 799px) {
+                    font-size: 16px;
+                  }
+                }
+                //pc過程
+                @media screen and (min-width: 641px) and (max-width: 799px) {
                   font-size: 20px;
                 }
               }
@@ -1053,11 +1081,15 @@
                 }
               }
             }
+            .price-diff {
+              position: absolute;
+              right: 28px;
+              top: -24px;
+              @include pc {
+                top: 5px;
+              }
+            }
           }
-        }
-
-        .th {
-          background: #f5f5f5;
         }
       }
     }
@@ -1084,13 +1116,13 @@
     }
   }
 
-  .sp-hide {
+  .pc-only {
     display: none;
     @include pc {
       display: block;
     }
   }
-  .pc-hide {
+  .sp-only {
     display: block;
     @include pc {
       display: none;
@@ -1105,7 +1137,13 @@
 
 /************* Break Point *****************/
 @mixin pc {
-  @media screen and (min-width: 641px) {
+  @media (min-width: 641px) {
+    @content;
+  }
+}
+
+@mixin pc-middle {
+  @media (min-width: 641px) and (max-width: 800px) {
     @content;
   }
 }

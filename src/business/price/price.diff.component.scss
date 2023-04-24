@@ -1,9 +1,10 @@
 .price-diff-component {
   opacity: 0;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 100;
+  // position: absolute;
+  // top: 20px;
+  // right: 20px;
+  // z-index: 100;
+  margin-top: 0;
   width: 100px;
   height: 50px;
   &.isView {
@@ -51,26 +52,26 @@
       z-index: 1;
     }
 
-    .sign {
-      //font-size: 14px;
-    }
-    .number {
-      //font-size: 16px;
-    }
-    .yen {
-      //font-size: 14px;
-    }
+    // .sign {
+    //   //font-size: 14px;
+    // }
+    // .number {
+    //   //font-size: 16px;
+    // }
+    // .yen {
+    //   //font-size: 14px;
+    // }
   }
 }
 
 @keyframes fadeInAnime {
   0% {
     opacity: 0;
-    top: 20px;
+    margin-top: 13px;
   }
   100% {
     opacity: 1;
-    top: 7px;
+    margin-top: 0px;
   }
 }
 @keyframes fadeOutAnime {
