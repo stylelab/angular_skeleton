@@ -43,322 +43,331 @@
           </li>
         </ul>
         <div class="tab-content">
-          <div class="flex-table tbl-01">
-            <div class="th">
-              <p>
-                <img src="assets/images/sample_result_01.png" alt="" />
-              </p>
-            </div>
-            <div class="td" [class.current]="currentTabNum == 0">
-              <div class="box-hd"><h2>シンプルプラン</h2></div>
-              <div class="box-text">
-                <p class="text-normal" TXT-01-01>
-                  「対人賠償」「対物賠償」「人身傷害（車内のみ補償」のシンプルなプランです。
+          <div class="table-content">
+            <div class="tr tr-01">
+              <div class="th">
+                <p>
+                  <img src="assets/images/sample_result_01.png" alt="" />
                 </p>
               </div>
-              <div class="box-price">
-                <dl>
-                  <dt class="dt-01"><span>保険料（一括払）</span></dt>
-                  <dd class="dd-01">
+              <div class="td" [class.current]="currentTabNum == 0">
+                <div class="box-hd"><h2>シンプルプラン</h2></div>
+                <div class="box-text">
+                  <p class="text-normal" TXT-01-01>
+                    「対人賠償」「対物賠償」「人身傷害（車内のみ補償」のシンプルなプランです。
+                  </p>
+                </div>
+                <div class="box-price">
+                  <dl>
+                    <dt class="dt-01"><span>保険料（一括払）</span></dt>
+                    <dd class="dd-01">
+                      <span class="total-price">{{ counterData | number }}</span
+                      ><span class="total-yen">円</span>
+                    </dd>
+                    <dt class="dt-02">
+                      <span class="text-01">12回払</span
+                      ><span class="split-price">{{ 1234 | number }}</span
+                      ><span class="split-yen">円</span
+                      ><span class="text-01">/回</span>
+                    </dt>
+                    <dd class="dd-02">
+                      <span class="text-02"
+                        >（総額{{ counterData | number }}円）</span
+                      >
+                    </dd>
+                  </dl>
+                </div>
+                <div class="box-btn">
+                  <ul>
+                    <li>ぼたん1</li>
+                    <li>ぼたん2</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="td" [class.current]="currentTabNum == 1">
+                <div class="box-hd"><h2>おすすめプラン</h2></div>
+                <div class="box-text">
+                  <p class="text-normal" TXT-01-01>
+                    もらい事故でも安心な「弁護士特約」と、自転車に乗る方におすすめの「個人賠償特約」を付けたプランです。
+                  </p>
+                </div>
+                <div class="box-price">
+                  <dl>
+                    <dt class="dt-01"><span>保険料（一括払）</span></dt>
+                    <dd class="dd-01">
+                      <span class="total-price">{{
+                        counterData2 | number
+                      }}</span
+                      ><span class="total-yen">円</span>
+                    </dd>
+                    <dt class="dt-02">
+                      <span class="text-01">12回払</span
+                      ><span class="split-price">{{ 1234 | number }}</span
+                      ><span class="split-yen">円</span
+                      ><span class="text-01">/回</span>
+                    </dt>
+                    <dd class="dd-02">
+                      <span class="text-02"
+                        >（総額{{ counterData2 | number }}円）</span
+                      >
+                    </dd>
+                  </dl>
+                </div>
+                <div class="box-btn">
+                  <ul>
+                    <li>ぼたん1</li>
+                    <li>ぼたん2</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="tr tr-02">
+              <div class="th">
+                <div class="inner">
+                  <p class="pc-only"><span class="span-01">保険料</span></p>
+                  <p class="p-01">
+                    <span
+                      class="span-02 ac-btn"
+                      (click)="toggleAccordion('ac01')"
+                      >保険料の内訳を見る</span
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="td" [class.current]="currentTabNum == 0">
+                <div class="inner">
+                  <p>
                     <span class="total-price">{{ counterData | number }}</span
                     ><span class="total-yen">円</span>
-                  </dd>
-                  <dt class="dt-02">
+                  </p>
+                  <p>
                     <span class="text-01">12回払</span
                     ><span class="split-price">{{ 1234 | number }}</span
                     ><span class="split-yen">円</span
                     ><span class="text-01">/回</span>
-                  </dt>
-                  <dd class="dd-02">
+                  </p>
+                  <p>
                     <span class="text-02"
                       >（総額{{ counterData | number }}円）</span
                     >
-                  </dd>
-                </dl>
+                  </p>
+                </div>
               </div>
-
-              <div class="box-btn">
-                <ul>
-                  <li>ぼたん1</li>
-                  <li>ぼたん2</li>
-                </ul>
-              </div>
-            </div>
-            <div class="td" [class.current]="currentTabNum == 1">
-              <div class="box-hd"><h2>おすすめプラン</h2></div>
-              <div class="box-text">
-                <p class="text-normal" TXT-01-01>
-                  もらい事故でも安心な「弁護士特約」と、自転車に乗る方におすすめの「個人賠償特約」を付けたプランです。
-                </p>
-              </div>
-              <div class="box-price">
-                <dl>
-                  <dt class="dt-01"><span>保険料（一括払）</span></dt>
-                  <dd class="dd-01">
+              <div class="td" [class.current]="currentTabNum == 1">
+                <div class="inner">
+                  <p>
                     <span class="total-price">{{ counterData2 | number }}</span
                     ><span class="total-yen">円</span>
-                  </dd>
-                  <dt class="dt-02">
+                  </p>
+                  <p>
                     <span class="text-01">12回払</span
                     ><span class="split-price">{{ 1234 | number }}</span
                     ><span class="split-yen">円</span
                     ><span class="text-01">/回</span>
-                  </dt>
-                  <dd class="dd-02">
+                  </p>
+                  <p>
                     <span class="text-02"
                       >（総額{{ counterData2 | number }}円）</span
                     >
-                  </dd>
-                </dl>
-              </div>
-              <div class="box-btn">
-                <ul>
-                  <li>ぼたん1</li>
-                  <li>ぼたん2</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="flex-table tbl-02">
-            <div class="th">
-              <div class="inner">
-                <p class="pc-only"><span class="span-01">保険料</span></p>
-                <p class="p-01">
-                  <span class="span-02 ac-btn" (click)="toggleAccordion('ac01')"
-                    >保険料の内訳を見る</span
-                  >
-                </p>
-              </div>
-            </div>
-            <div class="td" [class.current]="currentTabNum == 0">
-              <div class="inner">
-                <p>
-                  <span class="total-price">{{ counterData | number }}</span
-                  ><span class="total-yen">円</span>
-                </p>
-                <p>
-                  <span class="text-01">12回払</span
-                  ><span class="split-price">{{ 1234 | number }}</span
-                  ><span class="split-yen">円</span
-                  ><span class="text-01">/回</span>
-                </p>
-                <p>
-                  <span class="text-02"
-                    >（総額{{ counterData | number }}円）</span
-                  >
-                </p>
-              </div>
-            </div>
-            <div class="td" [class.current]="currentTabNum == 1">
-              <div class="inner">
-                <p>
-                  <span class="total-price">{{ counterData2 | number }}</span
-                  ><span class="total-yen">円</span>
-                </p>
-                <p>
-                  <span class="text-01">12回払</span
-                  ><span class="split-price">{{ 1234 | number }}</span
-                  ><span class="split-yen">円</span
-                  ><span class="text-01">/回</span>
-                </p>
-                <p>
-                  <span class="text-02"
-                    >（総額{{ counterData2 | number }}円）</span
-                  >
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="ac-obj" [class.isOpen]="isOpenAc01">
-            <div class="flex-table tbl-03">
-              <div class="th">
-                <div class="inner">
-                  <p>相手方への補填<br />お車による怪我の補填</p>
+                  </p>
                 </div>
+              </div>
+            </div>
+
+            <div class="ac-obj" [class.isOpen]="isOpenAc01">
+              <div class="tr tr-03">
+                <div class="th">
+                  <div class="inner">
+                    <p>相手方への補填<br />お車による怪我の補填</p>
+                  </div>
+                </div>
+                <div class="td" [class.current]="currentTabNum == 0">
+                  <div class="inner">
+                    <p>
+                      <span class="price">{{ 1179 | number }}</span
+                      ><span class="yen">円</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="td" [class.current]="currentTabNum == 1">
+                  <div class="inner">
+                    <p>
+                      <span class="price">{{ 1834 | number }}</span
+                      ><span class="yen">円</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tr tr-04">
+                <div class="th">
+                  <div class="inner"><p>ご自身のお車の補償</p></div>
+                </div>
+                <div class="td" [class.current]="currentTabNum == 0">
+                  <div class="inner">
+                    <p>
+                      <span class="price">{{ 1200 | number }}</span
+                      ><span class="yen">円</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="td" [class.current]="currentTabNum == 1">
+                  <div class="inner">
+                    <p>
+                      <span class="price">{{ 1400 | number }}</span
+                      ><span class="yen">円</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tr tr-05">
+                <div class="th">
+                  <div class="inner"><p>その他の補償</p></div>
+                </div>
+                <div class="td" [class.current]="currentTabNum == 0">
+                  <div class="inner">
+                    <p>
+                      <span class="price">{{ 1300 | number }}</span
+                      ><span class="yen">円</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="td" [class.current]="currentTabNum == 1">
+                  <div class="inner">
+                    <p>
+                      <span class="price">{{ 1500 | number }}</span
+                      ><span class="yen">円</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /acObj -->
+
+            <div class="tr tr-06">
+              <div class="th">
+                <div class="inner"><p>適用されている割引</p></div>
               </div>
               <div class="td" [class.current]="currentTabNum == 0">
                 <div class="inner">
-                  <p>
-                    <span class="price">{{ 1179 | number }}</span
-                    ><span class="yen">円</span>
-                  </p>
+                  <ul class="ul-label">
+                    <li class="label-red">新車割引</li>
+                  </ul>
                 </div>
               </div>
               <div class="td" [class.current]="currentTabNum == 1">
                 <div class="inner">
-                  <p>
-                    <span class="price">{{ 1834 | number }}</span
-                    ><span class="yen">円</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="flex-table tbl-04">
-              <div class="th">
-                <div class="inner"><p>ご自身のお車の補償</p></div>
-              </div>
-              <div class="td" [class.current]="currentTabNum == 0">
-                <div class="inner">
-                  <p>
-                    <span class="price">{{ 1200 | number }}</span
-                    ><span class="yen">円</span>
-                  </p>
-                </div>
-              </div>
-              <div class="td" [class.current]="currentTabNum == 1">
-                <div class="inner">
-                  <p>
-                    <span class="price">{{ 1400 | number }}</span
-                    ><span class="yen">円</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="flex-table tbl-05">
-              <div class="th">
-                <div class="inner"><p>その他の補償</p></div>
-              </div>
-              <div class="td" [class.current]="currentTabNum == 0">
-                <div class="inner">
-                  <p>
-                    <span class="price">{{ 1300 | number }}</span
-                    ><span class="yen">円</span>
-                  </p>
-                </div>
-              </div>
-              <div class="td" [class.current]="currentTabNum == 1">
-                <div class="inner">
-                  <p>
-                    <span class="price">{{ 1500 | number }}</span
-                    ><span class="yen">円</span>
-                  </p>
+                  <ul class="ul-label">
+                    <li class="label-red">新車割引</li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
-          <div class="flex-table tbl-06">
-            <div class="th">
-              <div class="inner"><p>適用されている割引</p></div>
-            </div>
-            <div class="td" [class.current]="currentTabNum == 0">
-              <div class="inner">
-                <ul class="ul-label">
-                  <li class="label-red">新車割引</li>
-                </ul>
-              </div>
-            </div>
-            <div class="td" [class.current]="currentTabNum == 1">
-              <div class="inner">
-                <ul class="ul-label">
-                  <li class="label-red">新車割引</li>
-                </ul>
-              </div>
-            </div>
+
+          <div class="sticky-trigger">
+            <p>スティッキートリガー</p>
           </div>
-        </div>
 
-        <div class="sticky-trigger">
-          <p>スティッキートリガー</p>
-        </div>
+          <br /><br /><br />
 
-        <br /><br /><br />
+          <div class="sticky-object" [class.show]="isStickyFix">
+            <div class="sticky-object-inner">
+              <ul class="sticky-tab-button">
+                <li
+                  [class.current]="currentTabNum == 0"
+                  (click)="setCurrentTabNum(0)"
+                >
+                  <span>シンプルプラン</span>
+                </li>
+                <li
+                  [class.current]="currentTabNum == 1"
+                  (click)="setCurrentTabNum(1)"
+                >
+                  <span>おすすめプラン</span>
+                </li>
+              </ul>
 
-        <div class="sticky-object" [class.show]="isStickyFix">
-          <div class="sticky-object-inner">
-            <ul class="sticky-tab-button">
-              <li
-                [class.current]="currentTabNum == 0"
-                (click)="setCurrentTabNum(0)"
-              >
-                <span>シンプルプラン</span>
-              </li>
-              <li
-                [class.current]="currentTabNum == 1"
-                (click)="setCurrentTabNum(1)"
-              >
-                <span>おすすめプラン</span>
-              </li>
-            </ul>
-
-            <div class="flex-table">
-              <div class="th">
-                <div class="inner">
-                  <p><span>保険料</span><br />（一括払）</p>
-                  <span>
-                    <img src="assets/images/sample_result_01.png" alt="" />
-                  </span>
-                </div>
-              </div>
-              <div class="td" [class.current]="currentTabNum == 0">
-                <div class="inner">
-                  <div class="box-plan">
-                    <div class="name">
-                      <p>
-                        <span class="pc-only">シンプルプラン</span
-                        ><span class="sp-only">保険料（一括払）</span>
-                      </p>
-                    </div>
-                    <div class="price">
-                      <price-counter-component
-                        [currentData]="counterData"
-                      ></price-counter-component>
-                      <span class="yen">円</span>
+              <div class="table-content">
+                <div class="tr">
+                  <div class="th">
+                    <div class="inner">
+                      <p><span>保険料</span><br />（一括払）</p>
+                      <span>
+                        <img src="assets/images/sample_result_01.png" alt="" />
+                      </span>
                     </div>
                   </div>
-                  <div class="box-btn">
-                    <div class="save">
-                      <p>BTN-A</p>
-                    </div>
-                    <div class="apply">
-                      <p>BTN-B</p>
-                    </div>
-                  </div>
-                  <div class="price-diff">
-                    <price-diff-component
-                      [currentData]="counterData"
-                    ></price-diff-component>
-                  </div>
-                </div>
-              </div>
-
-              <div class="td" [class.current]="currentTabNum == 1">
-                <div class="inner">
-                  <div class="box-plan">
-                    <div class="name">
-                      <p>
-                        <span class="pc-only">おすすめプラン</span
-                        ><span class="sp-only">保険料（一括払）</span>
-                      </p>
-                    </div>
-                    <div class="price">
-                      <price-counter-component
-                        [currentData]="counterData2"
-                      ></price-counter-component>
-                      <span class="yen">円</span>
-                    </div>
-                  </div>
-                  <div class="box-btn">
-                    <div class="save">
-                      <p>BTN-A</p>
-                    </div>
-                    <div class="apply">
-                      <p>BTN-B</p>
+                  <div class="td" [class.current]="currentTabNum == 0">
+                    <div class="inner">
+                      <div class="box-plan">
+                        <div class="name">
+                          <p>
+                            <span class="pc-only">シンプルプラン</span
+                            ><span class="sp-only">保険料（一括払）</span>
+                          </p>
+                        </div>
+                        <div class="price">
+                          <price-counter-component
+                            [currentData]="counterData"
+                          ></price-counter-component>
+                          <span class="yen">円</span>
+                        </div>
+                      </div>
+                      <div class="box-btn">
+                        <div class="save">
+                          <p>BTN-A</p>
+                        </div>
+                        <div class="apply">
+                          <p>BTN-B</p>
+                        </div>
+                      </div>
+                      <div class="price-diff">
+                        <price-diff-component
+                          [currentData]="counterData"
+                        ></price-diff-component>
+                      </div>
                     </div>
                   </div>
-                  <div class="price-diff">
-                    <price-diff-component
-                      [currentData]="counterData2"
-                    ></price-diff-component>
+                  <div class="td" [class.current]="currentTabNum == 1">
+                    <div class="inner">
+                      <div class="box-plan">
+                        <div class="name">
+                          <p>
+                            <span class="pc-only">おすすめプラン</span
+                            ><span class="sp-only">保険料（一括払）</span>
+                          </p>
+                        </div>
+                        <div class="price">
+                          <price-counter-component
+                            [currentData]="counterData2"
+                          ></price-counter-component>
+                          <span class="yen">円</span>
+                        </div>
+                      </div>
+                      <div class="box-btn">
+                        <div class="save">
+                          <p>BTN-A</p>
+                        </div>
+                        <div class="apply">
+                          <p>BTN-B</p>
+                        </div>
+                      </div>
+                      <div class="price-diff">
+                        <price-diff-component
+                          [currentData]="counterData2"
+                        ></price-diff-component>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- <div>
+          <!-- <div>
           <p>オーバーフロー養素内のスティッキー</p>
           <div class="sticky-test-box" id="stickyTestBox">
             <p>
@@ -393,12 +402,13 @@
             </p>
           </div>
         </div> -->
-        <div>
           <p class="btn" (click)="scrollToElement('scrolltest')">
             ページ内スクロールしてみる!！！↓↓
           </p>
 
           <br /><br /><br />
+          <br /><br /><br />
+
           <p (click)="setCounterData(123456789)">カウンター変更ボタン</p>
           <!-- <p>{{ testCounterData }}</p> -->
           <price-counter-component
@@ -406,6 +416,15 @@
           ></price-counter-component>
 
           <br /><br /><br />
+
+          <div class="form-table">
+            <div class="thead"><h3>ご自身のお車の補償</h3></div>
+            <div class="tr">
+              <th>車両保険</th>
+              <td></td>
+              <td></td>
+            </div>
+          </div>
 
           <div style="text-align: center">
             <apx-chart
@@ -527,35 +546,35 @@
                 </dl>
               </div>
             </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <p id="scrolltest">ここにジャンプ</p>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
           </div>
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <p id="scrolltest">ここにジャンプ</p>
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-        </div>
 
-        <!--<router-outlet></router-outlet>-->
+          <!--<router-outlet></router-outlet>-->
+        </div>
       </div>
     </div>
   </div>

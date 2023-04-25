@@ -600,147 +600,244 @@
       border: none;
     }
 
-    .flex-table {
-      display: flex;
-      flex-wrap: wrap;
-      width: 100%;
-
-      //共通th
-      .th {
+    .table-content {
+      .tr {
+        display: flex;
+        flex-wrap: wrap;
         width: 100%;
-        font-weight: bold;
-        .inner {
-          padding: 16px 0 16px 16px;
-          @include pc {
-            padding: 16px;
-          }
-        }
-        @include pc {
-          width: 34%;
-          box-sizing: border-box;
-          border-right: 1px solid #d8d8d8;
-          border-bottom: 1px solid #d8d8d8;
-          border-left: 1px solid #d8d8d8;
-          display: flex;
-          align-items: center;
-        }
-      }
-      //共通td
-      .td {
-        position: relative;
-        width: 100%;
-        vertical-align: bottom;
-        display: none;
-        justify-content: flex-end;
-        align-items: center;
-        .inner {
-          padding: 16px 16px 16px 0;
-          @include pc {
-            padding: 16px;
-          }
-        }
-        &.current {
-          display: flex;
-        }
-        @include pc {
-          width: 33%;
-          box-sizing: border-box;
-          border-right: 1px solid #d8d8d8;
-          border-bottom: 1px solid #d8d8d8;
-          display: flex;
-        }
 
-        //共通span
-        span {
-          display: inline-block;
-          &.price {
-            margin-right: 3px;
-            @extend .font-medium-large;
-            vertical-align: bottom;
-          }
-          &.yen {
-            @extend .font-medium;
-            vertical-align: bottom;
-          }
-        }
-      }
-
-      //共通label
-      .ul-label {
-        li {
-          display: inline-block;
-          margin-right: 10px;
-          padding: 2px 10px;
-          border-radius: 6px;
-          font-weight: normal;
-          @extend .font-medium;
-          &.label-red {
-            background: #fff;
-            color: #f00;
-          }
-        }
-      }
-
-      //1行目
-      &.tbl-01 {
+        //共通th
         .th {
-          display: none;
-          @include pc {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-left: 0;
-            text-align: center;
-            img {
-              padding-top: 60px;
-              width: 90%;
-              height: auto;
+          width: 100%;
+          font-weight: bold;
+          .inner {
+            padding: 16px 0 16px 16px;
+            @include pc {
+              padding: 16px;
             }
           }
+          @include pc {
+            width: 34%;
+            box-sizing: border-box;
+            border-right: 1px solid #d8d8d8;
+            border-bottom: 1px solid #d8d8d8;
+            border-left: 1px solid #d8d8d8;
+            display: flex;
+            align-items: center;
+          }
         }
+        //共通td
         .td {
+          position: relative;
+          width: 100%;
+          vertical-align: bottom;
           display: none;
+          justify-content: flex-end;
+          align-items: center;
+          .inner {
+            padding: 16px 16px 16px 0;
+            @include pc {
+              padding: 16px;
+            }
+          }
           &.current {
             display: flex;
-            flex-flow: column;
           }
           @include pc {
+            width: 33%;
+            box-sizing: border-box;
+            border-right: 1px solid #d8d8d8;
+            border-bottom: 1px solid #d8d8d8;
             display: flex;
-            flex-flow: column;
           }
 
-          .box-hd {
-            display: none;
-            @extend .font-extra-large;
-            @include pc {
-              display: block;
-              padding: 16px 0;
-              width: 100%;
-              background: var(--ion-color-custom-dark-green);
-            }
-            h2 {
-              padding: 0 16px;
-              font-size: 24px;
-              color: #fff;
-              white-space: nowrap;
-              line-height: 1;
-            }
-          }
-          .box-text {
-            padding: 16px 16px 0;
-          }
-          .box-price {
-            padding: 16px;
-            text-align: center;
-            @include pc {
-              display: none;
-            }
-
-            .dt-01 {
+          //共通span
+          span {
+            display: inline-block;
+            &.price {
+              margin-right: 3px;
               @extend .font-medium-large;
-              font-weight: bold;
+              vertical-align: bottom;
+            }
+            &.yen {
+              @extend .font-medium;
+              vertical-align: bottom;
+            }
+          }
+        }
+
+        //共通label
+        .ul-label {
+          li {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 2px 10px;
+            border-radius: 6px;
+            font-weight: normal;
+            @extend .font-medium;
+            &.label-red {
+              background: #fff;
+              color: #f00;
+            }
+          }
+        }
+
+        //1行目
+        &.tr-01 {
+          .th {
+            display: none;
+            @include pc {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-left: 0;
+              text-align: center;
+              img {
+                padding-top: 60px;
+                width: 90%;
+                height: auto;
+              }
+            }
+          }
+          .td {
+            display: none;
+            &.current {
+              display: flex;
+              flex-flow: column;
+            }
+            @include pc {
+              display: flex;
+              flex-flow: column;
             }
 
+            .box-hd {
+              display: none;
+              @extend .font-extra-large;
+              @include pc {
+                display: block;
+                padding: 16px 0;
+                width: 100%;
+                background: var(--ion-color-custom-dark-green);
+              }
+              h2 {
+                padding: 0 16px;
+                font-size: 24px;
+                color: #fff;
+                white-space: nowrap;
+                line-height: 1;
+              }
+            }
+            .box-text {
+              padding: 16px 16px 0;
+            }
+            .box-price {
+              padding: 16px;
+              text-align: center;
+              @include pc {
+                display: none;
+              }
+
+              .dt-01 {
+                @extend .font-medium-large;
+                font-weight: bold;
+              }
+
+              span {
+                line-height: 1;
+              }
+              .total-price {
+                font-size: 40px;
+                font-weight: bold;
+                color: var(--ion-color-custom-dark-green);
+                letter-spacing: 2px;
+              }
+              .total-yen {
+                @extend .font-medium-large;
+                color: var(--ion-color-custom-dark-green);
+                font-weight: bold;
+              }
+              .split-price {
+                margin-left: 5px;
+                @extend .font-extra-large;
+                color: var(--ion-color-custom-dark-green);
+                font-weight: bold;
+              }
+              .split-yen {
+                margin-right: 5px;
+                @extend .font-medium;
+                color: var(--ion-color-custom-dark-green);
+                font-weight: bold;
+              }
+              .text-01 {
+                @extend .font-medium;
+                font-weight: bold;
+              }
+              .text-02 {
+                @extend .font-medium;
+              }
+            }
+            .box-btn {
+              margin-top: auto;
+              width: 100%;
+              ul {
+                padding: 8px 16px 16px;
+                li {
+                  width: 100%;
+                  margin: 8px auto 0;
+                  background: #f00;
+                }
+              }
+            }
+          }
+        }
+
+        //2行目
+        &.tr-02 {
+          .th {
+            border-top: 2px solid #d8d8d8;
+            border-bottom: 2px solid #d8d8d8;
+
+            @include pc {
+              padding: 12px 0;
+              background: #eee;
+              border-top: none;
+              border-bottom: 1px solid #d8d8d8;
+            }
+            .inner {
+              padding: 0;
+              text-align: center;
+              @include pc {
+                display: flex;
+                flex-flow: column;
+                justify-content: space-between;
+                padding: 16px;
+                height: 100%;
+                text-align: left;
+              }
+              span {
+                line-height: 1;
+              }
+              .span-01 {
+                @extend .font-extra-large;
+              }
+              .span-02 {
+                display: block;
+                padding: 16px 0;
+                font-size: 16px;
+                font-weight: normal;
+                color: #13a0ff;
+                @include pc {
+                  padding: 0;
+                }
+              }
+            }
+          }
+          .td {
+            text-align: right;
+            display: none; //SP時非表示(別位置に同じ別要素を表示される)
+            @include pc {
+              display: flex;
+            }
             span {
               line-height: 1;
             }
@@ -748,7 +845,6 @@
               font-size: 40px;
               font-weight: bold;
               color: var(--ion-color-custom-dark-green);
-              letter-spacing: 2px;
             }
             .total-yen {
               @extend .font-medium-large;
@@ -775,144 +871,50 @@
               @extend .font-medium;
             }
           }
-          .box-btn {
-            margin-top: auto;
-            width: 100%;
-            ul {
-              padding: 8px 16px 16px;
-              li {
-                width: 100%;
-                margin: 8px auto 0;
-                background: #f00;
-              }
-            }
-          }
         }
-      }
-
-      //2行目
-      &.tbl-02 {
-        .th {
-          border-top: 2px solid #d8d8d8;
-          border-bottom: 2px solid #d8d8d8;
-
-          @include pc {
-            padding: 12px 0;
-            background: #eee;
-            border-top: none;
-            border-bottom: 1px solid #d8d8d8;
-          }
-          .inner {
-            padding: 0;
-            text-align: center;
+        //3-6行目
+        &.tr-03,
+        &.tr-04,
+        &.tr-05,
+        &.tr-06 {
+          .th {
+            width: 60%;
+            border-bottom: 2px dotted #d8d8d8;
             @include pc {
-              display: flex;
-              flex-flow: column;
-              justify-content: space-between;
-              padding: 16px;
-              height: 100%;
-              text-align: left;
+              width: 34%;
             }
-            span {
-              line-height: 1;
-            }
-            .span-01 {
-              @extend .font-extra-large;
-            }
-            .span-02 {
-              display: block;
-              padding: 16px 0;
-              font-size: 16px;
-              font-weight: normal;
-              color: #13a0ff;
-              @include pc {
-                padding: 0;
-              }
+          }
+          .td {
+            width: 40%;
+            font-weight: bold;
+            border-bottom: 2px dotted #d8d8d8;
+            @include pc {
+              width: 33%;
             }
           }
         }
-        .td {
-          text-align: right;
-          display: none; //SP時非表示(別位置に同じ別要素を表示される)
-          @include pc {
-            display: flex;
-          }
-          span {
-            line-height: 1;
-          }
-          .total-price {
-            font-size: 40px;
-            font-weight: bold;
-            color: var(--ion-color-custom-dark-green);
-          }
-          .total-yen {
-            @extend .font-medium-large;
-            color: var(--ion-color-custom-dark-green);
-            font-weight: bold;
-          }
-          .split-price {
-            margin-left: 5px;
-            @extend .font-extra-large;
-            color: var(--ion-color-custom-dark-green);
-            font-weight: bold;
-          }
-          .split-yen {
-            margin-right: 5px;
-            @extend .font-medium;
-            color: var(--ion-color-custom-dark-green);
-            font-weight: bold;
-          }
-          .text-01 {
-            @extend .font-medium;
-            font-weight: bold;
-          }
-          .text-02 {
-            @extend .font-medium;
-          }
-        }
-      }
-      //3-6行目
-      &.tbl-03,
-      &.tbl-04,
-      &.tbl-05,
-      &.tbl-06 {
-        .th {
-          width: 60%;
-          border-bottom: 2px dotted #d8d8d8;
-          @include pc {
-            width: 34%;
-          }
-        }
-        .td {
-          width: 40%;
-          font-weight: bold;
-          border-bottom: 2px dotted #d8d8d8;
-          @include pc {
-            width: 33%;
-          }
-        }
-      }
-      &.tbl-05 {
-        .th,
-        .td {
-          border-bottom: 1px solid #d8d8d8;
-        }
-      }
-      //6行目
-      &.tbl-06 {
-        .th {
-          border-bottom: none;
-          background: #fcecec;
-          @include pc {
+        &.tr-05 {
+          .th,
+          .td {
             border-bottom: 1px solid #d8d8d8;
           }
         }
-        .td {
-          border-bottom: none;
-          background: #fcecec;
-          @include pc {
-            border-bottom: 1px solid #d8d8d8;
-            justify-content: flex-start;
+        //6行目
+        &.tr-06 {
+          .th {
+            border-bottom: none;
+            background: #fcecec;
+            @include pc {
+              border-bottom: 1px solid #d8d8d8;
+            }
+          }
+          .td {
+            border-bottom: none;
+            background: #fcecec;
+            @include pc {
+              border-bottom: 1px solid #d8d8d8;
+              justify-content: flex-start;
+            }
           }
         }
       }
@@ -969,18 +971,20 @@
         }
       }
 
-      .flex-table {
-        display: flex;
-        margin: 0 auto;
-        min-height: 107px;
-        border: 2px solid var(--ion-color-custom-dark-green);
-        box-sizing: border-box;
-        box-shadow: 0px 3px 3px 2px rgba(0, 0, 0, 0.1);
-        @include pc {
-          max-width: 980px;
-          min-height: 140px;
-          border: none;
-          box-shadow: none;
+      .table-content {
+        .tr {
+          display: flex;
+          margin: 0 auto;
+          min-height: 107px;
+          border: 2px solid var(--ion-color-custom-dark-green);
+          box-sizing: border-box;
+          box-shadow: 0px 3px 3px 2px rgba(0, 0, 0, 0.1);
+          @include pc {
+            max-width: 980px;
+            min-height: 140px;
+            border: none;
+            box-shadow: none;
+          }
         }
 
         .th {
