@@ -235,11 +235,9 @@ export class AppComponent implements AfterViewInit {
   public stickyTrigger; //このオブジェクトの位置でstickyObjectの表示が切り替わる
   public isStickyFix = false;
   ngAfterViewInit(): void {
-    //todo:stickyObjectそのものを固定するか、別のDOMを登場させるかでやり方が変わる。今はそのものを固定してy座標が変わってしまうので一度fixしてしまうとバグってる。この場合は実装を変える必要あり。
-    //stickyObjectの位置ではなく、その下の要素の位置を検知して計算すれば良さそう。
-
     this.stickyObject = document.querySelector(".sticky-object");
-    this.stickyBox = document.querySelector(".sticky-test-box"); //本家だと大本のdivのwrapperがこれになりそう。＝いらない。
+    //this.stickyBox = document.querySelector(".sticky-test-box"); //本家だと大本のdivのwrapperがこれになりそう。＝いらない。
+    this.stickyBox = window;
     this.stickyTrigger = document.querySelector(".sticky-trigger");
 
     this.checkScrollValue();
@@ -253,8 +251,10 @@ export class AppComponent implements AfterViewInit {
   }
 
   public checkScrollValue(): void {
+    console.log(1223);
     let stickyTriggerPosY = this.stickyTrigger.getBoundingClientRect().top;
-    let stickyBoxPosY = this.stickyBox.getBoundingClientRect().top; //本家だと0で良いかも？
+    //let stickyBoxPosY = this.stickyBox.getBoundingClientRect().top; //本家だと0で良いかも？
+    let stickyBoxPosY = 0;
 
     if (stickyBoxPosY - stickyTriggerPosY > 0) {
       this.isStickyFix = true;

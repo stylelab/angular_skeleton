@@ -700,12 +700,13 @@
         }
         .td {
           display: none;
-          // padding: 0 0 80px 0;
           &.current {
-            display: block;
+            display: flex;
+            flex-flow: column;
           }
           @include pc {
-            display: block;
+            display: flex;
+            flex-flow: column;
           }
 
           .box-hd {
@@ -713,17 +714,20 @@
             @extend .font-extra-large;
             @include pc {
               display: block;
-              padding: 16px;
-              white-space: nowrap;
-              font-weight: bold;
-              color: #fff;
+              padding: 16px 0;
+              width: 100%;
               background: var(--ion-color-custom-dark-green);
+            }
+            h2 {
+              padding: 0 16px;
+              font-size: 24px;
+              color: #fff;
+              white-space: nowrap;
+              line-height: 1;
             }
           }
           .box-text {
-            @include pc {
-              padding: 16px;
-            }
+            padding: 16px 16px 0;
           }
           .box-price {
             padding: 16px;
@@ -771,17 +775,16 @@
               @extend .font-medium;
             }
           }
-          .ul-btn {
-            // position: absolute;
-            // bottom: 0;
-            // left: 0;
-            // width: 100%;
+          .box-btn {
             margin-top: auto;
-
-            li {
-              width: 80%;
-              margin: 10px auto;
-              background: #f00;
+            width: 100%;
+            ul {
+              padding: 8px 16px 16px;
+              li {
+                width: 100%;
+                margin: 8px auto 0;
+                background: #f00;
+              }
             }
           }
         }
@@ -790,7 +793,6 @@
       //2行目
       &.tbl-02 {
         .th {
-          padding: 6px 0;
           border-top: 2px solid #d8d8d8;
           border-bottom: 2px solid #d8d8d8;
 
@@ -801,11 +803,13 @@
             border-bottom: 1px solid #d8d8d8;
           }
           .inner {
+            padding: 0;
             text-align: center;
             @include pc {
               display: flex;
               flex-flow: column;
               justify-content: space-between;
+              padding: 16px;
               height: 100%;
               text-align: left;
             }
@@ -814,6 +818,16 @@
             }
             .span-01 {
               @extend .font-extra-large;
+            }
+            .span-02 {
+              display: block;
+              padding: 16px 0;
+              font-size: 16px;
+              font-weight: normal;
+              color: #13a0ff;
+              @include pc {
+                padding: 0;
+              }
             }
           }
         }
@@ -919,6 +933,7 @@
     position: fixed;
     top: -180px;
     left: 0;
+    z-index: 10;
     transition: all 0.3s ease-out;
     @include pc {
       min-height: 140px;

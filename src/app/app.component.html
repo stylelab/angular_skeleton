@@ -50,7 +50,7 @@
               </p>
             </div>
             <div class="td" [class.current]="currentTabNum == 0">
-              <div class="box-hd">シンプルプラン</div>
+              <div class="box-hd"><h2>シンプルプラン</h2></div>
               <div class="box-text">
                 <p class="text-normal" TXT-01-01>
                   「対人賠償」「対物賠償」「人身傷害（車内のみ補償」のシンプルなプランです。
@@ -77,13 +77,15 @@
                 </dl>
               </div>
 
-              <ul class="ul-btn">
-                <li>ぼたん1</li>
-                <li>ぼたん2</li>
-              </ul>
+              <div class="box-btn">
+                <ul>
+                  <li>ぼたん1</li>
+                  <li>ぼたん2</li>
+                </ul>
+              </div>
             </div>
             <div class="td" [class.current]="currentTabNum == 1">
-              <div class="box-hd">おすすめプラン</div>
+              <div class="box-hd"><h2>おすすめプラン</h2></div>
               <div class="box-text">
                 <p class="text-normal" TXT-01-01>
                   もらい事故でも安心な「弁護士特約」と、自転車に乗る方におすすめの「個人賠償特約」を付けたプランです。
@@ -109,20 +111,22 @@
                   </dd>
                 </dl>
               </div>
-              <ul class="ul-btn">
-                <li>ぼたん1</li>
-                <li>ぼたん2</li>
-              </ul>
+              <div class="box-btn">
+                <ul>
+                  <li>ぼたん1</li>
+                  <li>ぼたん2</li>
+                </ul>
+              </div>
             </div>
           </div>
 
           <div class="flex-table tbl-02">
             <div class="th">
               <div class="inner">
-                <p class="sp-hide"><span class="span-01">保険料</span></p>
+                <p class="pc-only"><span class="span-01">保険料</span></p>
                 <p class="p-01">
-                  <span class="ac-btn" (click)="toggleAccordion('ac01')"
-                    >保険料の内訳を閉じる</span
+                  <span class="span-02 ac-btn" (click)="toggleAccordion('ac01')"
+                    >保険料の内訳を見る</span
                   >
                 </p>
               </div>
@@ -255,6 +259,10 @@
           </div>
         </div>
 
+        <div class="sticky-trigger">
+          <p>スティッキートリガー</p>
+        </div>
+
         <br /><br /><br />
 
         <div class="sticky-object" [class.show]="isStickyFix">
@@ -350,12 +358,9 @@
           </div>
         </div>
 
-        <div>
+        <!-- <div>
           <p>オーバーフロー養素内のスティッキー</p>
           <div class="sticky-test-box" id="stickyTestBox">
-            <div class="sticky-trigger">
-              <p>スティッキートリガー</p>
-            </div>
             <p>
               あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />
               あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />
@@ -387,7 +392,8 @@
               かかかきききききききくく<br />かかかきききききききくく<br />かかかきききききききくく<br />かかかきききききききくく<br />かかかきききききききくく<br />かかかきききききききくく<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />あああああい<br />
             </p>
           </div>
-
+        </div> -->
+        <div>
           <p class="btn" (click)="scrollToElement('scrolltest')">
             ページ内スクロールしてみる!！！↓↓
           </p>
