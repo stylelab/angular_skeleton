@@ -5,6 +5,15 @@
       <h1 class="title-h1" HDG-01>見積もり結果</h1>
       <!--<app-error global></app-error>-->
 
+      <picture>
+        <source
+          media="(max-width: 768px)"
+          srcset="assets/images/01_01_01_img001.png"
+        />
+        <img src="assets/images/sample_result_01.png" />
+      </picture>
+      <br /><br /><br />
+
       <div>
         <p class="text-normal" TXT-01-01>
           補償プランと保険料をご案内します。補償の有無、保険金額の変更も可能ですので、ご自身に合った内容をお選びください。
@@ -43,7 +52,7 @@
           </li>
         </ul>
         <div class="tab-content">
-          <div class="table-content">
+          <div class="table">
             <div class="tr tr-01">
               <div class="th">
                 <p>
@@ -266,108 +275,122 @@
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="sticky-trigger">
-            <p>スティッキートリガー</p>
-          </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
 
-          <br /><br /><br />
+        <dl>
+          <dt>
+            &eなら、インターネット割引はあらかじめ保険料に織り込まれています!
+          </dt>
+          <dd>aaa</dd>
+        </dl>
 
-          <div class="sticky-object" [class.show]="isStickyFix">
-            <div class="sticky-object-inner">
-              <ul class="sticky-tab-button">
-                <li
-                  [class.current]="currentTabNum == 0"
-                  (click)="setCurrentTabNum(0)"
-                >
-                  <span>シンプルプラン</span>
-                </li>
-                <li
-                  [class.current]="currentTabNum == 1"
-                  (click)="setCurrentTabNum(1)"
-                >
-                  <span>おすすめプラン</span>
-                </li>
-              </ul>
+        <div class="sticky-trigger">
+          <p>スティッキートリガー</p>
+        </div>
 
-              <div class="table-content">
-                <div class="tr">
-                  <div class="th">
-                    <div class="inner">
-                      <p><span>保険料</span><br />（一括払）</p>
-                      <span>
-                        <img src="assets/images/sample_result_01.png" alt="" />
-                      </span>
-                    </div>
+        <br /><br /><br />
+
+        <div class="sticky-content" [class.show]="isStickyFix">
+          <div class="sticky-content-inner">
+            <ul class="sticky-tab-button">
+              <li
+                [class.current]="currentTabNum == 0"
+                (click)="setCurrentTabNum(0)"
+              >
+                <span>シンプルプラン</span>
+              </li>
+              <li
+                [class.current]="currentTabNum == 1"
+                (click)="setCurrentTabNum(1)"
+              >
+                <span>おすすめプラン</span>
+              </li>
+            </ul>
+
+            <div class="table">
+              <div class="tr">
+                <div class="th">
+                  <div class="inner">
+                    <p><span>保険料</span><br />（一括払）</p>
+                    <span>
+                      <img src="assets/images/sample_result_01.png" alt="" />
+                    </span>
                   </div>
-                  <div class="td" [class.current]="currentTabNum == 0">
-                    <div class="inner">
-                      <div class="box-plan">
-                        <div class="name">
-                          <p>
-                            <span class="pc-only">シンプルプラン</span
-                            ><span class="sp-only">保険料（一括払）</span>
-                          </p>
-                        </div>
-                        <div class="price">
-                          <price-counter-component
-                            [currentData]="counterData"
-                          ></price-counter-component>
-                          <span class="yen">円</span>
-                        </div>
+                </div>
+                <div class="td" [class.current]="currentTabNum == 0">
+                  <div class="inner">
+                    <div class="box-plan">
+                      <div class="name">
+                        <p>
+                          <span class="pc-only">シンプルプラン</span
+                          ><span class="sp-only">保険料（一括払）</span>
+                        </p>
                       </div>
-                      <div class="box-btn">
-                        <div class="save">
-                          <p>BTN-A</p>
-                        </div>
-                        <div class="apply">
-                          <p>BTN-B</p>
-                        </div>
-                      </div>
-                      <div class="price-diff">
-                        <price-diff-component
+                      <div class="price">
+                        <price-counter-component
                           [currentData]="counterData"
-                        ></price-diff-component>
+                        ></price-counter-component>
+                        <span class="yen">円</span>
                       </div>
                     </div>
+                    <div class="box-btn">
+                      <div class="save">
+                        <p>BTN-A</p>
+                      </div>
+                      <div class="apply">
+                        <p>BTN-B</p>
+                      </div>
+                    </div>
+                    <div class="price-diff">
+                      <price-diff-component
+                        [currentData]="counterData"
+                      ></price-diff-component>
+                    </div>
                   </div>
-                  <div class="td" [class.current]="currentTabNum == 1">
-                    <div class="inner">
-                      <div class="box-plan">
-                        <div class="name">
-                          <p>
-                            <span class="pc-only">おすすめプラン</span
-                            ><span class="sp-only">保険料（一括払）</span>
-                          </p>
-                        </div>
-                        <div class="price">
-                          <price-counter-component
-                            [currentData]="counterData2"
-                          ></price-counter-component>
-                          <span class="yen">円</span>
-                        </div>
+                </div>
+                <div class="td" [class.current]="currentTabNum == 1">
+                  <div class="inner">
+                    <div class="box-plan">
+                      <div class="name">
+                        <p>
+                          <span class="pc-only">おすすめプラン</span
+                          ><span class="sp-only">保険料（一括払）</span>
+                        </p>
                       </div>
-                      <div class="box-btn">
-                        <div class="save">
-                          <p>BTN-A</p>
-                        </div>
-                        <div class="apply">
-                          <p>BTN-B</p>
-                        </div>
-                      </div>
-                      <div class="price-diff">
-                        <price-diff-component
+                      <div class="price">
+                        <price-counter-component
                           [currentData]="counterData2"
-                        ></price-diff-component>
+                        ></price-counter-component>
+                        <span class="yen">円</span>
                       </div>
+                    </div>
+                    <div class="box-btn">
+                      <div class="save">
+                        <p>BTN-A</p>
+                      </div>
+                      <div class="apply">
+                        <p>BTN-B</p>
+                      </div>
+                    </div>
+                    <div class="price-diff">
+                      <price-diff-component
+                        [currentData]="counterData2"
+                      ></price-diff-component>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- <div>
+        <!-- <div>
           <p>オーバーフロー養素内のスティッキー</p>
           <div class="sticky-test-box" id="stickyTestBox">
             <p>
@@ -402,179 +425,276 @@
             </p>
           </div>
         </div> -->
-          <p class="btn" (click)="scrollToElement('scrolltest')">
-            ページ内スクロールしてみる!！！↓↓
-          </p>
+        <p class="btn" (click)="scrollToElement('scrolltest')">
+          ページ内スクロールしてみる!！！↓↓
+        </p>
 
-          <br /><br /><br />
-          <br /><br /><br />
+        <br /><br /><br />
+        <br /><br /><br />
 
-          <p (click)="setCounterData(123456789)">カウンター変更ボタン</p>
-          <!-- <p>{{ testCounterData }}</p> -->
-          <price-counter-component
-            [currentData]="counterData"
-          ></price-counter-component>
+        <p (click)="setCounterData(123456789)">カウンター変更ボタン</p>
+        <!-- <p>{{ testCounterData }}</p> -->
+        <price-counter-component
+          [currentData]="counterData"
+        ></price-counter-component>
 
-          <br /><br /><br />
+        <br /><br /><br />
 
-          <div class="form-table">
-            <div class="thead"><h3>ご自身のお車の補償</h3></div>
+        <div class="form-content">
+          <div class="table">
+            <div class="thead">
+              <div class="inner">
+                <h3>ご自身のお車の補償</h3>
+              </div>
+            </div>
             <div class="tr">
-              <th>車両保険</th>
-              <td></td>
-              <td></td>
-            </div>
-          </div>
-
-          <div style="text-align: center">
-            <apx-chart
-              [series]="chartOptions.series"
-              [chart]="chartOptions.chart"
-              [xaxis]="chartOptions.xaxis"
-              [title]="chartOptions.title"
-            ></apx-chart>
-          </div>
-
-          <br /><br /><br /><br /><br /><br />
-
-          <div style="text-align: center">
-            <apx-chart
-              [series]="chartOptions2.series"
-              [chart]="chartOptions2.chart"
-              [dataLabels]="chartOptions2.dataLabels"
-              [plotOptions]="chartOptions2.plotOptions"
-              [responsive]="chartOptions2.responsive"
-              [xaxis]="chartOptions2.xaxis"
-              [legend]="chartOptions2.legend"
-              [fill]="chartOptions2.fill"
-            ></apx-chart>
-          </div>
-
-          <br /><br /><br /><br /><br /><br />
-
-          <div class="app-page-content">
-            <div class="content-box">
-              <!-- Warning -->
-              <div class="box red-box" BOX-ALT-01>
-                <dl class="text-normal paragraph-explanation">
-                  <dt>
-                    <p class="text-normal text-red" textBold TXT-01-01>
-                      aaaaaa
-                    </p>
-                  </dt>
-                </dl>
+              <div class="th">
+                <div class="inner">車両保険</div>
               </div>
-
-              <!-- BOX-ALT-01 -->
-              <div class="box red-box" BOX-ALT-01>
-                <dl class="text-normal paragraph-explanation">
-                  <dt>
-                    <p class="text-normal text-red" textBold TXT-01-01>
-                      まだ申し込みはできません
-                    </p>
-                  </dt>
-                  <dd>
-                    <p class="text-normal" TXT-01-01>
-                      ご希望の保険開始日が70日以上先であるため、お申し込みができません。以下のリンク先からメール設定すると、保険開始日70日前に申し込み手続き開始のお知らせメールを送信します。
-                    </p>
-                  </dd>
-                </dl>
-                <!-- LNK-01 -->
-                <div class="link-normal" LNK-01>
-                  <a tappable preventDoubleClick>お知らせメールを設定する </a>
-                </div>
+              <div class="td" [class.current]="currentTabNum == 0">
+                <div class="inner">form-content-A</div>
               </div>
-
-              <!-- BOX-ALT-01 -->
-              <div class="box red-box" BOX-ALT-01>
-                <dl class="text-normal paragraph-explanation">
-                  <dt>
-                    <p class="text-normal text-red" textBold TXT-01-01>
-                      仮設定の項目があります。
-                    </p>
-                  </dt>
-                  <dd>
-                    <p class="text-normal" TXT-01-01>
-                      以下の項目は、仮の情報が設定されています。申し込み時は、正しい情報を設定してください。またお車の情報を仮設定しているため、車両保険なしの保険料を表示しています。車両保険ありの保険料は、お車の情報をご準備のうえ、再度お見積もりいただきご確認ください。
-                    </p>
-                  </dd>
-                </dl>
-
-                <ul class="list-dot-3 list-dot-4" LST-01-02>
-                  <li tappable preventDoubleClick>bbbbb</li>
-                </ul>
-              </div>
-
-              <div class="cnf-normal" CNF-01>
-                <div class="cnf-normal-box">
-                  <div class="cnf-normal-box-left">
-                    <div class="text-info" btmSpace15>
-                      <p class="text-normal">
-                        <span textBold>取扱代理店</span>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="cnf-normal-box-right">
-                    <p class="text-normal" TXT-01-01>
-                      明治安田生命保険相互会社
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="cnf-normal" CNF-01>
-                <div class="cnf-normal-box">
-                  <div class="cnf-normal-box-left">
-                    <div class="text-info" btmSpace15>
-                      <p class="text-normal">
-                        <span textBold>担当者</span>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="cnf-normal-box-right">
-                    <p class="text-normal" TXT-01-01>aa</p>
-                  </div>
-                </div>
-              </div>
-              <!-- BOX-ALT-01 -->
-              <div class="box" BOX-ALT-01>
-                <dl class="text-normal paragraph-explanation">
-                  <dd>
-                    <p class="text-normal" TXT-01-01>
-                      このお車の車両保険はお引き受けできません。
-                    </p>
-                  </dd>
-                </dl>
+              <div class="td" [class.current]="currentTabNum == 1">
+                <div class="inner">form-content-B</div>
               </div>
             </div>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <p id="scrolltest">ここにジャンプ</p>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
+            <div class="tr">
+              <div class="th">
+                <div class="inner">車両保険</div>
+              </div>
+              <div class="td" [class.current]="currentTabNum == 0">
+                <div class="inner">form-content-A</div>
+              </div>
+              <div class="td" [class.current]="currentTabNum == 1">
+                <div class="inner">form-content-B</div>
+              </div>
+            </div>
           </div>
-
-          <!--<router-outlet></router-outlet>-->
         </div>
+
+        <br /><br /><br />
+
+        <div class="info-content">
+          <div class="table">
+            <div class="thead">
+              <div class="inner" [class.isOpen]="isOpenAc02">
+                <h3>基本情報</h3>
+                <div class="btn ac-btn" (click)="toggleAccordion('ac02')">
+                  <span>情報を{{ isOpenAc02 ? "閉じる" : "見る" }}</span>
+                </div>
+              </div>
+            </div>
+            <div class="ac-obj" [class.isOpen]="isOpenAc02">
+              <div class="tr">
+                <div class="th"><div class="inner">保険期間</div></div>
+                <div class="td">
+                  <div class="inner">2023年4月1日～2024年4月1日</div>
+                </div>
+              </div>
+              <div class="tr">
+                <div class="th"><div class="inner">保険期間</div></div>
+                <div class="td">
+                  <div class="inner">2023年4月1日～2024年4月1日</div>
+                </div>
+              </div>
+              <div class="tr">
+                <div class="th"><div class="inner">保険期間</div></div>
+                <div class="td">
+                  <div class="inner">2023年4月1日～2024年4月1日</div>
+                </div>
+              </div>
+              <div class="tr">
+                <div class="td colspan">
+                  <div class="inner">情報を修正する</div>
+                </div>
+              </div>
+            </div>
+            <!-- /ac-obj -->
+
+            <div class="thead">
+              <div class="inner" [class.isOpen]="isOpenAc03">
+                <h3>AAAAA</h3>
+                <div class="btn ac-btn" (click)="toggleAccordion('ac03')">
+                  <span>情報を{{ isOpenAc03 ? "閉じる" : "見る" }}</span>
+                </div>
+              </div>
+            </div>
+            <div class="ac-obj" [class.isOpen]="isOpenAc03">
+              <div class="tr">
+                <div class="th"><div class="inner">保険期間</div></div>
+                <div class="td">
+                  <div class="inner">2023年4月1日～2024年4月1日</div>
+                </div>
+              </div>
+              <div class="tr">
+                <div class="th"><div class="inner">保険期間</div></div>
+                <div class="td">
+                  <div class="inner">2023年4月1日～2024年4月1日</div>
+                </div>
+              </div>
+              <div class="tr">
+                <div class="th"><div class="inner">保険期間</div></div>
+                <div class="td">
+                  <div class="inner">2023年4月1日～2024年4月1日</div>
+                </div>
+              </div>
+              <div class="tr">
+                <div class="td colspan">
+                  <div class="inner">情報を修正する</div>
+                </div>
+              </div>
+            </div>
+            <!-- /ac-obj -->
+          </div>
+        </div>
+
+        <br /><br /><br />
+        <br /><br /><br />
+
+        <div style="text-align: center">
+          <apx-chart
+            [series]="chartOptions.series"
+            [chart]="chartOptions.chart"
+            [xaxis]="chartOptions.xaxis"
+            [title]="chartOptions.title"
+          ></apx-chart>
+        </div>
+
+        <br /><br /><br /><br /><br /><br />
+
+        <div style="text-align: center">
+          <apx-chart
+            [series]="chartOptions2.series"
+            [chart]="chartOptions2.chart"
+            [dataLabels]="chartOptions2.dataLabels"
+            [plotOptions]="chartOptions2.plotOptions"
+            [responsive]="chartOptions2.responsive"
+            [xaxis]="chartOptions2.xaxis"
+            [legend]="chartOptions2.legend"
+            [fill]="chartOptions2.fill"
+          ></apx-chart>
+        </div>
+
+        <br /><br /><br /><br /><br /><br />
+
+        <div class="app-page-content">
+          <div class="content-box">
+            <!-- Warning -->
+            <div class="box red-box" BOX-ALT-01>
+              <dl class="text-normal paragraph-explanation">
+                <dt>
+                  <p class="text-normal text-red" textBold TXT-01-01>aaaaaa</p>
+                </dt>
+              </dl>
+            </div>
+
+            <!-- BOX-ALT-01 -->
+            <div class="box red-box" BOX-ALT-01>
+              <dl class="text-normal paragraph-explanation">
+                <dt>
+                  <p class="text-normal text-red" textBold TXT-01-01>
+                    まだ申し込みはできません
+                  </p>
+                </dt>
+                <dd>
+                  <p class="text-normal" TXT-01-01>
+                    ご希望の保険開始日が70日以上先であるため、お申し込みができません。以下のリンク先からメール設定すると、保険開始日70日前に申し込み手続き開始のお知らせメールを送信します。
+                  </p>
+                </dd>
+              </dl>
+              <!-- LNK-01 -->
+              <div class="link-normal" LNK-01>
+                <a tappable preventDoubleClick>お知らせメールを設定する </a>
+              </div>
+            </div>
+
+            <!-- BOX-ALT-01 -->
+            <div class="box red-box" BOX-ALT-01>
+              <dl class="text-normal paragraph-explanation">
+                <dt>
+                  <p class="text-normal text-red" textBold TXT-01-01>
+                    仮設定の項目があります。
+                  </p>
+                </dt>
+                <dd>
+                  <p class="text-normal" TXT-01-01>
+                    以下の項目は、仮の情報が設定されています。申し込み時は、正しい情報を設定してください。またお車の情報を仮設定しているため、車両保険なしの保険料を表示しています。車両保険ありの保険料は、お車の情報をご準備のうえ、再度お見積もりいただきご確認ください。
+                  </p>
+                </dd>
+              </dl>
+
+              <ul class="list-dot-3 list-dot-4" LST-01-02>
+                <li tappable preventDoubleClick>bbbbb</li>
+              </ul>
+            </div>
+
+            <div class="cnf-normal" CNF-01>
+              <div class="cnf-normal-box">
+                <div class="cnf-normal-box-left">
+                  <div class="text-info" btmSpace15>
+                    <p class="text-normal">
+                      <span textBold>取扱代理店</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="cnf-normal-box-right">
+                  <p class="text-normal" TXT-01-01>明治安田生命保険相互会社</p>
+                </div>
+              </div>
+            </div>
+            <div class="cnf-normal" CNF-01>
+              <div class="cnf-normal-box">
+                <div class="cnf-normal-box-left">
+                  <div class="text-info" btmSpace15>
+                    <p class="text-normal">
+                      <span textBold>担当者</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="cnf-normal-box-right">
+                  <p class="text-normal" TXT-01-01>aa</p>
+                </div>
+              </div>
+            </div>
+            <!-- BOX-ALT-01 -->
+            <div class="box" BOX-ALT-01>
+              <dl class="text-normal paragraph-explanation">
+                <dd>
+                  <p class="text-normal" TXT-01-01>
+                    このお車の車両保険はお引き受けできません。
+                  </p>
+                </dd>
+              </dl>
+            </div>
+          </div>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <p id="scrolltest">ここにジャンプ</p>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+        </div>
+
+        <!--<router-outlet></router-outlet>-->
       </div>
     </div>
   </div>

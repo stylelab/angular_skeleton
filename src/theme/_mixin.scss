@@ -6,7 +6,7 @@
  */
 
 /* A file that defines definitions commonly included from other SCSS */
-@import 'fonts';
+@import "fonts";
 
 /* no margin top for the first element */
 @mixin auto-margin-top-calculate($reference) {
@@ -85,8 +85,8 @@ default level 0.5 */
 @mixin opacity($opacity: 0.5) {
   $IEValue: calc(#{$opacity} * 100);
   opacity: $opacity;
-  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=' + $IEValue +
-    ')';
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" + $IEValue +
+    ")";
   filter: alpha(opacity=$IEValue);
 }
 
@@ -151,7 +151,7 @@ default level 0.5 */
 
 /************* Break Point *****************/
 @mixin pc {
-  @media screen and (min-width: 641px) {
+  @media screen and (min-width: 769px) {
     @content;
   }
 }

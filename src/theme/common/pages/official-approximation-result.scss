@@ -600,7 +600,7 @@
       border: none;
     }
 
-    .table-content {
+    .table {
       .tr {
         display: flex;
         flex-wrap: wrap;
@@ -921,6 +921,160 @@
     }
   }
 
+  .form-content {
+    .table {
+      .thead {
+        padding: 16px;
+        background: #003a77;
+        h3 {
+          margin: 0;
+          padding: 0;
+          font-size: 20px;
+          color: #fff;
+          line-height: 1;
+        }
+      }
+      .tr {
+        display: block;
+        width: 100%;
+        border-bottom: 2px solid #d8d8d8;
+
+        @include pc {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .th {
+          width: 100%;
+          font-weight: bold;
+          background: #fff;
+          @include pc {
+            background: #f5f5f5;
+          }
+          .inner {
+            padding: 16px 0 16px 16px;
+            @include pc {
+              padding: 16px;
+            }
+          }
+          @include pc {
+            width: 34%;
+            display: flex;
+            align-items: center;
+          }
+        }
+        //共通td
+        .td {
+          position: relative;
+          width: 100%;
+          display: none;
+          align-items: center;
+          .inner {
+            padding: 0 16px 16px 16px;
+            @include pc {
+              padding: 16px;
+            }
+          }
+          &.current {
+            display: flex;
+          }
+          @include pc {
+            width: 33%;
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+
+  .info-content {
+    .table {
+      border: 2px solid #d8d8d8;
+      border-top: none;
+
+      .thead {
+        border-top: 2px solid #d8d8d8;
+        .inner {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          padding: 28px 16px;
+          background: #fff;
+          &.isOpen {
+            background: #f5f5f5;
+          }
+          h3 {
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            line-height: 1;
+            width: 50%;
+          }
+          .btn {
+            display: inline-block;
+            width: 50%;
+            text-align: right;
+          }
+        }
+      }
+      .tr {
+        display: block;
+        width: 100%;
+        border-bottom: 2px dotted #d8d8d8;
+        @include pc {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        &:first-child {
+          border-top: 2px solid #d8d8d8;
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+        .th {
+          width: 100%;
+          font-weight: bold;
+          .inner {
+            padding: 16px 0 16px 16px;
+            @include pc {
+              padding: 16px;
+            }
+          }
+          @include pc {
+            width: 50%;
+            display: flex;
+            align-items: center;
+          }
+        }
+        //共通td
+        .td {
+          position: relative;
+          width: 100%;
+          display: none;
+          align-items: center;
+          @include pc {
+            width: 50%;
+            display: flex;
+          }
+          &.colspan {
+            width: 100%;
+            text-align: center;
+            display: block;
+          }
+          .inner {
+            padding: 16px 16px 16px 0;
+            width: 100%;
+            @include pc {
+              padding: 16px;
+            }
+          }
+          &.current {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+
   //sticky
   .sticky-test-box {
     overflow: scroll;
@@ -929,7 +1083,7 @@
     height: 500px;
   }
 
-  .sticky-object {
+  .sticky-content {
     width: 100%;
     background: #fff;
     position: fixed;
@@ -945,7 +1099,7 @@
     &.show {
       top: 0;
     }
-    .sticky-object-inner {
+    .sticky-content-inner {
       padding: 0 20px;
 
       .sticky-tab-button {
@@ -971,7 +1125,7 @@
         }
       }
 
-      .table-content {
+      .table {
         .tr {
           display: flex;
           margin: 0 auto;
@@ -1053,7 +1207,7 @@
                 font-size: 16px;
                 font-weight: bold;
                 //pc過程
-                @media screen and (min-width: 641px) and (max-width: 799px) {
+                @media screen and (min-width: 641px) and (max-width: 830px) {
                   font-size: 14px;
                 }
               }
@@ -1066,12 +1220,12 @@
                 .yen {
                   font-size: 20px;
                   //pc過程
-                  @media screen and (min-width: 641px) and (max-width: 799px) {
+                  @media screen and (min-width: 641px) and (max-width: 830px) {
                     font-size: 16px;
                   }
                 }
                 //pc過程
-                @media screen and (min-width: 641px) and (max-width: 799px) {
+                @media screen and (min-width: 641px) and (max-width: 830px) {
                   font-size: 20px;
                 }
               }
@@ -1128,7 +1282,6 @@
     transition: all 0.5s;
     max-height: 0;
     overflow: hidden;
-
     &.isOpen {
       max-height: 250px;
       transition: all 0.8s;
@@ -1155,14 +1308,8 @@
 // }
 
 /************* Break Point *****************/
-@mixin pc {
-  @media (min-width: 641px) {
-    @content;
-  }
-}
-
-@mixin pc-middle {
-  @media (min-width: 641px) and (max-width: 800px) {
-    @content;
-  }
-}
+// @mixin pc {
+//   @media (min-width: 768px) {
+//     @content;
+//   }
+// }

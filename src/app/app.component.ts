@@ -199,21 +199,29 @@ export class AppComponent implements AfterViewInit {
    *
    */
   public isOpenAc01: boolean = true;
-  public toggleAccordion($accordionID: string): void {
-    console.log($accordionID);
+  public isOpenAc02: boolean = true;
+  public isOpenAc03: boolean = true;
 
+  public toggleAccordion($accordionID: string): void {
     switch ($accordionID) {
       case "ac01":
         this.isOpenAc01 = !this.isOpenAc01;
+        break;
+      case "ac02":
+        this.isOpenAc02 = !this.isOpenAc02;
+        break;
+      case "ac03":
+        this.isOpenAc03 = !this.isOpenAc03;
+        break;
+      default:
+        null;
     }
-    console.log(this.isOpenAc01);
   }
 
   //tab
   public currentTabNum: number = 0;
   public setCurrentTabNum($number: number): void {
     this.currentTabNum = $number;
-    console.log($number);
   }
 
   //counter
@@ -251,7 +259,6 @@ export class AppComponent implements AfterViewInit {
   }
 
   public checkScrollValue(): void {
-    console.log(1223);
     let stickyTriggerPosY = this.stickyTrigger.getBoundingClientRect().top;
     //let stickyBoxPosY = this.stickyBox.getBoundingClientRect().top; //本家だと0で良いかも？
     let stickyBoxPosY = 0;
